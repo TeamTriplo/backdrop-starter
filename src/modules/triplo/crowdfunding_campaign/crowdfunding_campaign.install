@@ -1,0 +1,107 @@
+<?php
+
+
+    /** 
+     * Implement hook_install()
+    */
+    function crowdfunding_campaign_install() {
+        // Create a vocabulary and some terms
+    
+        $type = array(
+            'type' => 'crowdfunding_offer',
+            'name' => st('Crowdfunding Offer'),
+            'base' => 'node_content',
+            'description' => st("Crowdfunding offer and its related fields"),
+            'settings' => array(
+                'status_default' => NODE_PUBLISHED,
+                'promote_enabled' => FALSE,
+                'node_preview' => TRUE,
+                'promote_default' => FALSE,
+                'sticky_enabled' => FALSE,
+                'sticky_default' => FALSE,
+                'revision_enabled' => TRUE,
+                'revision_default' => FALSE,
+                'node_submitted' => FALSE,
+                'node_user_picture' => FALSE,
+                'comment_default' => COMMENT_NODE_CLOSED,
+                'menu_options' => array('main-menu'),
+            ),
+            'is_new' => TRUE,
+        );
+
+        $type = node_type_set_defaults($type);
+        node_type_save($type);
+        node_add_body_field($type);
+        // Add default alias for page content types.
+        config('path.settings')
+            ->set('node_page_pattern', '[node:title]')
+            ->set('node_post_pattern', 'crowdfunding-offer/[node:title]')
+            ->save();
+        cache_clear_all();
+
+        // Add fields to content type Crowdfunding Offer
+
+        // Field SPPX ID 
+        $field = array(
+            'field_name' => 'field_sppx_id',
+            'type' => 'text',
+            'cardinality' => '1',
+          );
+        field_create_field($field);
+    
+        $instance = array(
+            'field_name' => 'field_sppx_id',
+            'entity_type' => 'node',
+            'label' => 'SPPX ID',
+            'bundle' => 'crowdfunding_offer',
+            'description' => st('SPPX ID'),
+            'widget' => array(
+                'type' => 'text_textfield'
+            ),
+            'display' => array(
+                'default' => array(
+                    'label' => st('SPPX ID'),
+                    'type' => 'text'
+                )
+            ),
+            'settings' => array(
+                'title' => 'none',
+                'title_value' => '',
+            )
+        );
+        field_create_instance($instance);
+        // Field SPPX UUID 
+        $field = array(
+            'field_name' => 'field_sppx_uuid',
+            'type' => 'text',
+            'cardinality' => '1',
+          );
+        field_create_field($field);
+    
+        $instance = array(
+            'field_name' => 'field_sppx_uuid',
+            'entity_type' => 'node',
+            'label' => 'SPPX UUID',
+            'bundle' => 'crowdfunding_offer',
+            'description' => st('SPPX UUID'),
+            'max_length' => 40,
+            'widget' => array(
+                'type' => 'text_textfield'
+            ),
+            'display' => array(
+                'default' => array(
+                    'label' => st('SPPX UUID'),
+                    'type' => 'text'
+                )
+            ),
+            'settings' => array(
+                'title' => 'none',
+                'title_value' => '',
+            )
+        );
+        field_create_instance($instance);
+        
+
+  
+
+    }

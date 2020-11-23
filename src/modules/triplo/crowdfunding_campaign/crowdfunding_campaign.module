@@ -1,0 +1,23 @@
+<?php
+
+/*/**
+ * Implements hook_cron()
+ */
+
+function crowdfunding_campaign_cron() {
+    global $user;
+    $uri = "https://test.sppx.io/api/v0/issue/1f764d1e-a65c-4c86-b4a8-1484c3534cae";
+    $response = file_get_contents($uri);
+    $data = json_decode($response, TRUE);
+    if ($status_code['code'] == 200){
+        $node = new stdClass();
+        $node->title = "My title";
+        $node->type = "crowdfunding_offer";
+        node_object_prepare($node); 
+        $node->uid = $user->uid; 
+        $node->status = 1;
+        $node = node_submit($node);
+        node_save($node);
+    }
+   
+}

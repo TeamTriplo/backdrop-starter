@@ -475,8 +475,9 @@
 
         $field = array(
             'field_name' => 'field_accredited',
-            'type' => 'list_boolean',
-            );
+            'type' => 'text',
+            'cardinality' => '1',
+          );
         field_create_field($field);
     
         $instance = array(
@@ -485,6 +486,15 @@
             'label' => 'Accredited',
             'bundle' => 'crowdfunding_offer',
             'description' => st('Accredited'),
+            'widget' => array(
+                'type' => 'text_textfield'
+            ),
+            'display' => array(
+                'default' => array(
+                    'label' => st('Accredited'),
+                    'type' => 'text'
+                )
+            ),
             'settings' => array(
                 'title' => 'none',
                 'title_value' => '',
@@ -496,8 +506,9 @@
 
         $field = array(
             'field_name' => 'field_reviewed',
-            'type' => 'list_boolean',
-            );
+            'type' => 'text',
+            'cardinality' => '1',
+          );
         field_create_field($field);
     
         $instance = array(
@@ -506,7 +517,15 @@
             'label' => 'Reviewed',
             'bundle' => 'crowdfunding_offer',
             'description' => st('Reviewed'),
-            // 'allowed_values' => array('on'=> 'YES', 'off'=> 'NO'),
+            'widget' => array(
+                'type' => 'text_textfield'
+            ),
+            'display' => array(
+                'default' => array(
+                    'label' => st('Reviewed'),
+                    'type' => 'text'
+                )
+            ),
             'settings' => array(
                 'title' => 'none',
                 'title_value' => '',
@@ -514,7 +533,8 @@
         );
         field_create_instance($instance);
 
-        // // Status
+
+        // Status
 
         $field = array(
             'field_name' => 'field_status',
@@ -536,109 +556,5 @@
         );
         field_create_instance($instance);
         
-        // Date start 
-        $field = array(
-            'field_name' => 'field_date_start',
-            'type' => 'text',
-            'cardinality' => '1',
-            );
-        field_create_field($field);
-    
-        $instance = array(
-            'field_name' => 'field_date_start',
-            'entity_type' => 'node',
-            'label' => 'Date Start',
-            'bundle' => 'crowdfunding_offer',
-            'description' => st('Date Start'),
-            'settings' => array(
-                'title' => 'none',
-                'title_value' => '',
-            )
-        );
-        field_create_instance($instance);
-
-        // Date End
-        $field = array(
-            'field_name' => 'field_date_end',
-            'type' => 'text',
-            'cardinality' => '1',
-            );
-        field_create_field($field);
-    
-        $instance = array(
-            'field_name' => 'field_date_end',
-            'entity_type' => 'node',
-            'label' => 'Date End',
-            'bundle' => 'crowdfunding_offer',
-            'description' => st('Date End'),
-            'settings' => array(
-                'title' => 'none',
-                'title_value' => '',
-            )
-        );
-        field_create_instance($instance);
-        
-        // Date Target 
-        $field = array(
-            'field_name' => 'field_date_target',
-            'type' => 'text',
-            'cardinality' => '1',
-            );
-        field_create_field($field);
-    
-        $instance = array(
-            'field_name' => 'field_date_target',
-            'entity_type' => 'node',
-            'label' => 'Date Target',
-            'bundle' => 'crowdfunding_offer',
-            'description' => st('Date Target'),
-            'settings' => array(
-                'title' => 'none',
-                'title_value' => '',
-            )
-        );
-        field_create_instance($instance);
-
-        // Caveat copyright
-        $field = array(
-            'field_name' => 'field_caveat_copyright',
-            'type' => 'text_long',
-            'cardinality' => '1',
-            );
-        field_create_field($field);
-    
-        $instance = array(
-            'field_name' => 'field_caveat_copyright',
-            'entity_type' => 'node',
-            'label' => 'Caveat copyright',
-            'bundle' => 'crowdfunding_offer',
-            'description' => st('Caveat copyright'),
-            'settings' => array(
-                'title' => 'none',
-                'title_value' => '',
-            )
-        );
-        field_create_instance($instance);
-
-        // Caveat warning
-
-        $field = array(
-            'field_name' => 'field_caveat_warning',
-            'type' => 'text_long',
-            'cardinality' => '1',
-            );
-        field_create_field($field);
-    
-        $instance = array(
-            'field_name' => 'field_caveat_warning',
-            'entity_type' => 'node',
-            'label' => 'Caveat warning',
-            'bundle' => 'crowdfunding_offer',
-            'description' => st('Caveat warning'),
-            'settings' => array(
-                'title' => 'none',
-                'title_value' => '',
-            )
-        );
-        field_create_instance($instance);
+       
     }

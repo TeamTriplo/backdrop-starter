@@ -41,12 +41,8 @@ dependencies[] = backup_migrate
 dependencies[] = devel
 dependencies[] = dashboard_plus
 dependencies[] = googleanalytics
-dependencies[] = views_bootstrap
-dependencies[] = submitted_by
-dependencies[] = configurable_block_style
 dependencies[] = manualcrop
 dependencies[] = imagesloaded
 dependencies[] = imgareaselect
 dependencies[] = metatag
-dependencies[] = triplo_feed
 

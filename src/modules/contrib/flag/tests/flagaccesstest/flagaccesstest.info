@@ -1,6 +1,0 @@
-name = Flag hook_flag_access test
-description = Tests for hook_flag_access
-backdrop = 1.x
-dependencies[] = flag
-package = Flags
-hidden = TRUE

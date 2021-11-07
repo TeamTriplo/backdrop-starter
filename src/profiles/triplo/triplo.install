@@ -156,7 +156,7 @@ function triplo_install() {
       'body' => array(
         LANGUAGE_NONE => array(
           array(
-            'value' => st('If you are having difficulties accessing or using your Backdrop CMS site, please contact us at info@triplo.co or visit us at http://backdrop.sites.triplo.co.'),
+            'value' => st('Welcome to this site.'),
           ),
         ),
       ),

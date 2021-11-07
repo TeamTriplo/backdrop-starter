@@ -1,0 +1,1 @@
+Replace the THEMENAME by your theme name and rename THEMENANE.starterkit to your_theme_name.info

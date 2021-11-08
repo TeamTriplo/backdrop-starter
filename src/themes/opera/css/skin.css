@@ -1258,8 +1258,38 @@ div.error:before {
   margin-bottom: 0;
 }
 
-
-
 .field-name-body{
   padding: 0 0 15px;
+}
+
+
+/* Promobox view on default home page */
+
+.view-card-grid .views-grid-box {
+  border: none;
+}
+
+.block-views-card-grid-block {
+  margin-top: -2em;
+  background-color: #f2f2f2;
+}
+
+/* Making views grid mobile friendly for 3, 4, or 5 columns */
+
+.views-view-grid-cols-3,
+.views-view-grid-cols-4,
+.views-view-grid-cols-5 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 48em) {
+  .views-view-grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .views-view-grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .views-view-grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

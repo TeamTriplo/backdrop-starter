@@ -7,6 +7,12 @@
     margin-bottom: 20px;
 }
 
+.views-view-grid .views-row, 
+.views-view-grid .views-grid-box {
+    padding: 1rem;
+    border: none;
+}
+
 
 
 

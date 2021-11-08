@@ -307,3 +307,7 @@ h2.block-title {
   display: block;
   font-weight: bold;
 }
+
+html body.page div.layout div.l-wrapper div .button a {
+  color: white;
+}

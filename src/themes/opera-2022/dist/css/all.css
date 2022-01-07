@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'FontName';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url("../fonts/font-name.woff2") format("woff2"), url("../fonts/font-name-lato-bold.woff") format("woff"); }
+
+/* stylelint-disable property-no-vendor-prefix */
+
+/*# sourceMappingURL=global.css.map */
+
+
+/*# sourceMappingURL=accordion.css.map */
+
+/**
+ * @file
+ * Component Layout CSS and some Page layout overrides
+ */
+
+/*# sourceMappingURL=layout.css.map */
+
+.view-portfolio {
+  background: red; }
+
+/*# sourceMappingURL=portfolio.css.map */

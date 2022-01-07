@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/layout/layout.scss"],"names":[],"mappings":"AAGA;;;GAGG","file":"layout.css","sourcesContent":["// Import site utilities.\n@import '../../global/utils/init';\n\n/**\n * @file\n * Component Layout CSS and some Page layout overrides\n */\n"]}

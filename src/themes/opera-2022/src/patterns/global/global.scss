@@ -1,0 +1,30 @@
+// Utilities
+//
+// Import variables and mixins
+// Should contain NO css output.
+// Only variables / mixins / settings.
+@import 'utils/init';
+
+// Import font-face fonts.
+//
+// This should only be imported and loaded once.
+@import 'fonts/fonts';
+
+
+// Base
+//
+// Plain html element styling. Shouldn't require
+// any classes.
+//
+// normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
+//
+// NOTE: While this uses normalize.css as a starting
+// point it has and will be updated as needed.
+// This should be ONLY plain html element styling.
+// There should be NO classes, IDs, etc.
+//=======================================================
+
+// StyleLint needs to ignore some Normalize specific things:
+/* stylelint-disable property-no-vendor-prefix */
+
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/

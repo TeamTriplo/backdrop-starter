@@ -1,0 +1,37 @@
+// Mixins for meadia query
+@mixin sm {
+  // Small devices
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+@mixin md {
+  // Medium devices
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+@mixin min-md {
+  // Medium devices
+  @media (min-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+@mixin lg {
+  // Large devices
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+@mixin xl {
+  // Extra large devices
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+@mixin xxl {
+  // Extra extra large devices
+  @media (max-width: #{$screen-xxl-max}) {
+    @content;
+  }
+}

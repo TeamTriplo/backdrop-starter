@@ -1,0 +1,26 @@
+// Font Size
+$font-x-lg	:42px;
+$font-lg	:30px;
+$font-x-md	:28px;
+$font-md	:24px;
+$font-x-sm	:22px;
+$font-sm	:20px;
+$font-x-tiny:18px;
+$font-tiny	:16px;
+
+// Media Screen
+$screen-sm-max: 550px;	// Small tablets and large smartphones (landscape view)
+$screen-md-max: 767px;	// Small tablets (portrait view)
+$screen-lg-max: 991px;	// Tablets and small desktops
+$screen-xl-max: 1199px;	// Large tablets and desktops
+$screen-xxl-max: 1445px;
+
+
+// Transition speeds.
+$standard--transition-speed: 300ms;
+$transition: $standard--transition-speed ease-in-out;
+$transition-fast: 0.1s linear;
+$motion-slow: 1000ms ease-in-out;
+$motion-default: 500ms ease-in-out;
+$motion-fast: 200ms ease-in-out;
+$motion-super-fast: 50ms ease-in-out;

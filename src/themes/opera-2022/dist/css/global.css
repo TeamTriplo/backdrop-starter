@@ -6,5 +6,7 @@
   src: url("../fonts/font-name.woff2") format("woff2"), url("../fonts/font-name-lato-bold.woff") format("woff"); }
 
 /* stylelint-disable property-no-vendor-prefix */
+.front .l-content {
+  background-color: none; }
 
 /*# sourceMappingURL=global.css.map */

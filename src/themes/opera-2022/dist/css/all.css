@@ -6,12 +6,21 @@
   src: url("../fonts/font-name.woff2") format("woff2"), url("../fonts/font-name-lato-bold.woff") format("woff"); }
 
 /* stylelint-disable property-no-vendor-prefix */
+.front .l-content {
+  background-color: none; }
 
 /*# sourceMappingURL=global.css.map */
 
 
 /*# sourceMappingURL=accordion.css.map */
 
+.block-views-blog-block {
+  background-color: rgba(216, 228, 213, 0.52); }
+  .block-views-blog-block .view-blog {
+    padding: 50px 0; }
+    .block-views-blog-block .view-blog .view-header {
+      text-align: center;
+      padding-bottom: 20px; }
 
 /*# sourceMappingURL=blog.css.map */
 

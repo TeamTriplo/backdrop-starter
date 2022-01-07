@@ -12,6 +12,14 @@
 
 /*# sourceMappingURL=accordion.css.map */
 
+footer {
+  display: flex; }
+  footer .block {
+    width: 33.33%;
+    text-align: center; }
+
+/*# sourceMappingURL=footer.css.map */
+
 /**
  * @file
  * Component Layout CSS and some Page layout overrides
@@ -20,6 +28,12 @@
 /*# sourceMappingURL=layout.css.map */
 
 .view-portfolio {
-  background: red; }
+  justify-content: center; }
+  .view-portfolio .view-header {
+    text-align: center; }
+  .view-portfolio .views-view-grid {
+    gap: 20px; }
+    .view-portfolio .views-view-grid .views-grid-box {
+      border: 1px solid; }
 
 /*# sourceMappingURL=portfolio.css.map */

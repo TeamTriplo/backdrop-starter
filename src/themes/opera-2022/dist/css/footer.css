@@ -2,6 +2,7 @@ footer {
   display: flex; }
   footer .block {
     width: 33.33%;
+    float: left;
     text-align: center; }
 
 /*# sourceMappingURL=footer.css.map */

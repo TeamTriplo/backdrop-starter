@@ -5,5 +5,9 @@
     .block-views-blog-block .view-blog .view-header {
       text-align: center;
       padding-bottom: 20px; }
+    .block-views-blog-block .view-blog .view-content {
+      grid-row-gap: 50px;
+      grid-template-columns: auto auto auto;
+      padding: 10px; }
 
 /*# sourceMappingURL=blog.css.map */

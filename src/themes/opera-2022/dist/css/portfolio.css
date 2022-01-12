@@ -2,6 +2,7 @@
   justify-content: center;
   padding: 50px 0; }
   .block-views-portfolio-block .view-portfolio .view-header {
+    color: black;
     text-align: center;
     padding-bottom: 20px; }
   .block-views-portfolio-block .view-portfolio .view-content .views-view-grid {
@@ -9,6 +10,8 @@
     .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {
       border: 1px solid rgba(216, 228, 213, 0.52);
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
+      color: black; }
   .block-views-portfolio-block .view-portfolio .view-footer p {
     padding-top: 30px; }
     .block-views-portfolio-block .view-portfolio .view-footer p a {

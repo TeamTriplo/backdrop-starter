@@ -1,0 +1,32 @@
+.slider_wrapper {
+	overflow: hidden;
+	justify-content: center;
+	width: 100%;
+	.block--inner-wrapper {
+		max-width: 1440px;
+		margin: 0px;
+		padding: 0px;
+		.flexslider  {
+			margin: 0;
+			border: 0;
+			border-radius: 0;
+			.field-content {
+				img {
+					height: 500px;
+				}
+			}
+			.slider-body {
+
+			}
+		}
+	}
+}
+.front {
+	.l-content {
+		.block{
+			&.slider_wrapper {
+				padding: 0;
+			}
+		}
+	}
+}

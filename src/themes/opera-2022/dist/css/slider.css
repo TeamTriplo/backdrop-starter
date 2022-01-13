@@ -12,6 +12,33 @@
       border-radius: 0; }
       .slider_wrapper .block--inner-wrapper .flexslider .field-content img {
         height: 500px; }
+        .slider_wrapper .block--inner-wrapper .flexslider .field-content img:before {
+          background: rgba(0, 0, 0, 0.5); }
+      .slider_wrapper .block--inner-wrapper .flexslider .slider-title {
+        font-size: 38px;
+        font-weight: 600;
+        position: absolute;
+        top: 30%;
+        left: 60%; }
+      .slider_wrapper .block--inner-wrapper .flexslider .slider-body {
+        font-size: 20px;
+        max-width: 480px;
+        position: absolute;
+        top: 40%;
+        left: 60%; }
+      .slider_wrapper .block--inner-wrapper .flexslider .flex-next {
+        display: none; }
+      .slider_wrapper .block--inner-wrapper .flexslider .flex-prev {
+        display: none; }
+      .slider_wrapper .block--inner-wrapper .flexslider .flex-control-nav {
+        z-index: 4;
+        bottom: 5%; }
+        .slider_wrapper .block--inner-wrapper .flexslider .flex-control-nav li {
+          margin: 0 10px; }
+          .slider_wrapper .block--inner-wrapper .flexslider .flex-control-nav li a {
+            padding: 6px;
+            background-color: white;
+            opacity: .5; }
 
 .front .l-content .block.slider_wrapper {
   padding: 0; }

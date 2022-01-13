@@ -11,7 +11,11 @@
       border: 1px solid rgba(216, 228, 213, 0.52);
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
     .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
-      color: black; }
+      color: black;
+      display: block;
+      width: 100%;
+      background: lightblue;
+      padding: 10px; }
   .block-views-portfolio-block .view-portfolio .view-footer p {
     padding-top: 30px; }
     .block-views-portfolio-block .view-portfolio .view-footer p a {
@@ -27,6 +31,7 @@
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
       transition: all .3s ease; }
       .block-views-portfolio-block .view-portfolio .view-footer p a:hover {
+        color: #000000;
         background-color: rgba(216, 228, 213, 0.52);
         transition: all 1s; }
 

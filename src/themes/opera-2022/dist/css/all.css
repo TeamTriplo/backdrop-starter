@@ -90,6 +90,8 @@ header .l-header-inner .block-system-header .block--inner-wrapper .block-content
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
       transition: all .3s ease; }
       .block-views-portfolio-block .view-portfolio .view-footer p a:hover {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
         color: #000000;
         background-color: rgba(216, 228, 213, 0.52);
         transition: all 1s; }
@@ -116,7 +118,7 @@ header .l-header-inner .block-system-header .block--inner-wrapper .block-content
         font-size: 38px;
         font-weight: 600;
         position: absolute;
-        top: 30%;
+        top: 28%;
         left: 60%; }
       .slider_wrapper .block--inner-wrapper .flexslider .slider-body {
         font-size: 20px;

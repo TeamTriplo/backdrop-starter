@@ -40,6 +40,8 @@
 				    -webkit-transition: all .3s ease;
 				    transition: all .3s ease;
 					&:hover {
+						
+    					transform: translateX(0px);
 						color: #000000;
 						background-color: rgba(216,228,213,.52);
 						-webkit-transition: all 1s;

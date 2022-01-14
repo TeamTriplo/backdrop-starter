@@ -31,8 +31,6 @@
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
       transition: all .3s ease; }
       .block-views-portfolio-block .view-portfolio .view-footer p a:hover {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
         color: #000000;
         background-color: rgba(216, 228, 213, 0.52);
         transition: all 1s; }

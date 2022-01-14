@@ -40,8 +40,12 @@ body {
       grid-template-columns: auto auto auto;
       padding: 10px; }
 
+.block-views-blog-block-1 .block--inner-wrapper .view-header {
+  text-align: center;
+  padding-bottom: 20px; }
+
 .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row {
-  margin-bottom: 15px; }
+  margin-bottom: 0px; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .field-content {
     display: grid;
     grid-template-columns: 50% 50%; }
@@ -200,7 +204,7 @@ header .header-menu li a {
             background-color: white;
             opacity: .5; }
 
-.front .l-content .block.slider_wrapper {
+.front .l-top .block.slider_wrapper {
   padding: 0; }
 
 /*# sourceMappingURL=slider.css.map */

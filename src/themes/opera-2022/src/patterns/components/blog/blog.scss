@@ -35,9 +35,13 @@
 
 .block-views-blog-block-1 {
 	.block--inner-wrapper {
+		.view-header {
+			text-align: center;
+			padding-bottom: 20px;
+		}
 		.view-content {
 			.views-row{
-				margin-bottom: 15px;
+				margin-bottom: 0px;
 				.field-content {
 					display: grid;
 					grid-template-columns:50% 50%;

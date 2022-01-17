@@ -1,43 +1,50 @@
-.block-views-portfolio-block .view-portfolio {
-  justify-content: center;
-  padding: 50px 0; }
-  .block-views-portfolio-block .view-portfolio .view-header {
-    color: black;
-    text-align: center;
-    padding-bottom: 20px; }
-  .block-views-portfolio-block .view-portfolio .view-content .views-view-grid {
-    gap: 20px; }
-    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {
-      border: 1px solid rgba(216, 228, 213, 0.52);
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
-    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image {
-      overflow: hidden; }
-      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img {
-        transition: all 1s;
-        vertical-align: top;
-        width: 100%; }
-        .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img:hover {
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1); }
-    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
-      padding: 10px; }
-  .block-views-portfolio-block .view-portfolio .view-footer p {
-    padding-top: 30px; }
-    .block-views-portfolio-block .view-portfolio .view-footer p a {
-      background-color: #6dc8be;
-      border-radius: 50px;
-      border: 1px solid black;
-      color: #f4f4f4;
-      font-size: 16px;
-      text-decoration: none;
-      padding: 12px 40px;
-      border: 2px solid #6dc8be;
-      /* padding: 5px 20px; */
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-      transition: all .3s ease; }
-      .block-views-portfolio-block .view-portfolio .view-footer p a:hover {
-        color: #000000;
-        background-color: rgba(216, 228, 213, 0.52);
-        transition: all 1s; }
+.block-views-portfolio-block {
+  padding-bottom: 50px !important; }
+  .block-views-portfolio-block .view-portfolio {
+    position: relative;
+    padding: 0 0 50px; }
+    .block-views-portfolio-block .view-portfolio .view-header {
+      color: black;
+      text-align: center;
+      padding: 0;
+      padding-bottom: 20px; }
+    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid {
+      gap: 20px; }
+      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {
+        border: 1px solid rgba(216, 228, 213, 0.52);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image {
+        overflow: hidden; }
+        .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img {
+          transition: all 1s;
+          vertical-align: top;
+          width: 100%; }
+          .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
+        padding: 10px; }
+    .block-views-portfolio-block .view-portfolio .view-footer {
+      position: absolute;
+      bottom: -20px;
+      left: 42%; }
+      .block-views-portfolio-block .view-portfolio .view-footer p {
+        padding-top: 30px; }
+        .block-views-portfolio-block .view-portfolio .view-footer p a {
+          background-color: #6dc8be;
+          border-radius: 50px;
+          border: 1px solid black;
+          color: #f4f4f4;
+          font-size: 16px;
+          text-decoration: none;
+          padding: 12px 40px;
+          border: 2px solid #6dc8be;
+          /* padding: 5px 20px; */
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          transition: all .3s ease; }
+          .block-views-portfolio-block .view-portfolio .view-footer p a:hover {
+            color: #000000;
+            background-color: rgba(216, 228, 213, 0.52);
+            transition: all 1s; }
 
 /*# sourceMappingURL=portfolio.css.map */

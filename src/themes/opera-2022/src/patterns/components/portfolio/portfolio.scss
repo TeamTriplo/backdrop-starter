@@ -1,16 +1,12 @@
 .block-views-portfolio-block {
-
+	padding-bottom: 50px !important;
 	.view-portfolio {
-		justify-content:center;
-<<<<<<< HEAD
-		padding-top: 50px;
-
-=======
-		padding: 50px 0;
->>>>>>> 0e05d42ec59b3fe7878eace8e2c3d6b951b50133
+		position: relative;
+		padding: 0 0 50px;
 		.view-header {
 			color: black;
 			text-align: center;
+			padding: 0;
 			padding-bottom: 20px;
 		}
 
@@ -44,7 +40,9 @@
 			}
 		}
 		.view-footer {
-
+			    position: absolute;
+			    bottom: -20px;
+			    left: 42%;
 			p {
 				padding-top: 30px;
 

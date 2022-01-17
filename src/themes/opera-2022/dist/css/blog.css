@@ -46,10 +46,12 @@
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details {
         max-width: 400px; }
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details a {
+          color: #000000;
           font-size: 22px;
           font-weight: 500;
           text-decoration: none; }
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .role {
+          color: #000000;
           font-size: 14px;
           padding-top: 20px; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even {
@@ -62,10 +64,12 @@
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details {
         max-width: 400px; }
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details a {
+          color: #000000;
           font-size: 22px;
           font-weight: 500;
           text-decoration: none; }
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .role {
+          color: #000000;
           font-size: 14px;
           padding-top: 20px; }
 

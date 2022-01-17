@@ -1,5 +1,9 @@
 @import '../../global/utils/init';
-header {
+.l-header {
+	position: fixed;
+    z-index: 999;
+    width: 100%;
+    background: rgba(138,207,201,0.8);
 	.header-site-name-wrapper {
 		img {
 			max-height: 90px;
@@ -29,3 +33,5 @@ header {
 		}
 	}
 }
+
+

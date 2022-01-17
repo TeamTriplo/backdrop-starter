@@ -1,26 +1,33 @@
 .block-views-services-block {
-
-	.view-content {
-		img {
-			width: auto;
-		}
-		.field-content {
-			display: flex;
-		    place-items: center;
-		    flex-direction: column;
-			.image {
-				width: 100px;
-				height: 100px;
+	.view-services {
+		padding: 50px 0;
+		.view-content {
+			img {
+				width: auto;
 			}
-			.service-content {
-				text-align: center;
-				.title {
-					color: #6dc8be;
-					font-size: 22px;
+			.field-content {
+				display: flex;
+			    flex-direction: column;
+				.image {
+					width: 100px;
+					height: 90px;
 				}
-				.body {
-					color: rgb(104, 104, 104);
+				.service-content {
 					text-align: left;
+					padding-bottom: 40px;
+					.title {
+						color: #6dc8be;
+						font-size: 22px;
+						line-height: 1em;
+						padding-bottom: 20px;
+						a {
+							text-decoration: none;
+						}
+					}
+					.body {
+						color: rgb(104, 104, 104);
+						text-align: left;
+					}
 				}
 			}
 		}

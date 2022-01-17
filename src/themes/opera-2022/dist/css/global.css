@@ -12,14 +12,16 @@
 body {
   font-family: Jost,sans-serif; }
 
-.view-header .global_header {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  padding: 0;
+.view-header {
   padding-bottom: 20px; }
-  .view-header .global_header .header {
-    text-align: left; }
-  .view-header .global_header .paragraph {
-    text-align: left; }
+  .view-header .global_header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 0;
+    padding-bottom: 20px; }
+    .view-header .global_header .header {
+      text-align: left; }
+    .view-header .global_header .paragraph {
+      text-align: left; }
 
 /*# sourceMappingURL=global.css.map */

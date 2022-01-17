@@ -12,15 +12,17 @@
 body {
   font-family: Jost,sans-serif; }
 
-.view-header .global_header {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  padding: 0;
+.view-header {
   padding-bottom: 20px; }
-  .view-header .global_header .header {
-    text-align: left; }
-  .view-header .global_header .paragraph {
-    text-align: left; }
+  .view-header .global_header {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 0;
+    padding-bottom: 20px; }
+    .view-header .global_header .header {
+      text-align: left; }
+    .view-header .global_header .paragraph {
+      text-align: left; }
 
 /*# sourceMappingURL=global.css.map */
 
@@ -144,8 +146,7 @@ header .header-menu li a {
     .block-views-portfolio-block .view-portfolio .view-header {
       color: black;
       text-align: center;
-      padding: 0;
-      padding-bottom: 20px; }
+      padding: 0; }
     .block-views-portfolio-block .view-portfolio .view-content .views-view-grid {
       gap: 20px; }
       .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {

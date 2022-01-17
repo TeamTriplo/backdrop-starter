@@ -1,0 +1,28 @@
+.block-views-services-block {
+
+	.view-content {
+		img {
+			width: auto;
+		}
+		.field-content {
+			display: flex;
+		    place-items: center;
+		    flex-direction: column;
+			.image {
+				width: 100px;
+				height: 100px;
+			}
+			.service-content {
+				text-align: center;
+				.title {
+					color: #6dc8be;
+					font-size: 22px;
+				}
+				.body {
+					color: rgb(104, 104, 104);
+					text-align: left;
+				}
+			}
+		}
+	}
+}

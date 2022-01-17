@@ -1,38 +1,50 @@
 .block-views-portfolio-block {
+	padding-bottom: 50px !important;
 	.view-portfolio {
-		justify-content:center;
-		padding: 50px 0;
+		position: relative;
+		padding: 0 0 50px;
+		.view-header {
+			color: black;
+			text-align: center;
+			padding: 0;
+			padding-bottom: 20px;
+		}
 		.view-content {
+
 			.views-view-grid {
 				gap:20px;
+
 				.views-grid-box {
 					border: 1px solid rgba(216,228,213,.52);
 					box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 				}
+
 				.views-field-field-portfolio-image {
 					overflow: hidden;
+
 					img {
 						-webkit-transition: all 1s;
 					    transition: all 1s;
 					    vertical-align: top;
 					    width: 100%;
+
 						&:hover {
 							transform: scale(1.1);
 						}
 					}
 				}
 				.views-field-title {
-					color: black;
-					display: block;
-				    width: 100%;
-				    background: lightblue;
 				    padding: 10px;
 				}
 			}
 		}
 		.view-footer {
+			    position: absolute;
+			    bottom: -20px;
+			    left: 42%;
 			p {
 				padding-top: 30px;
+
 				a {
 					background-color: #6dc8be;
 					border-radius: 50px;
@@ -46,6 +58,7 @@
 				    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 				    -webkit-transition: all .3s ease;
 				    transition: all .3s ease;
+				    
 					&:hover {
 						color: #000000;
 						background-color: rgba(216,228,213,.52);

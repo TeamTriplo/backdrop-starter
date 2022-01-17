@@ -15,6 +15,7 @@ body {
 .view-header .global_header {
   display: grid;
   grid-template-columns: 40% 60%;
+  padding: 0;
   padding-bottom: 20px; }
   .view-header .global_header .header {
     text-align: left; }

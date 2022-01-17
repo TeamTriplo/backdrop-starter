@@ -35,10 +35,6 @@
 
 .block-views-blog-block-1 {
 	.block--inner-wrapper {
-		.view-header {
-			text-align: center;
-			padding-bottom: 20px;
-		}
 		.view-content {
 			.views-row{
 				margin-bottom: 0px;
@@ -65,16 +61,19 @@
 						.card-list-right {
 							display: grid;
 							place-items: center;
-						    text-align: center;
+						    text-align: left;
 							padding: 0 15px;
-
-							a {
-								font-size: 16px;
-								font-weight: bold;	
-								text-decoration: none;
-							}
-							.role {
-								font-size: 14px;
+							.card-list-details {
+								max-width: 400px;
+								a {
+									font-size: 22px;
+	    							font-weight: 500;	
+									text-decoration: none;
+								}
+								.role {
+									font-size: 14px;
+									padding-top: 20px;
+								}
 							}
 						}
 					}
@@ -85,16 +84,19 @@
 						.card-list-right {
 							display: grid;
 							place-items: center;
-						    text-align: center;
+						    text-align: left;
 							padding: 0 15px;
-
-							a {
-								font-size: 16px;
-								font-weight: bold;	
-								text-decoration: none;
-							}
-							.role {
-								font-size: 14px;
+							.card-list-details {
+								max-width: 400px;
+								a {
+									font-size: 22px;
+	    							font-weight: 500;	
+									text-decoration: none;
+								}
+								.role {
+									font-size: 14px;
+									padding-top: 20px;
+								}
 							}
 						}
 					}

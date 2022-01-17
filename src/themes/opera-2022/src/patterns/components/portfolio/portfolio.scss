@@ -1,7 +1,7 @@
 .block-views-portfolio-block {
 	.view-portfolio {
 		justify-content:center;
-		padding: 50px 0;
+		padding-top: 50px;
 		.view-header {
 			color: black;
 			text-align: center;
@@ -13,6 +13,17 @@
 				.views-grid-box {
 					border: 1px solid rgba(216,228,213,.52);
 					box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+				}
+				.views-field-field-portfolio-image {
+					img {
+						-webkit-transition: all 1s;
+					    transition: all 1s;
+					    vertical-align: top;
+					    width: 100%;
+						&:hover {
+							transform: scale(1.1);
+						}
+					}
 				}
 				.views-field-title {
 					color: black;

@@ -45,7 +45,8 @@ body {
   padding-bottom: 20px; }
 
 .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row {
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  margin-bottom: 15px; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .field-content {
     display: grid;
     grid-template-columns: 50% 50%; }
@@ -54,36 +55,36 @@ body {
     height: 100%;
     max-height: 400px;
     min-height: 400px; }
-  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-left {
-    order: 1; }
-    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-left img {
-      width: 100%; }
-  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right {
-    border: 1px solid #80808026;
-    border-right: 0;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 0 15px; }
-    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right a {
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none; }
-    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .role {
-      font-size: 14px; }
-  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right {
-    border: 1px solid #80808026;
-    border-left: 0;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 0 15px; }
-    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right a {
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none; }
-    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .role {
-      font-size: 14px; }
+  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd {
+    background: #f5d23b; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-left {
+      order: 1; }
+      .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-left img {
+        width: 100%; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 0 15px; }
+      .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right a {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none; }
+      .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .role {
+        font-size: 14px; }
+  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even {
+    background: #cf5840; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 0 15px; }
+      .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right a {
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none; }
+      .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .role {
+        font-size: 14px; }
 
 /*# sourceMappingURL=blog.css.map */
 
@@ -125,7 +126,7 @@ header .header-menu li a {
 
 .block-views-portfolio-block .view-portfolio {
   justify-content: center;
-  padding: 50px 0; }
+  padding-top: 50px; }
   .block-views-portfolio-block .view-portfolio .view-header {
     color: black;
     text-align: center;
@@ -135,6 +136,13 @@ header .header-menu li a {
     .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {
       border: 1px solid rgba(216, 228, 213, 0.52);
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img {
+      transition: all 1s;
+      vertical-align: top;
+      width: 100%; }
+      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); }
     .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
       color: black;
       display: block;

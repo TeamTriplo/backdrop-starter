@@ -20,10 +20,6 @@
           -webkit-transform: scale(1.1);
           transform: scale(1.1); }
     .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
-      color: black;
-      display: block;
-      width: 100%;
-      background: lightblue;
       padding: 10px; }
   .block-views-portfolio-block .view-portfolio .view-footer p {
     padding-top: 30px; }

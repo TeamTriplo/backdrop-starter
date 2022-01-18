@@ -133,7 +133,7 @@ footer {
       display: block;
       width: 0%;
       height: 2px;
-      background: #bad634;
+      background: #cf5840;
       transition: width .5s;
       margin-top: 10px; }
     .l-header .header-menu li a:hover:after {

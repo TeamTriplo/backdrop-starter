@@ -172,6 +172,7 @@ footer {
             -webkit-transform: scale(1.1);
             transform: scale(1.1); }
       .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
+        color: #000000;
         padding: 10px; }
     .block-views-portfolio-block .view-portfolio .view-footer {
       position: absolute;
@@ -273,6 +274,18 @@ footer {
 
 .view-team {
   margin: 100px 0; }
+  .view-team .views-view-grid {
+    gap: 25px; }
+    .view-team .views-view-grid .views-grid-box {
+      padding: 0; }
+      .view-team .views-view-grid .views-grid-box .views-field-nothing {
+        border: 1px solid #e0d9d9ba;
+        border-top: 0; }
+        .view-team .views-view-grid .views-grid-box .views-field-nothing h3 {
+          padding: 15px 15px 0; }
+        .view-team .views-view-grid .views-grid-box .views-field-nothing p {
+          padding: 0 15px;
+          margin-bottom: 15px; }
 
 /*# sourceMappingURL=team.css.map */
 

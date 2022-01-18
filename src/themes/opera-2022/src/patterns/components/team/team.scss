@@ -1,3 +1,20 @@
 .view-team {
 	margin: 100px 0;
+	.views-view-grid {
+		gap:25px;
+		.views-grid-box {
+			padding: 0;
+			.views-field-nothing {
+				border: 1px solid #e0d9d9ba;
+				border-top: 0;
+				h3 {
+					padding: 15px 15px 0;
+				}
+				p {
+					padding: 0 15px;
+		    		margin-bottom: 15px;
+				}
+			}
+		}
+	}
 }

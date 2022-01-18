@@ -20,8 +20,10 @@ body {
     padding: 0;
     padding-bottom: 20px; }
     .view-header .global_header .header {
+      color: #000000;
       text-align: left; }
     .view-header .global_header .paragraph {
+      color: #000000;
       text-align: left; }
 
 /*# sourceMappingURL=global.css.map */
@@ -186,7 +188,6 @@ footer {
           text-decoration: none;
           padding: 12px 40px;
           border: 2px solid #6dc8be;
-          /* padding: 5px 20px; */
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
           transition: all .3s ease; }
           .block-views-portfolio-block .view-portfolio .view-footer p a:hover {
@@ -291,24 +292,19 @@ footer {
     background: none;
     border: 0; }
     .block-block-about-triplo .block--inner-wrapper .block-content .button a {
-      font-size: 18px;
-      border-radius: 50px;
       background-color: #6dc8be;
-      color: white;
+      border-radius: 50px;
+      border: 1px solid black;
+      color: #f4f4f4;
+      font-size: 16px;
       text-decoration: none;
-      border: #6dc8be;
       padding: 12px 40px;
-      text-align: center;
-      transition: all 0.3s ease-in-out 0s;
-      position: relative; }
+      border: 2px solid #6dc8be;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      transition: all .3s ease; }
       .block-block-about-triplo .block--inner-wrapper .block-content .button a:hover {
-        color: #ed1919;
-        background-color: black; }
-        .block-block-about-triplo .block--inner-wrapper .block-content .button a:hover:before {
-          border-radius: 10px;
-          -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-          -webkit-transform: scale(1);
-          transform: scale(1); }
+        color: #000000;
+        background-color: rgba(216, 228, 213, 0.52);
+        transition: all 1s; }
 
 /*# sourceMappingURL=triplo.css.map */

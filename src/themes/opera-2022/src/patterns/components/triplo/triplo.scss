@@ -27,24 +27,22 @@
 				background: none;
 				border: 0;
 				a {
-				    font-size: 18px;
-				    border-radius: 50px;
-				    background-color: #6dc8be;
-				    color: white;
-				    text-decoration: none;
-				    border: #6dc8be;;
-				    padding: 12px 40px;
-				    text-align: center;
-				    transition: all 0.3s ease-in-out 0s;
-				    position: relative;
+				 	background-color: #6dc8be;
+					border-radius: 50px;
+					border: 1px solid black;
+					color: #f4f4f4;
+					font-size: 16px;
+					text-decoration: none;
+					padding: 12px 40px;
+				    border: 2px solid #6dc8be;
+				    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+				    -webkit-transition: all .3s ease;
+				    transition: all .3s ease;  
 					&:hover {
-						color: rgb(237, 25, 25);
-    					background-color: black;
-	    					&:before {
-							border-radius: 10px;
-						    transform: translateX(0px);
-						    transform: scale(1);
-						}
+						color: #000000;
+						background-color: rgba(216,228,213,.52);
+						-webkit-transition: all 1s;
+						transition: all 1s;
 					}
 				}
 			}	

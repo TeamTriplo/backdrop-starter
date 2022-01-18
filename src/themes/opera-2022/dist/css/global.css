@@ -20,8 +20,10 @@ body {
     padding: 0;
     padding-bottom: 20px; }
     .view-header .global_header .header {
+      color: #000000;
       text-align: left; }
     .view-header .global_header .paragraph {
+      color: #000000;
       text-align: left; }
 
 /*# sourceMappingURL=global.css.map */

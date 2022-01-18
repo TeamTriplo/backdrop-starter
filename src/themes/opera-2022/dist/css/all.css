@@ -134,7 +134,7 @@ footer {
       width: 0%;
       height: 2px;
       background: #bad634;
-      transition: width .5s;
+      transition: width .2s;
       margin-top: 10px; }
     .l-header .header-menu li a:hover:after {
       width: 100%; }
@@ -270,6 +270,11 @@ footer {
   padding: 0; }
 
 /*# sourceMappingURL=slider.css.map */
+
+.view-team {
+  margin: 100px 0; }
+
+/*# sourceMappingURL=team.css.map */
 
 .block-block-about-triplo .block--inner-wrapper {
   padding: 50px 0; }

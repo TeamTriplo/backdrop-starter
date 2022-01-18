@@ -15,7 +15,8 @@
         color: #6dc8be;
         font-size: 22px;
         line-height: 1em;
-        padding-bottom: 20px; }
+        padding-bottom: 20px;
+        margin-top: 15px; }
         .block-views-services-block .view-services .view-content .field-content .service-content .title a {
           text-decoration: none; }
       .block-views-services-block .view-services .view-content .field-content .service-content .body {

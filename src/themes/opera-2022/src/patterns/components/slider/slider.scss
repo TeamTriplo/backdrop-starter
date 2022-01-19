@@ -11,31 +11,38 @@
 			margin: 0;
 			border: 0;
 			border-radius: 0;
-			.field-content {
-				&:after {
-					background-color: rgba(0,0,0, 0.5);
-				}
-				img {
-					max-height: 720px;
-					&:before {
-						background: rgba(0,0,0,0.5);
+			img {
+				max-height: 720px;
+			}
+			.views-field-nothing{
+				background: rgba(0, 0, 0, 0.5);
+				bottom: 0;
+				color: #FFFFFF;
+				font-size: 16px;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				width: 100%;
+				.field-content {
+					.slider-content {
+						.slider-title {
+							font-size: 38px;
+							font-weight: 600;
+							position: absolute;
+							top: 38%;
+			    			left: 60%;
+						}
+						.slider-body {
+							font-size: 20px;
+							max-width: 480px;
+							position: absolute;
+							top: 50%;
+							left: 60%;
+						}
 					}
 				}
 			}
-			.slider-title {
-				font-size: 38px;
-				font-weight: 600;
-				position: absolute;
-				top: 38%;
-    			left: 60%;
-			}
-			.slider-body {
-				font-size: 20px;
-				max-width: 480px;
-				position: absolute;
-				top: 50%;
-				left: 60%;
-			}
+			
 			.flex-next {
 				display: none;
 			}

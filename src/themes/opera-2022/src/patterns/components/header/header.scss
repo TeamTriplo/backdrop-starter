@@ -3,7 +3,7 @@
 	position: fixed;
     z-index: 999;
     width: 100%;
-    background: rgba(138,207,201,0.8);
+    background: rgba(230,224,224,0.6);
 	.header-site-name-wrapper {
 		img {
 			max-height: 90px;
@@ -21,7 +21,7 @@
 				    width: 0%;
 				    height: 2px;
 				    background: #cf5840;
-				    transition: width .5s;
+				    transition: width .2s;
 				    margin-top: 10px;
 				}
 				&:hover {

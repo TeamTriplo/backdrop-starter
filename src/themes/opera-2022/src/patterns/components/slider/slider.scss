@@ -12,11 +12,12 @@
 			border: 0;
 			border-radius: 0;
 			.field-content {
+				&:after {
+					background-color: rgba(0,0,0, 0.5);
+				}
 				img {
 					height: 600px;
-					&:before {
-						background: rgba(0,0,0,0.5);
-					}
+					
 				}
 			}
 			.slider-title {
@@ -54,6 +55,7 @@
 		}
 	}
 }
+
 
 
 .front {

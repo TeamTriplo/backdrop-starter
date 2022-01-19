@@ -106,6 +106,9 @@ body {
           font-size: 14px;
           padding-top: 20px; }
 
+.view-id-blog {
+  padding: 100px 0; }
+
 /*# sourceMappingURL=blog.css.map */
 
 footer {
@@ -121,7 +124,7 @@ footer {
   position: fixed;
   z-index: 999;
   width: 100%;
-  background: rgba(138, 207, 201, 0.8); }
+  background: rgba(230, 224, 224, 0.6); }
   .l-header .header-site-name-wrapper img {
     max-height: 90px; }
   .l-header .header-menu li a {
@@ -134,7 +137,7 @@ footer {
       width: 0%;
       height: 2px;
       background: #cf5840;
-      transition: width .5s;
+      transition: width .2s;
       margin-top: 10px; }
     .l-header .header-menu li a:hover:after {
       width: 100%; }
@@ -237,10 +240,10 @@ footer {
       margin: 0;
       border: 0;
       border-radius: 0; }
+      .slider_wrapper .block--inner-wrapper .flexslider .field-content:after {
+        background-color: rgba(0, 0, 0, 0.5); }
       .slider_wrapper .block--inner-wrapper .flexslider .field-content img {
         height: 600px; }
-        .slider_wrapper .block--inner-wrapper .flexslider .field-content img:before {
-          background: rgba(0, 0, 0, 0.5); }
       .slider_wrapper .block--inner-wrapper .flexslider .slider-title {
         font-size: 38px;
         font-weight: 600;

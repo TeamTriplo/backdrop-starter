@@ -282,7 +282,7 @@ footer {
 /*# sourceMappingURL=slider.css.map */
 
 .view-team {
-  margin: 100px 0; }
+  margin: 100px auto; }
   .view-team .views-view-grid {
     gap: 25px; }
     .view-team .views-view-grid .views-grid-box {

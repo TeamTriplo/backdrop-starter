@@ -110,10 +110,22 @@ body {
           font-size: 14px;
           padding-top: 20px; }
 
-.view-id-blog {
-  padding: 100px 0; }
-
 /*# sourceMappingURL=blog.css.map */
+
+.block-webform-client-block-50 {
+  width: 50%;
+  float: left; }
+  .block-webform-client-block-50 .block--inner-wrapper .block-content .webform-component--message {
+    width: 600px; }
+
+.block-block-where-are-we {
+  width: 50%;
+  float: left;
+  padding-left: 100px; }
+  .block-block-where-are-we .block--inner-wrapper .block-content h3 {
+    padding-top: 50px; }
+
+/*# sourceMappingURL=contact.css.map */
 
 footer {
   display: flex; }
@@ -245,8 +257,8 @@ footer {
       border: 0;
       border-radius: 0; }
       .slider_wrapper .block--inner-wrapper .flexslider img {
-        max-height: 720px; }
-      .slider_wrapper .block--inner-wrapper .flexslider .views-field-nothing {
+        height: 720px; }
+      .slider_wrapper .block--inner-wrapper .flexslider .field-content .views-field-nothing {
         background: rgba(0, 0, 0, 0.5);
         bottom: 0;
         color: #FFFFFF;
@@ -255,13 +267,13 @@ footer {
         left: 0;
         position: absolute;
         width: 100%; }
-        .slider_wrapper .block--inner-wrapper .flexslider .views-field-nothing .field-content .slider-content .slider-title {
+        .slider_wrapper .block--inner-wrapper .flexslider .field-content .views-field-nothing .field-content .slider-content .slider-title {
           font-size: 38px;
           font-weight: 600;
           position: absolute;
           top: 38%;
           left: 60%; }
-        .slider_wrapper .block--inner-wrapper .flexslider .views-field-nothing .field-content .slider-content .slider-body {
+        .slider_wrapper .block--inner-wrapper .flexslider .field-content .views-field-nothing .field-content .slider-content .slider-body {
           font-size: 20px;
           max-width: 480px;
           position: absolute;

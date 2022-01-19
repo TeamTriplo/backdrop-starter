@@ -287,7 +287,8 @@ footer {
 /*# sourceMappingURL=slider.css.map */
 
 .view-team {
-  margin: 100px auto; }
+  margin: 100px auto;
+  max-width: 1140px; }
   .view-team .views-view-grid {
     gap: 25px; }
     .view-team .views-view-grid .views-grid-box {

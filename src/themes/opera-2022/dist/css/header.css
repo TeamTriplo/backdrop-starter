@@ -1,7 +1,6 @@
 .l-header {
   z-index: 999;
-  width: 100%;
-  background: rgba(230, 224, 224, 0.6); }
+  width: 100%; }
   .l-header .header-site-name-wrapper img {
     max-height: 90px; }
   .l-header .header-menu li a {

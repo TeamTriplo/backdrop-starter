@@ -1,13 +1,25 @@
 .block-webform-client-block-50 {
-  width: 50%;
   float: left; }
   .block-webform-client-block-50 .block--inner-wrapper .block-content .webform-component--message {
     width: 600px; }
+  .block-webform-client-block-50 .form-actions input {
+    background-color: #6dc8be;
+    border-radius: 50px;
+    border: 1px solid black;
+    color: #f4f4f4;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0px 40px;
+    border: 2px solid #6dc8be;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all .3s ease; }
+    .block-webform-client-block-50 .form-actions input:hover {
+      color: #000000;
+      background-color: rgba(216, 228, 213, 0.52);
+      transition: all 1s; }
 
 .block-block-where-are-we {
-  width: 50%;
-  float: left;
-  padding-left: 100px; }
+  float: left; }
   .block-block-where-are-we .block--inner-wrapper .block-content h3 {
     padding-top: 50px; }
 

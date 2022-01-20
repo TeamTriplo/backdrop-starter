@@ -1,11 +1,14 @@
 .view-team {
-  margin: 100px auto;
-  max-width: 1140px; }
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 100px 0; }
   .view-team .views-view-grid {
     gap: 25px; }
     .view-team .views-view-grid .views-grid-box {
       padding: 0; }
       .view-team .views-view-grid .views-grid-box .views-field-nothing {
+        background: white;
         border: 1px solid #e0d9d9ba;
         border-top: 0; }
         .view-team .views-view-grid .views-grid-box .views-field-nothing h3 {

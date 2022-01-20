@@ -1,11 +1,14 @@
 .view-team {
-	margin: 100px auto;
+	background-color: #f0f0f0;
+	margin: 0 auto;
 	max-width: 1140px;
+	padding: 100px 0;
 	.views-view-grid {
 		gap:25px;
 		.views-grid-box {
 			padding: 0;
 			.views-field-nothing {
+				background: white;
 				border: 1px solid #e0d9d9ba;
 				border-top: 0;
 				h3 {

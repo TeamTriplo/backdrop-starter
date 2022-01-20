@@ -5,21 +5,12 @@
 .page .l-container {
   max-width: 1140px;
   margin: 0 auto; }
+  .page .l-container .view-blog {
+    max-width: 1140px;
+    margin: 0 auto; }
 
 .page img {
   width: 100%; }
-
-.block-views-blog-block {
-  background-color: rgba(216, 228, 213, 0.52); }
-  .block-views-blog-block .view-blog {
-    padding: 50px 0; }
-    .block-views-blog-block .view-blog .view-header {
-      text-align: center;
-      padding-bottom: 20px; }
-    .block-views-blog-block .view-blog .view-content {
-      grid-row-gap: 50px;
-      grid-template-columns: auto auto auto;
-      padding: 10px; }
 
 .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row {
   margin-bottom: 0px;

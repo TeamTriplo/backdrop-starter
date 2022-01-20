@@ -42,21 +42,12 @@ body {
 .page .l-container {
   max-width: 1140px;
   margin: 0 auto; }
+  .page .l-container .view-blog {
+    max-width: 1140px;
+    margin: 0 auto; }
 
 .page img {
   width: 100%; }
-
-.block-views-blog-block {
-  background-color: rgba(216, 228, 213, 0.52); }
-  .block-views-blog-block .view-blog {
-    padding: 50px 0; }
-    .block-views-blog-block .view-blog .view-header {
-      text-align: center;
-      padding-bottom: 20px; }
-    .block-views-blog-block .view-blog .view-content {
-      grid-row-gap: 50px;
-      grid-template-columns: auto auto auto;
-      padding: 10px; }
 
 .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row {
   margin-bottom: 0px;
@@ -113,15 +104,27 @@ body {
 /*# sourceMappingURL=blog.css.map */
 
 .block-webform-client-block-50 {
-  width: 50%;
   float: left; }
   .block-webform-client-block-50 .block--inner-wrapper .block-content .webform-component--message {
     width: 600px; }
+  .block-webform-client-block-50 .form-actions input {
+    background-color: #6dc8be;
+    border-radius: 50px;
+    border: 1px solid black;
+    color: #f4f4f4;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 0px 40px;
+    border: 2px solid #6dc8be;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all .3s ease; }
+    .block-webform-client-block-50 .form-actions input:hover {
+      color: #000000;
+      background-color: rgba(216, 228, 213, 0.52);
+      transition: all 1s; }
 
 .block-block-where-are-we {
-  width: 50%;
-  float: left;
-  padding-left: 100px; }
+  float: left; }
   .block-block-where-are-we .block--inner-wrapper .block-content h3 {
     padding-top: 50px; }
 
@@ -137,7 +140,6 @@ footer {
 /*# sourceMappingURL=footer.css.map */
 
 .l-header {
-  position: fixed;
   z-index: 999;
   width: 100%;
   background: rgba(230, 224, 224, 0.6); }
@@ -258,8 +260,8 @@ footer {
       border-radius: 0; }
       .slider_wrapper .block--inner-wrapper .flexslider img {
         height: 720px; }
-      .slider_wrapper .block--inner-wrapper .flexslider .field-content .views-field-nothing {
-        background: rgba(0, 0, 0, 0.5);
+      .slider_wrapper .block--inner-wrapper .flexslider .views-field-nothing {
+        background: rgba(0, 0, 0, 0.3);
         bottom: 0;
         color: #FFFFFF;
         font-size: 16px;
@@ -267,13 +269,13 @@ footer {
         left: 0;
         position: absolute;
         width: 100%; }
-        .slider_wrapper .block--inner-wrapper .flexslider .field-content .views-field-nothing .field-content .slider-content .slider-title {
+        .slider_wrapper .block--inner-wrapper .flexslider .views-field-nothing .field-content .slider-content .slider-title {
           font-size: 38px;
           font-weight: 600;
           position: absolute;
           top: 38%;
           left: 60%; }
-        .slider_wrapper .block--inner-wrapper .flexslider .field-content .views-field-nothing .field-content .slider-content .slider-body {
+        .slider_wrapper .block--inner-wrapper .flexslider .views-field-nothing .field-content .slider-content .slider-body {
           font-size: 20px;
           max-width: 480px;
           position: absolute;
@@ -299,13 +301,16 @@ footer {
 /*# sourceMappingURL=slider.css.map */
 
 .view-team {
-  margin: 100px auto;
-  max-width: 1140px; }
+  background-color: #f0f0f0;
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 100px 0; }
   .view-team .views-view-grid {
     gap: 25px; }
     .view-team .views-view-grid .views-grid-box {
       padding: 0; }
       .view-team .views-view-grid .views-grid-box .views-field-nothing {
+        background: white;
         border: 1px solid #e0d9d9ba;
         border-top: 0; }
         .view-team .views-view-grid .views-grid-box .views-field-nothing h3 {

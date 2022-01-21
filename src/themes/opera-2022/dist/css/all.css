@@ -109,6 +109,24 @@ h4 {
           color: #000000;
           padding-top: 20px; }
 
+.blog-page .view-content .views-grid-box {
+  border: 1px solid #80808030;
+  border-top: 0;
+  padding: 0;
+  margin: 1rem; }
+  .blog-page .view-content .views-grid-box .blog-page-content {
+    color: #000000;
+    padding: 15px; }
+    .blog-page .view-content .views-grid-box .blog-page-content .title {
+      padding-bottom: 15px; }
+      .blog-page .view-content .views-grid-box .blog-page-content .title a {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 600; }
+        .blog-page .view-content .views-grid-box .blog-page-content .title a:hover {
+          color: #6dc8be;
+          transition: all 1s; }
+
 /*# sourceMappingURL=blog.css.map */
 
 .block-webform-client-block-50 {
@@ -140,11 +158,16 @@ h4 {
 
 .l-footer {
   background: #014968;
-  display: flex; }
+  display: flex;
+  border: 0; }
   .l-footer .block {
-    width: 33.33%;
+    color: #ffffff;
     float: left;
+    font-size: 18px;
+    width: 33.33%;
     text-align: center; }
+    .l-footer .block a {
+      color: #ffffff; }
 
 /*# sourceMappingURL=footer.css.map */
 
@@ -254,7 +277,8 @@ h4 {
           font-size: 22px;
           line-height: 1em;
           padding-bottom: 20px;
-          margin-top: 15px; }
+          margin-top: 15px;
+          cursor: default; }
           .block-views-services-block .view-services .view-content .field-content .service-content .title:hover {
             color: #6dc8be;
             transition: all 1s; }

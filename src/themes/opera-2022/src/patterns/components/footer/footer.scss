@@ -2,9 +2,15 @@
 .l-footer {
 	background: #014968;
 	display: flex;
+	border: 0;
 	.block {
-		width: 33.33%;
+		color: #ffffff;
 		float: left;
+		font-size: 18px;
+		width: 33.33%;
 		text-align: center;
+		a {
+			color: #ffffff;
+		}
 	}
 }

@@ -19,7 +19,8 @@
           font-size: 22px;
           line-height: 1em;
           padding-bottom: 20px;
-          margin-top: 15px; }
+          margin-top: 15px;
+          cursor: default; }
           .block-views-services-block .view-services .view-content .field-content .service-content .title:hover {
             color: #6dc8be;
             transition: all 1s; }

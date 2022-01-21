@@ -21,7 +21,7 @@
         transition: width .2s; }
       .l-header .header-menu li a:hover:after {
         width: 100%; }
-      .l-header .header-menu li a .active:after {
+      .l-header .header-menu li a.active:after {
         width: 100%; }
 
 /*# sourceMappingURL=header.css.map */

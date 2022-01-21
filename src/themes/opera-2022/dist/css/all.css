@@ -9,7 +9,7 @@
 .front .l-content {
   background-color: none; }
 
-.page .l-container {
+.front.page .l-container {
   max-width: initial !important;
   margin: 0 !important; }
 

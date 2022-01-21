@@ -32,11 +32,13 @@
 .front .l-content {
 	background-color: none;
 }
-.page {
-	.l-container {
-		max-width: initial !important;
-		margin: 0 !important;
-	}	
+.front{
+	&.page {
+		.l-container {
+			max-width: initial !important;
+			margin: 0 !important;
+		}	
+	}
 }
 body {
 	font-family: Jost,sans-serif;

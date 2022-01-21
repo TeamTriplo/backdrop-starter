@@ -62,4 +62,22 @@
           color: #000000;
           padding-top: 20px; }
 
+.blog-page .view-content .views-grid-box {
+  border: 1px solid #80808030;
+  border-top: 0;
+  padding: 0;
+  margin: 1rem; }
+  .blog-page .view-content .views-grid-box .blog-page-content {
+    color: #000000;
+    padding: 15px; }
+    .blog-page .view-content .views-grid-box .blog-page-content .title {
+      padding-bottom: 15px; }
+      .blog-page .view-content .views-grid-box .blog-page-content .title a {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 600; }
+        .blog-page .view-content .views-grid-box .blog-page-content .title a:hover {
+          color: #6dc8be;
+          transition: all 1s; }
+
 /*# sourceMappingURL=blog.css.map */

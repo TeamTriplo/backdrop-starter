@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap");
 @font-face {
   font-family: 'FontName';
   font-style: normal;
@@ -15,6 +16,15 @@
 
 body {
   font-family: Jost,sans-serif; }
+
+p {
+  font-size: 18px; }
+
+h2 {
+  font-weight: bold; }
+
+h4 {
+  font-weight: 600; }
 
 .view-header {
   padding-bottom: 20px; }
@@ -76,11 +86,10 @@ body {
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details a {
           color: #000000;
           font-size: 22px;
-          font-weight: 500;
+          font-weight: 600;
           text-decoration: none; }
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .role {
           color: #000000;
-          font-size: 14px;
           padding-top: 20px; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even {
     background: #cf5840; }
@@ -94,11 +103,10 @@ body {
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details a {
           color: #000000;
           font-size: 22px;
-          font-weight: 500;
+          font-weight: 600;
           text-decoration: none; }
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .role {
           color: #000000;
-          font-size: 14px;
           padding-top: 20px; }
 
 /*# sourceMappingURL=blog.css.map */
@@ -150,7 +158,8 @@ body {
     padding-top: 10px; }
     .l-header .header-menu li a {
       color: #ffffff;
-      font-size: 15px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none !important;
       padding: 0px 20px; }
       .l-header .header-menu li a:after {
@@ -238,15 +247,16 @@ body {
         text-align: left;
         padding-bottom: 40px; }
         .block-views-services-block .view-services .view-content .field-content .service-content .title {
-          color: #6dc8be;
+          color: #000000;
+          font-weight: 600;
           font-size: 22px;
           line-height: 1em;
           padding-bottom: 20px;
           margin-top: 15px; }
-          .block-views-services-block .view-services .view-content .field-content .service-content .title a {
-            text-decoration: none; }
+          .block-views-services-block .view-services .view-content .field-content .service-content .title:hover {
+            color: #6dc8be;
+            transition: all 1s; }
         .block-views-services-block .view-services .view-content .field-content .service-content .body {
-          color: #686868;
           text-align: left; }
 
 /*# sourceMappingURL=service.css.map */
@@ -334,10 +344,7 @@ body {
       font-size: 38px;
       padding: 10px 0px;
       margin: 0; }
-    .block-block-about-triplo .block--inner-wrapper .block-content h4 {
-      font-weight: 600; }
     .block-block-about-triplo .block--inner-wrapper .block-content p {
-      font-size: 15px;
       padding-top: 10px;
       padding-bottom: 30px; }
     .block-block-about-triplo .block--inner-wrapper .block-content .button {

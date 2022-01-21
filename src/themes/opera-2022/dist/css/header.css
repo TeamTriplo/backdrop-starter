@@ -8,7 +8,8 @@
     padding-top: 10px; }
     .l-header .header-menu li a {
       color: #ffffff;
-      font-size: 15px;
+      font-size: 16px;
+      font-weight: 600;
       text-decoration: none !important;
       padding: 0px 20px; }
       .l-header .header-menu li a:after {

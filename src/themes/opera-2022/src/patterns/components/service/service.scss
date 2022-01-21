@@ -17,17 +17,19 @@
 					text-align: left;
 					padding-bottom: 40px;
 					.title {
-						color: #6dc8be;
+						color: #000000;
+						font-weight: 600;
 						font-size: 22px;
 						line-height: 1em;
 						padding-bottom: 20px;
 						margin-top: 15px;
-						a {
-							text-decoration: none;
+						&:hover {
+							color: #6dc8be;
+							-webkit-transition: all 1s;
+							transition: all 1s;
 						}
 					}
 					.body {
-						color: rgb(104, 104, 104);
 						text-align: left;
 					}
 				}

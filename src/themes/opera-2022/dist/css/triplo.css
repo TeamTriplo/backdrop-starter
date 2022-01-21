@@ -22,18 +22,18 @@
       background: none;
       border: 0; }
       .block-block-about-triplo .block--inner-wrapper .block-content .button a {
-        background-color: #6dc8be;
+        background-color: #014968;
         border-radius: 50px;
         border: 1px solid black;
-        color: #f4f4f4;
+        color: #ffffff !important;
         font-size: 16px;
         text-decoration: none;
         padding: 12px 40px;
-        border: 2px solid #6dc8be;
+        border: 2px solid #014968;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
         transition: all .3s ease; }
         .block-block-about-triplo .block--inner-wrapper .block-content .button a:hover {
-          color: #000000;
+          color: #000000 !important;
           background-color: rgba(216, 228, 213, 0.52);
           transition: all 1s; }
 

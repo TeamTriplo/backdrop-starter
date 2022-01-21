@@ -1,6 +1,7 @@
-footer {
+.l-footer {
+  background: #014968;
   display: flex; }
-  footer .block {
+  .l-footer .block {
     width: 33.33%;
     float: left;
     text-align: center; }

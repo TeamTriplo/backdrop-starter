@@ -1,0 +1,47 @@
+{
+    "_config_name": "layout.flexible.saint_paul",
+    "name": "saint_paul",
+    "title": "Saint Paul",
+    "description": "",
+    "rows": {
+        "8dbda505-6d40-4bdd-8556-86f370c02f18": {
+            "contains": "region_12",
+            "element": "header",
+            "classes": "",
+            "container": "container",
+            "region_names": {
+                "region_name_0": "Header"
+            }
+        },
+        "9bb9969d-47fb-454b-8c5c-92abad7a22ee": {
+            "contains": "region_12",
+            "element": "div",
+            "classes": "",
+            "container": "no_container",
+            "region_names": {
+                "region_name_0": "Hero Region"
+            }
+        },
+        "b818150d-c66c-432f-af0f-1555f1674290": {
+            "contains": "region_8_4",
+            "element": "div",
+            "classes": "",
+            "container": "container",
+            "region_names": {
+                "region_name_0": "Content",
+                "region_name_1": "Content Sidebar"
+            }
+        },
+        "cdb458c6-0b91-41f1-8d09-9e588f858c98": {
+            "contains": "region_4_4_4",
+            "element": "footer",
+            "classes": "",
+            "container": "container",
+            "region_names": {
+                "region_name_0": "Footer Left",
+                "region_name_1": "Footer Center",
+                "region_name_2": "Footer Right"
+            }
+        }
+    }
+}

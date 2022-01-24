@@ -1,8 +1,13 @@
-.block-webform-client-block-50 {
+.contact_us {
   float: left; }
-  .block-webform-client-block-50 .block--inner-wrapper .block-content .webform-component--message {
+  .contact_us .block--inner-wrapper .block-content .webform-component--message {
     width: 600px; }
-  .block-webform-client-block-50 .form-actions input {
+  .contact_us input {
+    border: 2px solid #afafaf3b;
+    width: 100%; }
+  .contact_us textarea {
+    border: 2px solid #afafaf3b; }
+  .contact_us .form-actions input {
     background-color: #014968;
     border-radius: 50px;
     border: 1px solid black;
@@ -13,7 +18,7 @@
     border: 2px solid #014968;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all .3s ease; }
-    .block-webform-client-block-50 .form-actions input:hover {
+    .contact_us .form-actions input:hover {
       color: #000000 !important;
       background-color: rgba(216, 228, 213, 0.52);
       transition: all 1s; }

@@ -36,7 +36,7 @@
       padding: 0 15px; }
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details {
         max-width: 400px; }
-        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details a {
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .name {
           color: #000000;
           font-size: 22px;
           font-weight: 600;
@@ -44,6 +44,20 @@
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .role {
           color: #000000;
           padding-top: 20px; }
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link {
+          padding-top: 40px; }
+          .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link a {
+            color: #000000 !important;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 8px 40px;
+            border: 1px solid #014968;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            transition: all .3s ease; }
+            .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link a:hover {
+              color: #000000 !important;
+              background-color: rgba(216, 228, 213, 0.52);
+              transition: all 1s; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even {
     background: #cf5840; }
     .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right {
@@ -53,7 +67,7 @@
       padding: 0 15px; }
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details {
         max-width: 400px; }
-        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details a {
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .name {
           color: #000000;
           font-size: 22px;
           font-weight: 600;
@@ -61,6 +75,20 @@
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .role {
           color: #000000;
           padding-top: 20px; }
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link {
+          padding-top: 40px; }
+          .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link a {
+            color: #000000 !important;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 8px 40px;
+            border: 1px solid #014968;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            transition: all .3s ease; }
+            .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link a:hover {
+              color: #000000 !important;
+              background-color: rgba(216, 228, 213, 0.52);
+              transition: all 1s; }
 
 .blog-page {
   padding: 100px 0; }

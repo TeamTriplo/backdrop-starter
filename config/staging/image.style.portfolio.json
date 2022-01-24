@@ -1,0 +1,15 @@
+{
+    "_config_name": "image.style.portfolio",
+    "label": "Portfolio",
+    "name": "portfolio",
+    "effects": [
+        {
+            "name": "image_scale_and_crop",
+            "data": {
+                "width": "335",
+                "height": "240"
+            },
+            "weight": "1"
+        }
+    ]
+}

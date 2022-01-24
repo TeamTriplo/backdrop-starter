@@ -83,7 +83,7 @@ h4 {
       padding: 0 15px; }
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details {
         max-width: 400px; }
-        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details a {
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .name {
           color: #000000;
           font-size: 22px;
           font-weight: 600;
@@ -91,6 +91,20 @@ h4 {
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .role {
           color: #000000;
           padding-top: 20px; }
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link {
+          padding-top: 40px; }
+          .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link a {
+            color: #000000 !important;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 8px 40px;
+            border: 1px solid #014968;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            transition: all .3s ease; }
+            .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link a:hover {
+              color: #000000 !important;
+              background-color: rgba(216, 228, 213, 0.52);
+              transition: all 1s; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even {
     background: #cf5840; }
     .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right {
@@ -100,7 +114,7 @@ h4 {
       padding: 0 15px; }
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details {
         max-width: 400px; }
-        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details a {
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .name {
           color: #000000;
           font-size: 22px;
           font-weight: 600;
@@ -108,6 +122,20 @@ h4 {
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .role {
           color: #000000;
           padding-top: 20px; }
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link {
+          padding-top: 40px; }
+          .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link a {
+            color: #000000 !important;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 8px 40px;
+            border: 1px solid #014968;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            transition: all .3s ease; }
+            .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link a:hover {
+              color: #000000 !important;
+              background-color: rgba(216, 228, 213, 0.52);
+              transition: all 1s; }
 
 .blog-page {
   padding: 100px 0; }
@@ -131,11 +159,16 @@ h4 {
 
 /*# sourceMappingURL=blog.css.map */
 
-.block-webform-client-block-50 {
+.contact_us {
   float: left; }
-  .block-webform-client-block-50 .block--inner-wrapper .block-content .webform-component--message {
+  .contact_us .block--inner-wrapper .block-content .webform-component--message {
     width: 600px; }
-  .block-webform-client-block-50 .form-actions input {
+  .contact_us input {
+    border: 2px solid #afafaf3b;
+    width: 100%; }
+  .contact_us textarea {
+    border: 2px solid #afafaf3b; }
+  .contact_us .form-actions input {
     background-color: #014968;
     border-radius: 50px;
     border: 1px solid black;
@@ -146,7 +179,7 @@ h4 {
     border: 2px solid #014968;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     transition: all .3s ease; }
-    .block-webform-client-block-50 .form-actions input:hover {
+    .contact_us .form-actions input:hover {
       color: #000000 !important;
       background-color: rgba(216, 228, 213, 0.52);
       transition: all 1s; }
@@ -160,8 +193,10 @@ h4 {
 
 .l-footer {
   background: #014968;
+  border: 0;
   display: flex;
-  border: 0; }
+  padding: 0px;
+  padding-top: 20px; }
   .l-footer .block {
     color: #ffffff;
     float: left;
@@ -377,7 +412,8 @@ h4 {
       padding-top: 10px;
       padding-bottom: 30px; }
     .block-block-about-triplo .block--inner-wrapper .block-content .button {
-      float: right;
+      display: flex;
+      justify-content: center;
       padding-top: 0px;
       padding-bottom: 0px;
       background: none;
@@ -389,7 +425,7 @@ h4 {
         color: #ffffff !important;
         font-size: 16px;
         text-decoration: none;
-        padding: 12px 40px;
+        padding: 0px 40px;
         border: 2px solid #014968;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
         transition: all .3s ease; }

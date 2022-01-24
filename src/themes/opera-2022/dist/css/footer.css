@@ -1,7 +1,9 @@
 .l-footer {
   background: #014968;
+  border: 0;
   display: flex;
-  border: 0; }
+  padding: 0px;
+  padding-top: 20px; }
   .l-footer .block {
     color: #ffffff;
     float: left;

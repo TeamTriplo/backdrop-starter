@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.where_are_we",
+    "delta": "where_are_we",
+    "info": "Where are we?",
+    "title": "",
+    "description": "Our locations",
+    "body": {
+        "value": "<h3><strong>USA Office</strong></h3>\r\n\r\n<p>Triplo LLC<br />\r\n1360 University Ave.<br />\r\n#102<br />\r\nSaint Paul, MN 55104</p>\r\n\r\n<h3><strong>Bangladesh Office</strong></h3>\r\n\r\n<p>House # 10 (4th floor, A1),<br />\r\nRoad # 1/A , Sector #&nbsp;09<br />\r\nUttara, Dhaka, Bangladesh</p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

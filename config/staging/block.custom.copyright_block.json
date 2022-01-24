@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.copyright_block",
+    "delta": "copyright_block",
+    "info": "Copyright Block",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<p>Copyright © 2019 - Triplo LLC</p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

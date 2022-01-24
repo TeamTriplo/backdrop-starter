@@ -1,0 +1,55 @@
+{
+    "_config_name": "field.instance.node.location.field_location_geofield",
+    "field_name": "field_location_geofield",
+    "entity_type": "node",
+    "bundle": "location",
+    "label": "Geofield",
+    "widget": {
+        "weight": "-2",
+        "type": "geocoder",
+        "module": "geocoder",
+        "active": 1,
+        "settings": {
+            "geocoder_field": "field_location_address",
+            "geocoder_handler": "google",
+            "handler_settings": {
+                "google": {
+                    "https": 1,
+                    "geometry_type": "point",
+                    "all_results": 1,
+                    "reject_results": {
+                        "APPROXIMATE": "APPROXIMATE",
+                        "GEOMETRIC_CENTER": 0,
+                        "RANGE_INTERPOLATED": 0,
+                        "ROOFTOP": 0
+                    },
+                    "biasing": {
+                        "bounds": "",
+                        "region": "",
+                        "components": ""
+                    }
+                }
+            },
+            "delta_handling": "default"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "geofield_wkt",
+            "weight": "2",
+            "settings": {
+                "data": "full"
+            },
+            "module": "geofield"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "_config_name": "field.instance.node.team.field_profile_picture",
+    "field_name": "field_profile_picture",
+    "entity_type": "node",
+    "bundle": "team",
+    "label": "Profile Picture",
+    "widget": {
+        "weight": "0",
+        "type": "image_image",
+        "module": "image",
+        "active": 1,
+        "settings": {
+            "progress_indicator": "throbber",
+            "preview_image_style": "thumbnail"
+        }
+    },
+    "description": "",
+    "required": 0,
+    "deleted": 0,
+    "default_value": null,
+    "default_value_function": null,
+    "settings": {
+        "file_directory": "profile-picture",
+        "file_extensions": "png gif jpg jpeg",
+        "max_filesize": "",
+        "max_dimensions": "",
+        "min_dimensions": "",
+        "alt_field": 1,
+        "title_field": 1,
+        "orientate": 0,
+        "default_image": "public://default_images/icon-person_0.png",
+        "user_register_form": false
+    },
+    "display": {
+        "default": {
+            "label": "hidden",
+            "type": "image",
+            "weight": "3",
+            "settings": {
+                "image_style": "big_thumbnail",
+                "image_link": "",
+                "image_float": "right"
+            },
+            "module": "image"
+        }
+    }
+}

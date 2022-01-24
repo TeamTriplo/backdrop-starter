@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.newsletter",
+    "delta": "newsletter",
+    "info": "Newsletter",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<p class=\"button\"><a class=\"text-align-center\" href=\"http://sendymail.dev.triplo.co/subscription?f=mO2aTdK8li0E2aCjoBO26Yg763pNNrFvf892hiYYWTmC3gYS5effO763mUQ2sc53sdN5MFEGxSWVXMUu9GI8u7KPOfqw\">Subscribe to our email newsletter</a></p>",
+        "format": "full_html"
+    },
+    "default_langcode": "und"
+}

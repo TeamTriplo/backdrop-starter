@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.about_triplo",
+    "delta": "about_triplo",
+    "info": "About triplo",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<h5>Get connected</h5>\r\n\r\n<p class=\"header\">Custom web and mobile applications development shop</p>\r\n\r\n<h4>Triplo - Our diverse team offers high level software development and simple websites as well as ongoing support and online marketing.</h4>\r\n\r\n<p>We've developed very complex custom software as well as extremely cost effective websites. Communication and excellent results are obtained by first listening to the clients needs. Each and every client is extremely important to us as word of mouth is our primary source of business. Happy clients lead to introductions to new clients. We're eager to hear how we can be of service.</p>\r\n\r\n<p class=\"button\"><a href=\"http://sendymail.dev.triplo.co/subscription?f=mO2aTdK8li0E2aCjoBO26Yg763pNNrFvf892hiYYWTmC3gYS5effO763mUQ2sc53sdN5MFEGxSWVXMUu9GI8u7KPOfqw\">SUBSCRIBE TO OUR EMAIL NEWSLETTER</a></p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

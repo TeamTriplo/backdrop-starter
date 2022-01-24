@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.test_block",
+    "delta": "test_block",
+    "info": "Test Block",
+    "title": "About",
+    "description": "Teste",
+    "body": {
+        "value": "<p>Based in Saint Paul, Minnesota<br />\r\nwith partners in&nbsp;Uttara, Dhaka, Bangladesh</p>\r\n\r\n<p>Serving the world.</p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

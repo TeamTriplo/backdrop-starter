@@ -18,7 +18,8 @@
 				padding-bottom: 30px;
 			}
 			.button {
-				float: right;
+				display: flex;
+				justify-content: center;
 				padding-top: 0px;
 				padding-bottom: 0px;
 				background: none;
@@ -30,7 +31,7 @@
 					color: #ffffff !important;
 					font-size: 16px;
 					text-decoration: none;
-					padding: 12px 40px;
+					padding: 0px 40px;
 				    border: 2px solid #014968;
 				    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
 				    -webkit-transition: all .3s ease;

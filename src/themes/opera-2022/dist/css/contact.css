@@ -2,25 +2,6 @@
   float: left; }
   .contact_us .block--inner-wrapper .block-content .webform-component--message {
     width: 600px; }
-  .contact_us input {
-    border: 2px solid #afafaf3b;
-    width: 100%; }
-  .contact_us textarea {
-    border: 2px solid #afafaf3b; }
-  .contact_us .form-actions input {
-    background-color: #014968;
-    border-radius: 50px;
-    border: 2px solid #014968;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    color: #ffffff !important;
-    font-size: 16px;
-    padding: 0px 40px;
-    text-decoration: none;
-    transition: all .3s ease; }
-    .contact_us .form-actions input:hover {
-      background-color: rgba(216, 228, 213, 0.52);
-      color: #000000 !important;
-      transition: all 1s; }
 
 .block-block-where-are-we {
   float: left; }

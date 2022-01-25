@@ -18,11 +18,52 @@
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .field-content {
     display: grid;
     grid-template-columns: 50% 50%; }
+  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row a {
+    box-shadow: 0 0 2px;
+    color: #000000; }
+  .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button {
+    background: none;
+    color: #000000 !important;
+    line-height: 1em;
+    overflow: hidden;
+    position: relative;
+    padding: 12px 40px;
+    text-transform: capitalize;
+    z-index: 1; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button:before {
+      bottom: 0;
+      background-color: rgba(216, 228, 213, 0.52);
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transition: all .3s;
+      width: 0%;
+      z-index: -1; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button:after {
+      bottom: 0;
+      border: 1px solid #014968;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      transition: all .3s ease;
+      width: 100%;
+      z-index: -2; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button:hover {
+      color: #000000;
+      text-decoration: none; }
+      .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button:hover:before {
+        width: 100%; }
+    .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button:hover {
+      border: 0; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row img {
     height: 100%;
     max-height: 400px;
     min-height: 400px;
-    width: 100%; }
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd {
     background: #f5d23b; }
     .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-left {
@@ -44,20 +85,8 @@
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .role {
           color: #000000;
           padding-top: 20px; }
-        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link {
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .button-content {
           padding-top: 40px; }
-          .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link a {
-            border: 1px solid #014968;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-            color: #000000 !important;
-            font-size: 16px;
-            padding: 8px 40px;
-            text-decoration: none;
-            transition: all .3s ease; }
-            .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.odd .field-content .card-list-right .card-list-details .link a:hover {
-              background-color: rgba(216, 228, 213, 0.52);
-              color: #000000 !important;
-              transition: all 1s; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even {
     background: #cf5840; }
     .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right {
@@ -75,20 +104,8 @@
         .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .role {
           color: #000000;
           padding-top: 20px; }
-        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link {
+        .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .button-content {
           padding-top: 40px; }
-          .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link a {
-            border: 1px solid #014968;
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-            color: #000000 !important;
-            font-size: 16px;
-            text-decoration: none;
-            padding: 8px 40px;
-            transition: all .3s ease; }
-            .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row.even .field-content .card-list-right .card-list-details .link a:hover {
-              background-color: rgba(216, 228, 213, 0.52);
-              color: #000000 !important;
-              transition: all 1s; }
 
 .blog-page {
   padding: 100px 0; }

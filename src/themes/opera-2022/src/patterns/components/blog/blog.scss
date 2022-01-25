@@ -21,23 +21,6 @@
 	}
 }
 
-// .block-views-blog-block {
-// 	background-color: rgba(216,228,213,.5);
-// 	.view-blog {
-// 		padding: 50px 0;
-// 		.view-header {
-// 			text-align: center;
-// 			padding-bottom: 20px;
-// 		}
-// 		.view-content {
-// 		  grid-row-gap: 50px;
-// 		  grid-template-columns: auto auto auto;
-// 		  padding: 10px;
-
-// 		}
-// 	}
-// }
-
 .block-views-blog-block-1 {
 	.block--inner-wrapper {
 		.view-content {
@@ -48,11 +31,58 @@
 					display: grid;
 					grid-template-columns:50% 50%;
 				}
+				a {
+					box-shadow: 0 0 2px;
+					color: #000000;
+				}
+				.button {
+					background: none;
+					color: #000000 !important;
+					line-height: 1em;
+					overflow: hidden;
+					position: relative;
+					padding: 12px 40px;
+					text-transform: capitalize;
+					z-index: 1;
+					&:before {
+					    bottom: 0;
+					    background-color: rgba(216,228,213,.52);
+						content: '';
+					    height: 100%;
+					    left: 0;
+						position: absolute;
+					    transition: all .3s;
+					    width: 0%;
+					    z-index: -1;
+					}
+					&:after{
+					    bottom: 0;
+					    border: 1px solid #014968;
+						content: '';
+					    height: 100%;
+					    left: 0;
+						position: absolute;
+    					transition: all .3s ease;
+					    width: 100%;
+					    z-index: -2;
+					}
+					&:hover {
+					    color: #000000;
+					    text-decoration: none;
+					    &:before {
+					      width: 100%;
+					    }
+				  	}
+				  	&:hover {
+				  		border:0;
+				  	}
+				}
 				img {
 					height: 100%;
 					max-height: 400px;
 					min-height: 400px;
 					width: 100%;
+					object-fit: cover;	
 				}
 				&.odd {
 					background: #f5d23b;
@@ -80,24 +110,8 @@
 									color: #000000;
 									padding-top: 20px;
 								}
-								.link {
+								.button-content {
 									padding-top: 40px;
-									a {			
-									    border: 1px solid #014968;
-									    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-										color: #000000 !important;
-										font-size: 16px;
-										padding: 8px 40px;
-										text-decoration: none;
-									    -webkit-transition: all .3s ease;
-									    transition: all .3s ease;  
-										&:hover {
-											background-color: rgba(216,228,213,.52);
-											color: #000000 !important;
-											-webkit-transition: all 1s;
-											transition: all 1s;
-										}
-									}
 								}
 							}
 						}
@@ -123,24 +137,8 @@
 									color: #000000;
 									padding-top: 20px;
 								}
-								.link {
+								.button-content {
 									padding-top: 40px;
-									a {			
-									    border: 1px solid #014968;
-									    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
-										color: #000000 !important;
-										font-size: 16px;
-										text-decoration: none;
-										padding: 8px 40px;
-									    -webkit-transition: all .3s ease;
-									    transition: all .3s ease;  
-										&:hover {
-											background-color: rgba(216,228,213,.52);
-											color: #000000 !important;
-											-webkit-transition: all 1s;
-											transition: all 1s;
-										}
-									}
 								}
 							}
 						}

@@ -8,19 +8,19 @@
       display: flex;
       flex-direction: column; }
       .block-views-services-block .view-services .view-content .field-content .image {
-        width: 100px;
-        height: 90px; }
+        height: 90px;
+        width: 100px; }
       .block-views-services-block .view-services .view-content .field-content .service-content {
-        text-align: left;
-        padding-bottom: 40px; }
+        padding-bottom: 40px;
+        text-align: left; }
         .block-views-services-block .view-services .view-content .field-content .service-content .title {
           color: #000000;
+          cursor: default;
           font-weight: 600;
           font-size: 22px;
           line-height: 1em;
-          padding-bottom: 20px;
           margin-top: 15px;
-          cursor: default; }
+          padding-bottom: 20px; }
           .block-views-services-block .view-services .view-content .field-content .service-content .title:hover {
             color: #6dc8be;
             transition: all 1s; }

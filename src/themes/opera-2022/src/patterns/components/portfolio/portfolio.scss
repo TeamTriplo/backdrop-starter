@@ -5,8 +5,8 @@
 		padding: 0 0 50px;
 		.view-header {
 			color: black;
-			text-align: center;
 			padding: 0;
+			text-align: center;
 		}
 		.view-content {
 			.views-view-grid {
@@ -18,10 +18,10 @@
 				.views-field-field-portfolio-image {
 					overflow: hidden;
 					img {
-						-webkit-transition: all 1s;
-					    transition: all 1s;
 					    vertical-align: top;
 					    width: 100%;
+						-webkit-transition: all 1s;
+					    transition: all 1s;
 						&:hover {
 							transform: scale(1.1);
 						}
@@ -34,26 +34,25 @@
 			}
 		}
 		.view-footer {
-			    position: absolute;
 			    bottom: -20px;
 			    left: 42%;
+			    position: absolute;
 			p {
 				padding-top: 30px;
 				a {
 					background-color: #014968;
 					border-radius: 50px;
-					border: 1px solid black;
-					color: #ffffff !important;
-					font-size: 16px;
-					text-decoration: none;
-					padding: 12px 40px;
 				    border: 2px solid #014968;
 				    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+					color: #ffffff !important;
+					font-size: 16px;
+					padding: 12px 40px;
+					text-decoration: none;
 				    -webkit-transition: all .3s ease;
 				    transition: all .3s ease;  
 					&:hover {
-						color: #000000 !important;
 						background-color: rgba(216,228,213,.52);
+						color: #000000 !important;
 						-webkit-transition: all 1s;
 						transition: all 1s;
 					}

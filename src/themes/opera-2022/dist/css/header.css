@@ -1,8 +1,8 @@
 .l-header {
   box-shadow: 0 0 5px;
-  z-index: 999;
+  background: #014968;
   width: 100%;
-  background: #014968; }
+  z-index: 999; }
   .l-header .header-site-name-wrapper img {
     max-height: 90px; }
   .l-header .header-menu li {
@@ -11,15 +11,15 @@
       color: #ffffff;
       font-size: 16px;
       font-weight: 600;
-      text-decoration: none !important;
-      padding: 0px 20px; }
+      padding: 0px 20px;
+      text-decoration: none !important; }
       .l-header .header-menu li a:after {
+        background: #cf5840;
         content: ' ';
         display: block;
-        width: 0%;
         height: 2px;
-        background: #cf5840;
-        transition: width .2s; }
+        transition: width .2s;
+        width: 0%; }
       .l-header .header-menu li a:hover:after {
         width: 100%; }
       .l-header .header-menu li a.active:after {

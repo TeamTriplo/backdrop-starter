@@ -2,17 +2,37 @@
 .l-footer {
 	background: #014968;
 	border: 0;
+	color: #ffffff;
 	display: flex;
+	font-size: 18px;
 	padding: 0px;
 	padding-top: 20px;
-	.block {
-		color: #ffffff;
-		float: left;
-		font-size: 18px;
-		width: 33.33%;
-		text-align: center;
-		a {
-			color: #ffffff;
+	text-align: center;
+	.block-system-powered-by {
+		flex: 33.33%;
+		.block-content {
+			padding-top: 20px;
+			span {
+				a {
+					color: #ffffff;
+					text-decoration: underline;
+					&:hover{
+						color: #6dc8be;
+						transition: all 1s; 
+						-webkit-transition: all 1s;
+					}
+				}
+			}
+		}
+	}
+	.block-block-address-block {
+		flex: 33.33%;
+		line-height: 1em;
+	}
+	.block-block-copyright-block {
+		flex: 33.33%;
+		.block-content {
+			padding-top: 20px;
 		}
 	}
 }

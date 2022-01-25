@@ -1,0 +1,54 @@
+{
+    "_config_name": "stickynav.settings",
+    "stickynav-enabled-bartik": 0,
+    "stickynav-enabled-seven": 0,
+    "stickynav-enabled-stark": null,
+    "stickynav-selector-bartik": "",
+    "stickynav-roles-bartik": {
+        "anonymous": 0,
+        "authenticated": 0,
+        "editor": 0,
+        "administrator": 0
+    },
+    "stickynav-offset-selector-bartik": "",
+    "stickynav-custom-offset-bartik": "",
+    "stickynav-selector-seven": "",
+    "stickynav-roles-seven": {
+        "anonymous": 0,
+        "authenticated": 0,
+        "editor": 0,
+        "administrator": 0
+    },
+    "stickynav-offset-selector-seven": "",
+    "stickynav-custom-offset-seven": "",
+    "stickynav-enabled-basis": 0,
+    "stickynav-selector-basis": "",
+    "stickynav-roles-basis": {
+        "anonymous": 0,
+        "authenticated": 0,
+        "editor": 0,
+        "administrator": 0
+    },
+    "stickynav-offset-selector-basis": "",
+    "stickynav-custom-offset-basis": "",
+    "stickynav-enabled-bootstrap_lite": 0,
+    "stickynav-selector-bootstrap_lite": "",
+    "stickynav-roles-bootstrap_lite": {
+        "anonymous": 0,
+        "authenticated": 0,
+        "editor": 0,
+        "administrator": 0
+    },
+    "stickynav-offset-selector-bootstrap_lite": "",
+    "stickynav-custom-offset-bootstrap_lite": "",
+    "stickynav-enabled-tatsu": 1,
+    "stickynav-selector-tatsu": ".l-header",
+    "stickynav-roles-tatsu": {
+        "anonymous": 0,
+        "authenticated": 0,
+        "editor": 0,
+        "administrator": 0
+    },
+    "stickynav-offset-selector-tatsu": "",
+    "stickynav-custom-offset-tatsu": ""
+}

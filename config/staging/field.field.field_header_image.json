@@ -1,0 +1,22 @@
+{
+    "_config_name": "field.field.field_header_image",
+    "field_name": "field_header_image",
+    "type": "image",
+    "translatable": false,
+    "module": "image",
+    "active": 1,
+    "locked": 0,
+    "cardinality": "1",
+    "deleted": 0,
+    "entity_types": [],
+    "settings": {
+        "uri_scheme": "public",
+        "default_image": "public://default_images//header-image.jpg"
+    },
+    "storage": {
+        "type": "field_sql_storage",
+        "settings": [],
+        "module": "field_sql_storage",
+        "active": 1
+    }
+}

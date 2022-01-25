@@ -1,0 +1,10 @@
+{
+    "_config_name": "entity.view_modes",
+    "view_modes": {
+        "node": {
+            "blog_post": {
+                "label": "Blog Post"
+            }
+        }
+    }
+}

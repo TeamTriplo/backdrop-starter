@@ -1,8 +1,9 @@
 @import '../../global/utils/init';
 .l-header {
-    z-index: 999;
-    width: 100%;
+	box-shadow: 0 0 5px;
     background: #014968;
+    width: 100%;
+    z-index: 999;
 	.header-site-name-wrapper {
 		img {
 			max-height: 90px;
@@ -15,17 +16,22 @@
 				color: #ffffff;
 				font-size: 16px;
 				font-weight: 600;
-				text-decoration: none !important;
 				padding: 0px 20px;
+				text-decoration: none !important;
 				&:after {
+				    background: #cf5840;
 				    content: ' ';
 				    display: block;
-				    width: 0%;
 				    height: 2px;
-				    background: #cf5840;
 				    transition: width .2s;
+				    width: 0%;
 				}
 				&:hover {
+					&:after {
+						width: 100%;
+					}
+				}
+				&.active {
 					&:after {
 						width: 100%;
 					}

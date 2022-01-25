@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.slider_block",
+    "delta": "slider_block",
+    "info": "Slider block",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<h2>Slider 3 Slider 3</h2>\r\n\r\n<p>Slider 3 Slider 3 Vivamus ut tempor urna. Phasellus molestie libero erat, sed imperdiet sapien vehicula sed. Nullam nibh arcu, mollis et vulputate nec, luctus blandit nulla.</p>\r\n",
+        "format": "full_html"
+    },
+    "default_langcode": "und"
+}

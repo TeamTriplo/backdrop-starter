@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.simplo_site",
+    "delta": "simplo_site",
+    "info": "Simplo Site",
+    "title": "",
+    "description": "",
+    "body": {
+        "value": "<div style=\"text-align:center;\">\r\n<p class=\"button\"><a class=\"text-align-center\" href=\"https://simplo.site\">Spin up a Backdrop CMS Site with Simplo</a></p>\r\n</div>",
+        "format": "full_html"
+    },
+    "default_langcode": "und"
+}

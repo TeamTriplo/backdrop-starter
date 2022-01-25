@@ -1,0 +1,15 @@
+{
+    "_config_name": "image.style.slider_image",
+    "label": "Slider Image (1200x400)",
+    "name": "slider_image",
+    "effects": [
+        {
+            "name": "image_scale_and_crop",
+            "data": {
+                "width": "1200",
+                "height": "400"
+            },
+            "weight": "1"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "_config_name": "block.custom.fish",
+    "delta": "fish",
+    "info": "fish",
+    "title": "Fish",
+    "description": "Fish",
+    "body": {
+        "value": "<p>Fish</p>\r\n",
+        "format": "filtered_html"
+    },
+    "default_langcode": "und"
+}

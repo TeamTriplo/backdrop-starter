@@ -1,0 +1,31 @@
+{
+    "_config_name": "opera2022.settings",
+    "color": {
+        "palette": {
+            "set1bg": "#e6e0e0",
+            "set1text": "#000000",
+            "set1links": "#000000",
+            "set2bg": "#f0f0c9",
+            "set2text": "#000000",
+            "set2links": "#b2bc22",
+            "set3bg": "#ffffff",
+            "set3text": "#002002",
+            "set3links": "#b2bc23",
+            "set4bg": "#fcfdfd",
+            "set4text": "#000000",
+            "set4links": "#b2bc24",
+            "set5bg": "#fafafa",
+            "set5text": "#000000",
+            "set5links": "#b2bc25",
+            "set1menu": "#983734"
+        },
+        "stylesheets": [
+            "public://color/opera2022-85de8bd7/all.css",
+            "public://color/opera2022-85de8bd7/opera-variables.css"
+        ],
+        "files": [
+            "public://color/opera2022-85de8bd7/all.css",
+            "public://color/opera2022-85de8bd7/opera-variables.css"
+        ]
+    }
+}

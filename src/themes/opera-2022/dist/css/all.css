@@ -199,6 +199,11 @@ textarea {
             color: #6dc8be;
             transition: all 1s; }
 
+.node-type-blog .l-container {
+  max-width: 700px; }
+  .node-type-blog .l-container .block-field-node-field-featured-image {
+    padding: 30px 0; }
+
 /*# sourceMappingURL=blog.css.map */
 
 .contact_us {

@@ -325,6 +325,12 @@ textarea {
             color: #000000 !important;
             transition: all 1s; }
 
+.node-portfolio .field-name-body {
+  padding: 15px 0; }
+
+.node-portfolio .field-name-field-portfolio-image {
+  margin-bottom: 15px; }
+
 /*# sourceMappingURL=portfolio.css.map */
 
 .block-views-services-block {

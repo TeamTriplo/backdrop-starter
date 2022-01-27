@@ -18,9 +18,9 @@
     display: grid;
     grid-template-columns: 50% 50%; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row a {
-    box-shadow: 0 0 2px;
     color: #000000; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .button {
+    box-shadow: 0 0 2px;
     background: none;
     color: #000000 !important;
     line-height: 1em;

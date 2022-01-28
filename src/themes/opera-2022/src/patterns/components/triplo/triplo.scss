@@ -1,6 +1,12 @@
+// Import site utilities.
 @import '../../global/utils/init';
+
 .block-block-about-triplo {
 	background-color: rgba(244, 244, 244, 0.68);
+	@include md {
+		padding: 15px !important;
+	}
+
 	.block--inner-wrapper {
 		padding: 50px 0;
 		.block-content {
@@ -12,10 +18,17 @@
 				font-size: 38px;
 				margin: 0;
 				padding: 10px 0px;
+				@include md {
+					line-height: 1.2em;
+				}
+
 			}
 			p{
 				padding-top: 10px;
 				padding-bottom: 30px;
+				@include md {
+					padding-bottom: 0px;
+				}
 			}
 			.button {
 				border: 0;
@@ -24,6 +37,11 @@
 				justify-content: center;
 				padding-top: 0px;
 				padding-bottom: 0px;
+				@include md {
+					width: 100%;
+				    display: inline-block;
+				    padding: 0px 10px;
+					}
 				a {
 				 	background-color: #014968;
 					border-radius: 50px;
@@ -34,7 +52,10 @@
 					padding: 0px 40px;
 					text-decoration: none;
 				    -webkit-transition: all .3s ease;
-				    transition: all .3s ease;  
+				    transition: all .3s ease; 
+				    @include md {
+				    	padding: 7px 21px;
+				    } 
 					&:hover {
 						background-color: rgba(216,228,213,.52);
 						color: #000000 !important;
@@ -42,7 +63,20 @@
 						transition: all 1s;
 					}
 				}
+			}
+			@include md {
+				text-align: center;
 			}	
 		}	
 	}
+}
+
+@include md {
+	.front {
+		.layout-front {
+			.block {
+				padding: 0px;
+			}
+		}
+	} 	
 }

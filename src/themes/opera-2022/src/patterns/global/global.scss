@@ -69,6 +69,22 @@ h4 {
 	    }
 	}
 }
+@include md {
+	.view-header {	
+		padding-bottom: 20px;
+		.global_header {
+		    display: grid;
+		    grid-template-columns: 100%;
+		    padding-bottom: 20px;
+		    .header {
+		    	text-align: center;
+		    }
+		    .paragraph {
+		    	text-align: center;	
+		    }
+		}
+	}
+}
 
 //start here for form design//
 

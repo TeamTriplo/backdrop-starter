@@ -40,6 +40,18 @@ h4 {
       color: #000000;
       text-align: left; }
 
+@media (max-width: 767px) {
+  .view-header {
+    padding-bottom: 20px; }
+    .view-header .global_header {
+      display: grid;
+      grid-template-columns: 100%;
+      padding-bottom: 20px; }
+      .view-header .global_header .header {
+        text-align: center; }
+      .view-header .global_header .paragraph {
+        text-align: center; } }
+
 .form-actions input {
   background-color: #014968;
   border-radius: 50px;

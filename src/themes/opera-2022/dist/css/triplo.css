@@ -1,5 +1,8 @@
 .block-block-about-triplo {
   background-color: rgba(244, 244, 244, 0.68); }
+  @media (max-width: 767px) {
+    .block-block-about-triplo {
+      padding: 15px !important; } }
   .block-block-about-triplo .block--inner-wrapper {
     padding: 50px 0; }
     .block-block-about-triplo .block--inner-wrapper .block-content h5 {
@@ -9,9 +12,15 @@
       font-size: 38px;
       margin: 0;
       padding: 10px 0px; }
+      @media (max-width: 767px) {
+        .block-block-about-triplo .block--inner-wrapper .block-content .header {
+          line-height: 1.2em; } }
     .block-block-about-triplo .block--inner-wrapper .block-content p {
       padding-top: 10px;
       padding-bottom: 30px; }
+      @media (max-width: 767px) {
+        .block-block-about-triplo .block--inner-wrapper .block-content p {
+          padding-bottom: 0px; } }
     .block-block-about-triplo .block--inner-wrapper .block-content .button {
       border: 0;
       background: none;
@@ -19,6 +28,11 @@
       justify-content: center;
       padding-top: 0px;
       padding-bottom: 0px; }
+      @media (max-width: 767px) {
+        .block-block-about-triplo .block--inner-wrapper .block-content .button {
+          width: 100%;
+          display: inline-block;
+          padding: 0px 10px; } }
       .block-block-about-triplo .block--inner-wrapper .block-content .button a {
         background-color: #014968;
         border-radius: 50px;
@@ -29,9 +43,19 @@
         padding: 0px 40px;
         text-decoration: none;
         transition: all .3s ease; }
+        @media (max-width: 767px) {
+          .block-block-about-triplo .block--inner-wrapper .block-content .button a {
+            padding: 7px 21px; } }
         .block-block-about-triplo .block--inner-wrapper .block-content .button a:hover {
           background-color: rgba(216, 228, 213, 0.52);
           color: #000000 !important;
           transition: all 1s; }
+    @media (max-width: 767px) {
+      .block-block-about-triplo .block--inner-wrapper .block-content {
+        text-align: center; } }
+
+@media (max-width: 767px) {
+  .front .layout-front .block {
+    padding: 0px; } }
 
 /*# sourceMappingURL=triplo.css.map */

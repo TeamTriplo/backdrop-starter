@@ -1,7 +1,13 @@
+// Import site utilities.
+@import '../../global/utils/init';
+
 .block-views-services-block {
 	background-color: #f4eee9;
 	.view-services {
 		padding: 50px 0;
+		@include md {
+			padding: 0px;
+		}
 		.view-content {
 			img {
 				width: auto;
@@ -24,6 +30,9 @@
 						line-height: 1em;
 						margin-top: 15px;
 						padding-bottom: 20px;
+						@include md {
+							text-align: center;
+						}
 						&:hover {
 							color: #6dc8be;
 							-webkit-transition: all 1s;
@@ -32,6 +41,9 @@
 					}
 					.body {
 						text-align: left;
+						@include md {
+							text-align: center;
+						}
 					}
 				}
 			}

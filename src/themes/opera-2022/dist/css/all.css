@@ -87,7 +87,7 @@ textarea {
 .block-views-blog-block-1 {
   padding: 100px 0 !important; }
   .block-views-blog-block-1 .block--inner-wrapper .view-content {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.7); }
     .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row {
       margin-bottom: 0px; }
       .block-views-blog-block-1 .block--inner-wrapper .view-content .views-row .field-content {

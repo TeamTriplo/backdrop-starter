@@ -85,6 +85,7 @@
 }
 
 .portfolio-page {
+	padding: 100px 0;
 	.views-view-grid-cols-3 {
 		.views-grid-box {
 			padding: 0;
@@ -115,5 +116,8 @@
 		@include md {
 			grid-template-columns: repeat(1, 1fr);
 		}
+	}
+	@include lg {
+		padding: 50px 0;
 	}
 }

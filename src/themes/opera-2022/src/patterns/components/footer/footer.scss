@@ -31,5 +31,8 @@
 				}
 			}
 		}
+		@include md {
+			margin-bottom: 15px;
+		}
 	}
 }

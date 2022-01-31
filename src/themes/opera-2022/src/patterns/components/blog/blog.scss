@@ -30,8 +30,14 @@
 	.block--inner-wrapper {
 		.view-content {
 			box-shadow: 3px 3px 10px 0 rgba(0,0,0,.7);
+			@include md {
+				box-shadow: none;
+			} 
 			.views-row{
-				margin-bottom: 0px;
+				margin-bottom: 20px;
+				@include md {
+					box-shadow: 3px 3px 10px 0 rgba(0,0,0,.7);
+				} 
 				.field-content {
 					display: grid;
 					grid-template-columns:50% 50%;
@@ -160,7 +166,7 @@
 						}
 					}
 				}
-			} 
+			}
 		}
 	}
 }
@@ -198,6 +204,7 @@
 .node-type-blog {
 	.l-container{
 		max-width: 700px;
+		padding: 15px;
 		.block-field-node-field-featured-image {
 			padding: 30px 0;
 		}

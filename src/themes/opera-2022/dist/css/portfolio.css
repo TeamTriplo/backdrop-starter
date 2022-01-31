@@ -7,27 +7,30 @@
       color: black;
       padding: 0;
       text-align: center; }
-    .block-views-portfolio-block .view-portfolio .view-content .views-view-grid {
-      gap: 20px; }
-      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {
-        border: 1px solid rgba(216, 228, 213, 0.52);
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
-      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image {
-        overflow: hidden; }
-        .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img {
-          vertical-align: top;
-          width: 100%;
-          transition: all 1s; }
-          .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img:hover {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
-      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
-        color: #000000;
-        padding: 10px; }
+    .block-views-portfolio-block .view-portfolio .view-content {
+      width: 100%; }
+      .block-views-portfolio-block .view-portfolio .view-content .views-view-grid {
+        gap: 20px; }
+        .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-grid-box {
+          border: 1px solid rgba(216, 228, 213, 0.52);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); }
+        .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image {
+          overflow: hidden; }
+          .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img {
+            vertical-align: top;
+            width: 100%;
+            transition: all 1s; }
+            .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img:hover {
+              -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+        .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
+          color: #000000;
+          padding: 10px; }
     .block-views-portfolio-block .view-portfolio .view-footer {
-      bottom: -20px;
-      left: 42%;
-      position: absolute; }
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      padding-top: 20px; }
       .block-views-portfolio-block .view-portfolio .view-footer p {
         padding-top: 30px; }
         .block-views-portfolio-block .view-portfolio .view-footer p a {

@@ -11,6 +11,9 @@
   padding: 0px;
   padding-top: 20px;
   text-align: center; }
+  @media (max-width: 767px) {
+    .l-footer {
+      display: block; } }
   .l-footer .block-system-powered-by .block-content span a {
     color: #ffffff;
     text-decoration: underline; }

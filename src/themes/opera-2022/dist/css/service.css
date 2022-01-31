@@ -10,6 +10,9 @@
     .block-views-services-block .view-services .view-content .field-content {
       display: flex;
       flex-direction: column; }
+      @media (max-width: 767px) {
+        .block-views-services-block .view-services .view-content .field-content {
+          align-items: center; } }
       .block-views-services-block .view-services .view-content .field-content .image {
         height: 90px;
         width: 100px; }

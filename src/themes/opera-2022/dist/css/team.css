@@ -1,8 +1,14 @@
 .view-team {
   background-color: #f4eee9;
-  padding: 100px; }
+  padding: 100px 0; }
+  @media (max-width: 767px) {
+    .view-team {
+      padding: 50px 0; } }
   .view-team .views-view-grid {
     gap: 25px; }
+    @media (max-width: 767px) {
+      .view-team .views-view-grid {
+        padding: 15px; } }
     .view-team .views-view-grid .views-grid-box {
       padding: 0; }
       .view-team .views-view-grid .views-grid-box .views-field-nothing {

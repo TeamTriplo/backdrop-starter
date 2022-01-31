@@ -3,9 +3,15 @@
 
 .view-team {
 	background-color: #f4eee9;
-	padding: 100px;
+	padding: 100px 0;
+	@include md {
+		padding: 50px 0;
+	}
 	.views-view-grid {
 		gap:25px;
+		@include md {
+			padding: 15px;
+		}
 		.views-grid-box {
 			padding: 0;
 			.views-field-nothing {

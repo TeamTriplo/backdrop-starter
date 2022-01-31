@@ -1,5 +1,8 @@
 .block-views-portfolio-block {
   padding-bottom: 50px !important; }
+  @media (max-width: 767px) {
+    .block-views-portfolio-block {
+      padding-bottom: 0px !important; } }
   .block-views-portfolio-block .view-portfolio {
     position: relative;
     padding: 0 0 50px; }

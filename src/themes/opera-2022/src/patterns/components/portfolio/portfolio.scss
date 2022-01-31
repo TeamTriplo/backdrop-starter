@@ -3,6 +3,9 @@
 
 .block-views-portfolio-block {
 	padding-bottom: 50px !important;
+	@include md {
+		padding-bottom: 0px!important;
+	}
 	.view-portfolio {
 		position: relative;
 		padding: 0 0 50px;

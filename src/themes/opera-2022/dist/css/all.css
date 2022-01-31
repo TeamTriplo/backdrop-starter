@@ -243,8 +243,6 @@ textarea {
 
 .contact_us {
   float: left; }
-  .contact_us .block--inner-wrapper .block-content .webform-component--message {
-    width: 600px; }
 
 .block-block-where-are-we {
   float: left; }
@@ -332,6 +330,9 @@ textarea {
 
 .block-views-portfolio-block {
   padding-bottom: 50px !important; }
+  @media (max-width: 767px) {
+    .block-views-portfolio-block {
+      padding-bottom: 0px !important; } }
   .block-views-portfolio-block .view-portfolio {
     position: relative;
     padding: 0 0 50px; }
@@ -438,9 +439,16 @@ textarea {
       .block-views-services-block .view-services .view-content .field-content .image {
         height: 90px;
         width: 100px; }
+        @media (max-width: 767px) {
+          .block-views-services-block .view-services .view-content .field-content .image {
+            text-align: center;
+            height: 65px; } }
       .block-views-services-block .view-services .view-content .field-content .service-content {
         padding-bottom: 40px;
         text-align: left; }
+        @media (max-width: 767px) {
+          .block-views-services-block .view-services .view-content .field-content .service-content {
+            padding-bottom: 20px; } }
         .block-views-services-block .view-services .view-content .field-content .service-content .title {
           color: #000000;
           cursor: default;
@@ -538,9 +546,15 @@ textarea {
 
 .view-team {
   background-color: #f4eee9;
-  padding: 100px; }
+  padding: 100px 0; }
+  @media (max-width: 767px) {
+    .view-team {
+      padding: 50px 0; } }
   .view-team .views-view-grid {
     gap: 25px; }
+    @media (max-width: 767px) {
+      .view-team .views-view-grid {
+        padding: 15px; } }
     .view-team .views-view-grid .views-grid-box {
       padding: 0; }
       .view-team .views-view-grid .views-grid-box .views-field-nothing {

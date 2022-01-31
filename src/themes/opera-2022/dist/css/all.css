@@ -46,7 +46,7 @@ h4 {
     .view-header .global_header {
       display: grid;
       grid-template-columns: 100%;
-      padding-bottom: 20px; }
+      padding: 20px 15px 0; }
       .view-header .global_header .header {
         text-align: center; }
       .view-header .global_header .paragraph {

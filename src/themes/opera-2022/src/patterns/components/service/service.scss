@@ -15,6 +15,9 @@
 			.field-content {
 				display: flex;
 			    flex-direction: column;
+			    @include md {
+			    	align-items: center;
+			    }
 				.image {
 					height: 90px;
 					width: 100px;

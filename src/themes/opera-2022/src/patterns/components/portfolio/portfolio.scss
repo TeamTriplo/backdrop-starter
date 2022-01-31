@@ -78,5 +78,35 @@
 		.field-name-field-portfolio-image {
 			margin-bottom: 15px;
 		}
+		@include md {
+			padding: 0 15px;
+		}
+	}
+}
+
+.portfolio-page {
+
+	.views-grid-box {
+		padding: 0;
+		margin: 1rem;
+		border: 1px solid #80808038;
+
+		.views-field-title {
+			padding: 15px;
+
+			a {
+				color: #000000;
+			    font-weight: 600;
+			    font-size: 22px;
+			    &:hover {
+					color: #6dc8be;
+					transition: all 1s;
+			    }
+			}
+		}
+
+		.views-field-body {
+			padding: 0 15px 15px;
+		}
 	}
 }

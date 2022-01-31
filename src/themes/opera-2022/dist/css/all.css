@@ -352,29 +352,32 @@ textarea {
     .node-type-portfolio .l-container {
       padding: 0 15px; } }
 
-.portfolio-page .views-view-grid-cols-3 .views-grid-box {
-  padding: 0;
-  margin: 1rem;
-  border: 1px solid #80808038; }
-  .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-title {
-    padding: 15px; }
-    .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-title a {
-      color: #000000;
-      font-weight: 600;
-      font-size: 22px; }
-      .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-title a:hover {
-        color: #6dc8be;
-        transition: all 1s; }
-  .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-body {
-    padding: 0 15px 15px; }
-
-@media (max-width: 991px) {
-  .portfolio-page .views-view-grid-cols-3 {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media (max-width: 767px) {
-  .portfolio-page .views-view-grid-cols-3 {
-    grid-template-columns: repeat(1, 1fr); } }
+.portfolio-page {
+  padding: 100px 0; }
+  .portfolio-page .views-view-grid-cols-3 .views-grid-box {
+    padding: 0;
+    margin: 1rem;
+    border: 1px solid #80808038; }
+    .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-title {
+      padding: 15px; }
+      .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-title a {
+        color: #000000;
+        font-weight: 600;
+        font-size: 22px; }
+        .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-title a:hover {
+          color: #6dc8be;
+          transition: all 1s; }
+    .portfolio-page .views-view-grid-cols-3 .views-grid-box .views-field-body {
+      padding: 0 15px 15px; }
+  @media (max-width: 991px) {
+    .portfolio-page .views-view-grid-cols-3 {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 767px) {
+    .portfolio-page .views-view-grid-cols-3 {
+      grid-template-columns: repeat(1, 1fr); } }
+  @media (max-width: 991px) {
+    .portfolio-page {
+      padding: 50px 0; } }
 
 /*# sourceMappingURL=portfolio.css.map */
 

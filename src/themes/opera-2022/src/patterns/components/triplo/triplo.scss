@@ -39,7 +39,7 @@
 				padding-bottom: 0px;
 				@include md {
 					width: 100%;
-				    display: inline-block;
+				    font-size: 0px;
 				    padding: 0px 10px;
 					}
 				a {
@@ -54,7 +54,7 @@
 				    -webkit-transition: all .3s ease;
 				    transition: all .3s ease; 
 				    @include md {
-				    	padding: 7px 21px;
+				    	padding: 0px 21px;
 				    } 
 					&:hover {
 						background-color: rgba(216,228,213,.52);

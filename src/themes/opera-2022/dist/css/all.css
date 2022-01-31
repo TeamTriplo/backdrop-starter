@@ -560,7 +560,7 @@ textarea {
       @media (max-width: 767px) {
         .block-block-about-triplo .block--inner-wrapper .block-content .button {
           width: 100%;
-          display: inline-block;
+          font-size: 0px;
           padding: 0px 10px; } }
       .block-block-about-triplo .block--inner-wrapper .block-content .button a {
         background-color: #014968;
@@ -574,7 +574,7 @@ textarea {
         transition: all .3s ease; }
         @media (max-width: 767px) {
           .block-block-about-triplo .block--inner-wrapper .block-content .button a {
-            padding: 7px 21px; } }
+            padding: 0px 21px; } }
         .block-block-about-triplo .block--inner-wrapper .block-content .button a:hover {
           background-color: rgba(216, 228, 213, 0.52);
           color: #000000 !important;

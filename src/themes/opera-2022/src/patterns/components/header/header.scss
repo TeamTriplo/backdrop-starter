@@ -6,13 +6,16 @@
     background: #014968;
     width: 100%;
     z-index: 999;
-	.header-site-name-wrapper {
-		img {
-			max-height: 90px;
-		}
-	}
-	.header-menu {
-		li {
+    max-width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .block-system-header {
+    	flex-basis:600px;
+    }
+    .block-system-main-menu {
+    	li {
+    		border: 0;
 			padding-top: 10px;
 			a {
 				color: #ffffff;
@@ -29,6 +32,8 @@
 				    width: 0%;
 				}
 				&:hover {
+					background: none;
+					padding: 0;
 					&:after {
 						width: 100%;
 					}
@@ -39,7 +44,18 @@
 					}
 				}
 			}
+			&:hover {
+				background-color: none !important;
+			}
 		}
+    }
+	.header-site-name-wrapper {
+		img {
+			max-height: 90px;
+		}
+	}
+	.header-menu {
+		
 	}
 }
 

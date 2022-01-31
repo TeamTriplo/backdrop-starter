@@ -38,9 +38,10 @@
 			}
 		}
 		.view-footer {
-			    bottom: -20px;
-			    left: 42%;
-			    position: absolute;
+			    display: flex;
+			    width: 100%;
+			    justify-content:center;
+			    padding-top: 20px;
 			p {
 				padding-top: 30px;
 				a {

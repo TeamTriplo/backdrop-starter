@@ -269,6 +269,9 @@ textarea {
       color: #6dc8be;
       transition: all 1s;
       -webkit-transition: all 1s; }
+  @media (max-width: 767px) {
+    .l-footer .block-system-powered-by {
+      margin-bottom: 15px; } }
 
 /*# sourceMappingURL=footer.css.map */
 

@@ -21,10 +21,17 @@
 				.image {
 					height: 90px;
 					width: 100px;
+					@include md {
+						text-align: center;
+						height: 65px;
+					}
 				}
 				.service-content {
 					padding-bottom: 40px;
 					text-align: left;
+					@include md {
+						padding-bottom: 20px;
+					}
 					.title {
 						color: #000000;
 						cursor: default;

@@ -301,41 +301,63 @@ textarea {
   margin: 0 auto;
   display: flex;
   justify-content: center; }
+  @media (max-width: 767px) {
+    .l-header {
+      display: block; } }
+  .l-header .menu-toggle-button {
+    position: absolute;
+    top: -70px;
+    right: 30px; }
   .l-header .block-system-header {
     flex-basis: 600px; }
-  .l-header .block-system-main-menu li {
+  @media (max-width: 1199px) {
+    .l-header .block-system-main-menu {
+      width: 100%; } }
+  @media (max-width: 1199px) {
+    .l-header .block-system-main-menu .menu {
+      float: right; } }
+  @media (max-width: 767px) {
+    .l-header .block-system-main-menu .menu {
+      float: left; } }
+  .l-header .block-system-main-menu .menu li {
     border: 0;
     margin-top: 10px; }
-    .l-header .block-system-main-menu li a {
+    .l-header .block-system-main-menu .menu li a {
       color: #ffffff;
       font-size: 16px;
       font-weight: 600;
       padding: 0px 20px;
       padding: 30px;
       text-decoration: none !important; }
-      .l-header .block-system-main-menu li a:after {
+      @media (max-width: 991px) {
+        .l-header .block-system-main-menu .menu li a {
+          padding: 20px; } }
+      .l-header .block-system-main-menu .menu li a:after {
         background: #cf5840;
         content: ' ';
         display: block;
         height: 2px;
         transition: width .2s;
         width: 0%; }
-      .l-header .block-system-main-menu li a:hover {
+      .l-header .block-system-main-menu .menu li a:hover {
         background: none;
         padding: 30px;
         font-weight: 600;
         color: white; }
-        .l-header .block-system-main-menu li a:hover:after {
+        .l-header .block-system-main-menu .menu li a:hover:after {
           width: 100%; }
-      .l-header .block-system-main-menu li a.active:after {
+      .l-header .block-system-main-menu .menu li a.active:after {
         width: 100%; }
-    .l-header .block-system-main-menu li:hover {
+    .l-header .block-system-main-menu .menu li:hover {
       background-color: unset !important;
       -webkit-filter: none;
       filter: none;
       color: #ffffff; }
   .l-header .header-site-name-wrapper img {
     max-height: 90px; }
+    @media (max-width: 767px) {
+      .l-header .header-site-name-wrapper img {
+        max-width: 200px; } }
 
 /*# sourceMappingURL=header.css.map */
 

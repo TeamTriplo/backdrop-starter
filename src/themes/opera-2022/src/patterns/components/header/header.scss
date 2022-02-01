@@ -10,57 +10,79 @@
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    @include md {
+    	display: block;
+    }
+    .menu-toggle-button {
+    	position: absolute;
+    	top: -70px;
+    	right: 30px;
+    }
     .block-system-header {
     	flex-basis:600px;
     }
     .block-system-main-menu {
-    	li {
-    		border: 0;
-			margin-top: 10px;
-			a {
-				color: #ffffff;
-				font-size: 16px;
-				font-weight: 600;
-				padding: 0px 20px;
-				padding: 30px;
-				text-decoration: none !important;
-				&:after {
-				    background: #cf5840;
-				    content: ' ';
-				    display: block;
-				    height: 2px;
-				    transition: width .2s;
-				    width: 0%;
+    	@include xl {
+    		width: 100%
+    	}
+    	.menu {
+    		@include xl {
+    			float: right;
+    		}
+    		@include md {
+    			float: left;
+    		}
+	    	li {
+	    		border: 0;
+				margin-top: 10px;
+				a {
+					color: #ffffff;
+					font-size: 16px;
+					font-weight: 600;
+					padding: 0px 20px;
+					padding: 30px;
+					text-decoration: none !important;
+					@include lg {
+						padding: 20px;
+					}
+					&:after {
+					    background: #cf5840;
+					    content: ' ';
+					    display: block;
+					    height: 2px;
+					    transition: width .2s;
+					    width: 0%;
+					}
+					&:hover {
+						background: none;
+						padding: 30px;
+						font-weight: 600;
+						color: white;
+						&:after {
+							width: 100%;
+						}
+					}
+					&.active {
+						&:after {
+							width: 100%;
+						}
+					}
 				}
 				&:hover {
-					background: none;
-					padding: 30px;
-					font-weight: 600;
-					color: white;
-					&:after {
-						width: 100%;
-					}
+					background-color: unset !important;
+					filter: none;
+					color: #ffffff;
 				}
-				&.active {
-					&:after {
-						width: 100%;
-					}
-				}
-			}
-			&:hover {
-				background-color: unset !important;
-				filter: none;
-				color: #ffffff;
 			}
 		}
     }
 	.header-site-name-wrapper {
 		img {
 			max-height: 90px;
+			@include md {
+				max-width: 200px;
+			}
 		}
-	}
-	.header-menu {
-		
 	}
 }
 

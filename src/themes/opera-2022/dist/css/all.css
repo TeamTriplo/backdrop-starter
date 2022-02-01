@@ -14,6 +14,10 @@
   max-width: initial !important;
   margin: 0 !important; }
 
+@media (max-width: 767px) {
+  .page .l-header .block-system-main-menu {
+    padding: 0 15px; } }
+
 body {
   font-family: Jost,sans-serif; }
 

@@ -13,14 +13,6 @@
     @include md {
     	display: block;
     }
-    .menu-toggle-button {
-    	position: absolute;
-    	top: -70px;
-    	right: 0px;
-    	.menu-toggle-button-text {
-    		visibility: hidden;
-    	}
-    }
     .block-system-header {
     	flex-basis:600px;
     }

@@ -88,4 +88,18 @@ textarea {
 .form-actions input {
   width: inherit; }
 
+.logged-in .menu-toggle-button {
+  position: absolute;
+  top: -70px;
+  right: 5%; }
+  .logged-in .menu-toggle-button .menu-toggle-button-text {
+    visibility: hidden; }
+
+.menu-toggle-button {
+  position: absolute;
+  top: 25px;
+  right: 5%; }
+  .menu-toggle-button .menu-toggle-button-text {
+    visibility: hidden; }
+
 /*# sourceMappingURL=global.css.map */

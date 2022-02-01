@@ -1,9 +1,21 @@
+.page-title {
+  padding-top: 50px;
+  font-weight: 600;
+  text-align: center; }
+
 .contact_us {
-  float: left; }
+  float: left;
+  padding-bottom: 50px;
+  margin-right: 100px; }
+  .contact_us .block--inner-wrapper .block-content label {
+    color: #22558e;
+    font-size: 20px; }
+  .contact_us .block--inner-wrapper .block-content .form-text {
+    border-radius: 4px; }
+  .contact_us .block--inner-wrapper .block-content .webform-component--message .form-textarea-wrapper textarea {
+    border-radius: 4px; }
 
 .block-block-where-are-we {
   float: left; }
-  .block-block-where-are-we .block--inner-wrapper .block-content h3 {
-    padding-top: 50px; }
 
 /*# sourceMappingURL=contact.css.map */

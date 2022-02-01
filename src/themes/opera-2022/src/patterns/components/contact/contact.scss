@@ -1,11 +1,34 @@
 // Import site utilities.
 @import '../../global/utils/init';
 
+.page-title {
+	padding-top: 50px;
+	font-weight: 600;
+	text-align: center;
+}
+
 .contact_us {
 	float: left;
+	padding-bottom: 50px;
+	margin-right: 100px;
 	.block--inner-wrapper {
 		.block-content {
+			label {
+					color: #22558e;
+    				font-size: 20px;
+				}
+				.form-text  {
+					border-radius: 4px;
+				}
+			.webform-component--name {
+				
+			}
 			.webform-component--message {
+				.form-textarea-wrapper {
+					textarea {
+						border-radius: 4px;
+					}	
+				}
 			}
 		}
 	}
@@ -14,9 +37,7 @@
 	float: left;
 	.block--inner-wrapper {
 		.block-content {
-			h3 {
-				padding-top: 50px;
-			}
+			
 		}
 	}
 }

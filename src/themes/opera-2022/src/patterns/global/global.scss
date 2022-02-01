@@ -40,6 +40,15 @@
 		}	
 	}
 }
+.page {
+	.l-header {
+		.block-system-main-menu {
+			@include md {
+				padding: 0 15px;
+			}
+		}
+	}
+}
 body {
 	font-family: Jost,sans-serif;
 }

@@ -8,6 +8,11 @@
 		@include md {
 			padding: 0px;
 		}
+		.views-grid-box {
+			@include md {
+				padding: 0;
+			}
+		}
 		.view-content {
 			img {
 				width: auto;
@@ -23,7 +28,6 @@
 					width: 100px;
 					@include md {
 						text-align: center;
-						height: 65px;
 					}
 				}
 				.service-content {

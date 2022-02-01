@@ -2,13 +2,12 @@
 @import '../../global/utils/init';
 
 .block-views-portfolio-block {
-	padding-bottom: 50px !important;
 	@include md {
 		padding-bottom: 0px!important;
 	}
 	.view-portfolio {
 		position: relative;
-		padding: 0 0 50px;
+		padding: 0 0 20px;
 		.view-header {
 			color: black;
 			padding: 0;

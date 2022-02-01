@@ -16,7 +16,10 @@
     .menu-toggle-button {
     	position: absolute;
     	top: -70px;
-    	right: 30px;
+    	right: 0px;
+    	.menu-toggle-button-text {
+    		visibility: hidden;
+    	}
     }
     .block-system-header {
     	flex-basis:600px;
@@ -31,6 +34,7 @@
     		}
     		@include md {
     			float: left;
+    			padding: 15px 0;
     		}
 	    	li {
 	    		border: 0;
@@ -44,6 +48,9 @@
 					text-decoration: none !important;
 					@include lg {
 						padding: 20px;
+					}
+					@include md {
+						padding: 5px;
 					}
 					&:after {
 					    background: #cf5840;

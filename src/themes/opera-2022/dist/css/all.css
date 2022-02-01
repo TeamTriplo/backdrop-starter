@@ -110,9 +110,10 @@ textarea {
 .menu-toggle-button {
   position: absolute;
   top: 25px;
-  right: 5%; }
+  right: 0%; }
   .menu-toggle-button .menu-toggle-button-text {
-    visibility: hidden; }
+    visibility: hidden;
+    padding: 0; }
 
 /*# sourceMappingURL=global.css.map */
 

@@ -26,6 +26,14 @@ h2 {
 h4 {
   font-weight: 600; }
 
+.page-title {
+  padding-top: 50px;
+  font-weight: 600; }
+  @media (max-width: 767px) {
+    .page-title {
+      padding-top: 0px !important;
+      font-size: 28px; } }
+
 .view-header {
   padding-bottom: 20px; }
   .view-header .global_header {
@@ -241,15 +249,22 @@ textarea {
 
 /*# sourceMappingURL=blog.css.map */
 
-.page-title {
-  padding-top: 50px;
-  font-weight: 600;
-  text-align: center; }
-
 .contact_us {
   float: left;
-  padding-bottom: 50px;
+  padding: 50px 0 !important;
   margin-right: 100px; }
+  @media (max-width: 991px) {
+    .contact_us {
+      margin-right: 0px;
+      padding: 15px !important; } }
+  @media (max-width: 991px) {
+    .contact_us .block-title {
+      text-align: center;
+      padding-top: 40px; } }
+  @media (max-width: 991px) {
+    .contact_us .form-actions {
+      display: flex;
+      justify-content: center; } }
   .contact_us .block--inner-wrapper .block-content label {
     color: #22558e;
     font-size: 20px; }
@@ -259,7 +274,14 @@ textarea {
     border-radius: 4px; }
 
 .block-block-where-are-we {
+  padding-top: 110px;
   float: left; }
+  @media (max-width: 991px) {
+    .block-block-where-are-we {
+      float: none;
+      text-align: center; } }
+  .block-block-where-are-we .block--inner-wrapper .block-content {
+    padding-top: 20px; }
 
 /*# sourceMappingURL=contact.css.map */
 

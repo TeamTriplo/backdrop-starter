@@ -26,6 +26,14 @@ h2 {
 h4 {
   font-weight: 600; }
 
+.page-title {
+  padding-top: 50px;
+  font-weight: 600; }
+  @media (max-width: 767px) {
+    .page-title {
+      padding-top: 0px !important;
+      font-size: 28px; } }
+
 .view-header {
   padding-bottom: 20px; }
   .view-header .global_header {

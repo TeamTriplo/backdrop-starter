@@ -1,16 +1,27 @@
 // Import site utilities.
 @import '../../global/utils/init';
 
-.page-title {
-	padding-top: 50px;
-	font-weight: 600;
-	text-align: center;
-}
 
 .contact_us {
 	float: left;
-	padding-bottom: 50px;
+	padding: 50px 0!important;
 	margin-right: 100px;
+	@include lg {
+		margin-right: 0px;
+		padding: 15px!important;
+	}
+	.block-title{
+		@include lg {
+			text-align: center;
+			padding-top: 40px; 
+		}
+	}
+	.form-actions {
+		@include lg {
+			display: flex;
+			justify-content:center;
+		}
+	}
 	.block--inner-wrapper {
 		.block-content {
 			label {
@@ -34,10 +45,16 @@
 	}
 } 
 .block-block-where-are-we {
+	padding-top: 110px;
 	float: left;
+	@include lg {
+		float: none;
+		text-align: center;
+	}
 	.block--inner-wrapper {
 		.block-content {
-			
+			padding-top: 20px;
+
 		}
 	}
 }

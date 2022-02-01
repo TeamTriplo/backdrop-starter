@@ -33,6 +33,9 @@
           width: 100%;
           font-size: 0px;
           padding: 0px 10px; } }
+      @media (max-width: 550px) {
+        .block-block-about-triplo .block--inner-wrapper .block-content .button {
+          padding: 0px 0px; } }
       .block-block-about-triplo .block--inner-wrapper .block-content .button a {
         background-color: #014968;
         border-radius: 50px;
@@ -46,6 +49,10 @@
         @media (max-width: 767px) {
           .block-block-about-triplo .block--inner-wrapper .block-content .button a {
             padding: 0px 21px; } }
+        @media (max-width: 550px) {
+          .block-block-about-triplo .block--inner-wrapper .block-content .button a {
+            padding: 0px 12px;
+            font-size: 15px; } }
         .block-block-about-triplo .block--inner-wrapper .block-content .button a:hover {
           background-color: rgba(216, 228, 213, 0.52);
           color: #000000 !important;

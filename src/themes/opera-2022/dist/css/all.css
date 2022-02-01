@@ -227,6 +227,9 @@ textarea {
 
 .blog-page {
   padding: 100px 0; }
+  @media (max-width: 767px) {
+    .blog-page {
+      padding: 50px; } }
   .blog-page .view-content .views-grid-box {
     border: 1px solid #80808030;
     border-top: 0;

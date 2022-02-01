@@ -16,12 +16,13 @@
     .block-system-main-menu {
     	li {
     		border: 0;
-			padding-top: 10px;
+			margin-top: 10px;
 			a {
 				color: #ffffff;
 				font-size: 16px;
 				font-weight: 600;
 				padding: 0px 20px;
+				padding: 30px;
 				text-decoration: none !important;
 				&:after {
 				    background: #cf5840;
@@ -33,7 +34,9 @@
 				}
 				&:hover {
 					background: none;
-					padding: 0;
+					padding: 30px;
+					font-weight: 600;
+					color: white;
 					&:after {
 						width: 100%;
 					}
@@ -45,7 +48,9 @@
 				}
 			}
 			&:hover {
-				background-color: none !important;
+				background-color: unset !important;
+				filter: none;
+				color: #ffffff;
 			}
 		}
     }

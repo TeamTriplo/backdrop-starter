@@ -11,12 +11,13 @@
     flex-basis: 600px; }
   .l-header .block-system-main-menu li {
     border: 0;
-    padding-top: 10px; }
+    margin-top: 10px; }
     .l-header .block-system-main-menu li a {
       color: #ffffff;
       font-size: 16px;
       font-weight: 600;
       padding: 0px 20px;
+      padding: 30px;
       text-decoration: none !important; }
       .l-header .block-system-main-menu li a:after {
         background: #cf5840;
@@ -27,13 +28,18 @@
         width: 0%; }
       .l-header .block-system-main-menu li a:hover {
         background: none;
-        padding: 0; }
+        padding: 30px;
+        font-weight: 600;
+        color: white; }
         .l-header .block-system-main-menu li a:hover:after {
           width: 100%; }
       .l-header .block-system-main-menu li a.active:after {
         width: 100%; }
     .l-header .block-system-main-menu li:hover {
-      background-color: none !important; }
+      background-color: unset !important;
+      -webkit-filter: none;
+      filter: none;
+      color: #ffffff; }
   .l-header .header-site-name-wrapper img {
     max-height: 90px; }
 

@@ -497,9 +497,6 @@ textarea {
   background-color: #f4eee9; }
   .block-views-services-block .view-services {
     padding: 50px 0; }
-    @media (max-width: 767px) {
-      .block-views-services-block .view-services {
-        padding: 0px; } }
     .block-views-services-block .view-services .view-content img {
       width: auto; }
     .block-views-services-block .view-services .view-content .field-content {

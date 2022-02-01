@@ -329,7 +329,9 @@ textarea {
   .l-header .menu-toggle-button {
     position: absolute;
     top: -70px;
-    right: 30px; }
+    right: 0px; }
+    .l-header .menu-toggle-button .menu-toggle-button-text {
+      visibility: hidden; }
   .l-header .block-system-header {
     flex-basis: 600px; }
   @media (max-width: 1199px) {
@@ -340,7 +342,8 @@ textarea {
       float: right; } }
   @media (max-width: 767px) {
     .l-header .block-system-main-menu .menu {
-      float: left; } }
+      float: left;
+      padding: 15px 0; } }
   .l-header .block-system-main-menu .menu li {
     border: 0;
     margin-top: 10px; }
@@ -354,6 +357,9 @@ textarea {
       @media (max-width: 991px) {
         .l-header .block-system-main-menu .menu li a {
           padding: 20px; } }
+      @media (max-width: 767px) {
+        .l-header .block-system-main-menu .menu li a {
+          padding: 5px; } }
       .l-header .block-system-main-menu .menu li a:after {
         background: #cf5840;
         content: ' ';

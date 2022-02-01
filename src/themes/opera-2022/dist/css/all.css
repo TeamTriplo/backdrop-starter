@@ -227,6 +227,9 @@ textarea {
 
 .blog-page {
   padding: 100px 0; }
+  @media (max-width: 767px) {
+    .blog-page {
+      padding: 50px; } }
   .blog-page .view-content .views-grid-box {
     border: 1px solid #80808030;
     border-top: 0;
@@ -497,6 +500,9 @@ textarea {
   background-color: #f4eee9; }
   .block-views-services-block .view-services {
     padding: 50px 0; }
+    @media (max-width: 767px) {
+      .block-views-services-block .view-services .views-grid-box {
+        padding: 0; } }
     .block-views-services-block .view-services .view-content img {
       width: auto; }
     .block-views-services-block .view-services .view-content .field-content {
@@ -510,8 +516,7 @@ textarea {
         width: 100px; }
         @media (max-width: 767px) {
           .block-views-services-block .view-services .view-content .field-content .image {
-            text-align: center;
-            height: 65px; } }
+            text-align: center; } }
       .block-views-services-block .view-services .view-content .field-content .service-content {
         padding-bottom: 40px;
         text-align: left; }

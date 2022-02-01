@@ -5,6 +5,11 @@
 	background-color: #f4eee9;
 	.view-services {
 		padding: 50px 0;
+		.views-grid-box {
+			@include md {
+				padding: 0;
+			}
+		}
 		.view-content {
 			img {
 				width: auto;
@@ -20,7 +25,6 @@
 					width: 100px;
 					@include md {
 						text-align: center;
-						height: 65px;
 					}
 				}
 				.service-content {

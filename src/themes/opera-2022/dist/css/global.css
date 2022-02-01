@@ -92,6 +92,18 @@ textarea {
   position: absolute;
   top: -70px;
   right: 5%; }
+  .logged-in .menu-toggle-button span:before {
+    background-color: white;
+    height: 3px;
+    width: 32px; }
+  .logged-in .menu-toggle-button span:after {
+    background-color: white;
+    height: 3px;
+    width: 32px; }
+  .logged-in .menu-toggle-button .menu-toggle-button-icon {
+    background-color: white;
+    height: 3px;
+    width: 32px; }
   .logged-in .menu-toggle-button .menu-toggle-button-text {
     visibility: hidden; }
 

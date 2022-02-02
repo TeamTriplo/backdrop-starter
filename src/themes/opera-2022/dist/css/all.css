@@ -439,7 +439,22 @@ textarea {
         max-width: 200px; } }
   .l-header.sticky_header {
     position: fixed;
-    top: 0; }
+    top: 0;
+    height: 70px;
+    transition: all .7s ease-in; }
+    .l-header.sticky_header .menu-toggle-button {
+      top: 15px; }
+    .l-header.sticky_header .block-system-main-menu .menu li a {
+      padding: 15px 30px; }
+      @media (max-width: 767px) {
+        .l-header.sticky_header .block-system-main-menu .menu li a {
+          padding: 5px; } }
+    .l-header.sticky_header .header-site-name-wrapper img {
+      max-height: 75px;
+      max-width: 150px; }
+    @media (max-width: 767px) {
+      .l-header.sticky_header {
+        height: auto; } }
 
 /*# sourceMappingURL=header.css.map */
 

@@ -96,6 +96,32 @@
 	&.sticky_header {
 		position: fixed;
 		top: 0;
+		height: 70px;
+	    transition: all .7s ease-in;
+	    .menu-toggle-button {
+	    	top: 15px;
+	    }
+		.block-system-main-menu {
+			.menu {
+				li{
+					a{
+						padding: 15px 30px;
+						@include md {
+							padding: 5px;
+						}
+					}
+				}	
+			}
+		}
+		.header-site-name-wrapper{
+			img {
+				max-height: 75px;
+				max-width: 150px;
+			}
+		}
+		@include md {
+			height: auto;
+		} 
 	}
 }
 

@@ -149,6 +149,7 @@ textarea {
     		}
     		&:after {
     			background-color: white;
+
     			height: 3px;
     			width: 32px;
     		}
@@ -167,6 +168,24 @@ textarea {
 	position: absolute;
 	top: 25px;
 	right: 0%;
+	span {
+		&:before {
+			background-color: white;
+			height: 3px;
+			width: 32px;
+		}
+		&:after {
+			background-color: white;
+
+			height: 3px;
+			width: 32px;
+		}
+	}
+	.menu-toggle-button-icon {
+		background-color: white;
+		height: 3px;
+		width: 32px;
+	}
 	.menu-toggle-button-text {
 		visibility: hidden;
 		padding: 0;

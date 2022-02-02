@@ -111,6 +111,18 @@ textarea {
   position: absolute;
   top: 25px;
   right: 0%; }
+  .menu-toggle-button span:before {
+    background-color: white;
+    height: 3px;
+    width: 32px; }
+  .menu-toggle-button span:after {
+    background-color: white;
+    height: 3px;
+    width: 32px; }
+  .menu-toggle-button .menu-toggle-button-icon {
+    background-color: white;
+    height: 3px;
+    width: 32px; }
   .menu-toggle-button .menu-toggle-button-text {
     visibility: hidden;
     padding: 0; }
@@ -559,7 +571,8 @@ textarea {
             color: #6dc8be;
             transition: all 1s; }
         .block-views-services-block .view-services .view-content .field-content .service-content .body {
-          text-align: left; }
+          text-align: left;
+          color: #000000; }
           @media (max-width: 767px) {
             .block-views-services-block .view-services .view-content .field-content .service-content .body {
               text-align: center; } }

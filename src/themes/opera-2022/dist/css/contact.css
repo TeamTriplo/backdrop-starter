@@ -28,7 +28,8 @@
   @media (max-width: 991px) {
     .block-block-where-are-we {
       float: none;
-      text-align: center; } }
+      text-align: center;
+      padding-bottom: 50px; } }
   .block-block-where-are-we .block--inner-wrapper .block-content {
     padding-top: 20px; }
 

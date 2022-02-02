@@ -58,6 +58,9 @@
 						padding: 30px;
 						font-weight: 600;
 						color: white;
+						@include md {
+							padding:5px;
+						}
 						&:after {
 							width: 100%;
 						}

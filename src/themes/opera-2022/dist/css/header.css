@@ -51,6 +51,9 @@
         padding: 30px;
         font-weight: 600;
         color: white; }
+        @media (max-width: 767px) {
+          .l-header .block-system-main-menu .menu li a:hover {
+            padding: 5px; } }
         .l-header .block-system-main-menu .menu li a:hover:after {
           width: 100%; }
       .l-header .block-system-main-menu .menu li a.active:after {

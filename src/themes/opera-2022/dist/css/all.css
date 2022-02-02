@@ -419,8 +419,14 @@ textarea {
             padding: 5px; } }
         .l-header .block-system-main-menu .menu li a:hover:after {
           width: 100%; }
+        @media (max-width: 767px) {
+          .l-header .block-system-main-menu .menu li a:hover {
+            margin-right: 30px; } }
       .l-header .block-system-main-menu .menu li a.active:after {
         width: 100%; }
+      @media (max-width: 767px) {
+        .l-header .block-system-main-menu .menu li a.active {
+          margin-right: 30px; } }
     .l-header .block-system-main-menu .menu li:hover {
       background-color: unset !important;
       -webkit-filter: none;

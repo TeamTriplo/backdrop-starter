@@ -18,7 +18,7 @@
     }
     .block-system-main-menu {
     	@include xl {
-    		width: 100%
+    		width: 100%;
     	}
     	.menu {
     		@include xl {
@@ -64,10 +64,16 @@
 						&:after {
 							width: 100%;
 						}
+						@include md {
+							margin-right: 30px;
+						}
 					}
 					&.active {
 						&:after {
 							width: 100%;
+						}
+						@include md {
+							margin-right: 30px;
 						}
 					}
 				}

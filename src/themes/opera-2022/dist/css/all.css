@@ -415,6 +415,9 @@ textarea {
     @media (max-width: 767px) {
       .l-header .header-site-name-wrapper img {
         max-width: 200px; } }
+  .l-header.sticky_header {
+    position: fixed;
+    top: 0; }
 
 /*# sourceMappingURL=header.css.map */
 

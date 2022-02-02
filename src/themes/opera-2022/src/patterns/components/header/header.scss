@@ -18,7 +18,7 @@
     }
     .block-system-main-menu {
     	@include xl {
-    		width: 100%
+    		width: 100%;
     	}
     	.menu {
     		@include xl {
@@ -58,13 +58,22 @@
 						padding: 30px;
 						font-weight: 600;
 						color: white;
+						@include md {
+							padding:5px;
+						}
 						&:after {
 							width: 100%;
+						}
+						@include md {
+							margin-right: 30px;
 						}
 					}
 					&.active {
 						&:after {
 							width: 100%;
+						}
+						@include md {
+							margin-right: 30px;
 						}
 					}
 				}

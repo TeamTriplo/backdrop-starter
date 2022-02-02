@@ -93,15 +93,15 @@ textarea {
   top: -70px;
   right: 5%; }
   .logged-in .menu-toggle-button span:before {
-    background-color: white;
+    background-color: #ffffff;
     height: 3px;
     width: 32px; }
   .logged-in .menu-toggle-button span:after {
-    background-color: white;
+    background-color: #ffffff;
     height: 3px;
     width: 32px; }
   .logged-in .menu-toggle-button .menu-toggle-button-icon {
-    background-color: white;
+    background-color: #ffffff;
     height: 3px;
     width: 32px; }
   .logged-in .menu-toggle-button .menu-toggle-button-text {
@@ -111,6 +111,18 @@ textarea {
   position: absolute;
   top: 25px;
   right: 0%; }
+  .menu-toggle-button span:before {
+    background-color: #ffffff;
+    height: 3px;
+    width: 32px; }
+  .menu-toggle-button span:after {
+    background-color: #ffffff;
+    height: 3px;
+    width: 32px; }
+  .menu-toggle-button .menu-toggle-button-icon {
+    background-color: #ffffff;
+    height: 3px;
+    width: 32px; }
   .menu-toggle-button .menu-toggle-button-text {
     visibility: hidden;
     padding: 0; }
@@ -256,7 +268,7 @@ textarea {
   padding: 100px 0; }
   @media (max-width: 767px) {
     .blog-page {
-      padding: 50px; } }
+      padding: 50px 0; } }
   .blog-page .view-content .views-grid-box {
     border: 1px solid #80808030;
     border-top: 0;
@@ -313,7 +325,8 @@ textarea {
   @media (max-width: 991px) {
     .block-block-where-are-we {
       float: none;
-      text-align: center; } }
+      text-align: center;
+      padding-bottom: 50px; } }
   .block-block-where-are-we .block--inner-wrapper .block-content {
     padding-top: 20px; }
 
@@ -401,10 +414,19 @@ textarea {
         padding: 30px;
         font-weight: 600;
         color: white; }
+        @media (max-width: 767px) {
+          .l-header .block-system-main-menu .menu li a:hover {
+            padding: 5px; } }
         .l-header .block-system-main-menu .menu li a:hover:after {
           width: 100%; }
+        @media (max-width: 767px) {
+          .l-header .block-system-main-menu .menu li a:hover {
+            margin-right: 30px; } }
       .l-header .block-system-main-menu .menu li a.active:after {
         width: 100%; }
+      @media (max-width: 767px) {
+        .l-header .block-system-main-menu .menu li a.active {
+          margin-right: 30px; } }
     .l-header .block-system-main-menu .menu li:hover {
       background-color: unset !important;
       -webkit-filter: none;
@@ -525,6 +547,9 @@ textarea {
   .block-views-services-block .view-services {
     padding: 50px 0; }
     @media (max-width: 767px) {
+      .block-views-services-block .view-services {
+        padding-top: 0px; } }
+    @media (max-width: 767px) {
       .block-views-services-block .view-services .views-grid-box {
         padding: 0; } }
     .block-views-services-block .view-services .view-content img {
@@ -562,7 +587,8 @@ textarea {
             color: #6dc8be;
             transition: all 1s; }
         .block-views-services-block .view-services .view-content .field-content .service-content .body {
-          text-align: left; }
+          text-align: left;
+          color: #000000; }
           @media (max-width: 767px) {
             .block-views-services-block .view-services .view-content .field-content .service-content .body {
               text-align: center; } }

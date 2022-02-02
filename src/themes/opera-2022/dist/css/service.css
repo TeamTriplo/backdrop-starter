@@ -3,6 +3,9 @@
   .block-views-services-block .view-services {
     padding: 50px 0; }
     @media (max-width: 767px) {
+      .block-views-services-block .view-services {
+        padding-top: 0px; } }
+    @media (max-width: 767px) {
       .block-views-services-block .view-services .views-grid-box {
         padding: 0; } }
     .block-views-services-block .view-services .view-content img {
@@ -40,7 +43,8 @@
             color: #6dc8be;
             transition: all 1s; }
         .block-views-services-block .view-services .view-content .field-content .service-content .body {
-          text-align: left; }
+          text-align: left;
+          color: #000000; }
           @media (max-width: 767px) {
             .block-views-services-block .view-services .view-content .field-content .service-content .body {
               text-align: center; } }

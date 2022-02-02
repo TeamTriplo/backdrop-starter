@@ -93,15 +93,15 @@ textarea {
   top: -70px;
   right: 5%; }
   .logged-in .menu-toggle-button span:before {
-    background-color: white;
+    background-color: #ffffff;
     height: 3px;
     width: 32px; }
   .logged-in .menu-toggle-button span:after {
-    background-color: white;
+    background-color: #ffffff;
     height: 3px;
     width: 32px; }
   .logged-in .menu-toggle-button .menu-toggle-button-icon {
-    background-color: white;
+    background-color: #ffffff;
     height: 3px;
     width: 32px; }
   .logged-in .menu-toggle-button .menu-toggle-button-text {
@@ -111,6 +111,18 @@ textarea {
   position: absolute;
   top: 25px;
   right: 0%; }
+  .menu-toggle-button span:before {
+    background-color: #ffffff;
+    height: 3px;
+    width: 32px; }
+  .menu-toggle-button span:after {
+    background-color: #ffffff;
+    height: 3px;
+    width: 32px; }
+  .menu-toggle-button .menu-toggle-button-icon {
+    background-color: #ffffff;
+    height: 3px;
+    width: 32px; }
   .menu-toggle-button .menu-toggle-button-text {
     visibility: hidden;
     padding: 0; }

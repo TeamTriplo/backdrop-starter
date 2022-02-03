@@ -1,52 +1,50 @@
 .block-views-services-block {
   background-color: #f4eee9; }
-  .block-views-services-block .view-services {
-    padding: 50px 0; }
+  @media (max-width: 767px) {
+    .block-views-services-block .view-services {
+      padding: 0 0 50px; } }
+  @media (max-width: 767px) {
+    .block-views-services-block .view-services .views-grid-box {
+      padding: 0; } }
+  .block-views-services-block .view-services .view-content img {
+    width: auto; }
+  .block-views-services-block .view-services .view-content .field-content {
+    display: flex;
+    flex-direction: column; }
     @media (max-width: 767px) {
-      .block-views-services-block .view-services {
-        padding-top: 0px; } }
-    @media (max-width: 767px) {
-      .block-views-services-block .view-services .views-grid-box {
-        padding: 0; } }
-    .block-views-services-block .view-services .view-content img {
-      width: auto; }
-    .block-views-services-block .view-services .view-content .field-content {
-      display: flex;
-      flex-direction: column; }
+      .block-views-services-block .view-services .view-content .field-content {
+        align-items: center; } }
+    .block-views-services-block .view-services .view-content .field-content .image {
+      height: 90px;
+      width: 100px; }
       @media (max-width: 767px) {
-        .block-views-services-block .view-services .view-content .field-content {
-          align-items: center; } }
-      .block-views-services-block .view-services .view-content .field-content .image {
-        height: 90px;
-        width: 100px; }
+        .block-views-services-block .view-services .view-content .field-content .image {
+          text-align: center; } }
+    .block-views-services-block .view-services .view-content .field-content .service-content {
+      padding-bottom: 40px;
+      text-align: left; }
+      @media (max-width: 767px) {
+        .block-views-services-block .view-services .view-content .field-content .service-content {
+          padding-bottom: 20px; } }
+      .block-views-services-block .view-services .view-content .field-content .service-content .title {
+        color: #000000;
+        cursor: default;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1em;
+        margin-top: 15px;
+        padding-bottom: 20px; }
         @media (max-width: 767px) {
-          .block-views-services-block .view-services .view-content .field-content .image {
+          .block-views-services-block .view-services .view-content .field-content .service-content .title {
             text-align: center; } }
-      .block-views-services-block .view-services .view-content .field-content .service-content {
-        padding-bottom: 40px;
-        text-align: left; }
+        .block-views-services-block .view-services .view-content .field-content .service-content .title:hover {
+          color: #6dc8be;
+          transition: all 1s; }
+      .block-views-services-block .view-services .view-content .field-content .service-content .body {
+        text-align: left;
+        color: #000000; }
         @media (max-width: 767px) {
-          .block-views-services-block .view-services .view-content .field-content .service-content {
-            padding-bottom: 20px; } }
-        .block-views-services-block .view-services .view-content .field-content .service-content .title {
-          color: #000000;
-          cursor: default;
-          font-weight: 600;
-          font-size: 22px;
-          line-height: 1em;
-          margin-top: 15px;
-          padding-bottom: 20px; }
-          @media (max-width: 767px) {
-            .block-views-services-block .view-services .view-content .field-content .service-content .title {
-              text-align: center; } }
-          .block-views-services-block .view-services .view-content .field-content .service-content .title:hover {
-            color: #6dc8be;
-            transition: all 1s; }
-        .block-views-services-block .view-services .view-content .field-content .service-content .body {
-          text-align: left;
-          color: #000000; }
-          @media (max-width: 767px) {
-            .block-views-services-block .view-services .view-content .field-content .service-content .body {
-              text-align: center; } }
+          .block-views-services-block .view-services .view-content .field-content .service-content .body {
+            text-align: center; } }
 
 /*# sourceMappingURL=service.css.map */

@@ -374,7 +374,7 @@ textarea {
     .l-header {
       display: block; } }
   .l-header .block-system-header {
-    flex-basis: 600px; }
+    flex-basis: 700px; }
   @media (max-width: 1199px) {
     .l-header .block-system-main-menu {
       width: 100%; } }

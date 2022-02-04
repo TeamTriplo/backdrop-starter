@@ -734,7 +734,7 @@
                         "alter": {
                             "alter_text": 0,
                             "text": "",
-                            "make_link": 0,
+                            "make_link": 1,
                             "path": "",
                             "absolute": 0,
                             "external": false,
@@ -743,10 +743,10 @@
                             "trim_whitespace": 0,
                             "alt": "",
                             "rel": "",
-                            "link_class": "",
+                            "link_class": "button",
                             "prefix": "",
                             "suffix": "",
-                            "target": "",
+                            "target": "[view_node]",
                             "nl2br": 0,
                             "max_length": "",
                             "word_boundary": 1,
@@ -784,7 +784,7 @@
                         "exclude": 0,
                         "alter": {
                             "alter_text": true,
-                            "text": "<div class=\"card-list-left\">\r\n[field_featured_image]\r\n</div>\r\n<div class=\"card-list-right\">\r\n<div class=\"card-list-details\">\r\n  <div class=\"name\">[title]</div>\r\n  <div class=\"role\">[body]</div>\r\n  <div class=\"link\">[view_node]</div>\r\n</div>\r\n</div>",
+                            "text": "<div class=\"card-list-left\">\r\n[field_featured_image]\r\n</div>\r\n<div class=\"card-list-right\">\r\n<div class=\"card-list-details\">\r\n  <div class=\"name\">[title]</div>\r\n  <div class=\"role\">[body]</div>\r\n  <div class=\"button-content\">[view_node]</div>\r\n</div>\r\n</div>",
                             "make_link": 0,
                             "path": "",
                             "absolute": 0,
@@ -861,7 +861,7 @@
                         "ui_name": "",
                         "label": "",
                         "empty": 0,
-                        "content": "<div class=\"container global_header\">\r\n<h2 class=\"header\">Blog</h2>\r\n\r\n<p class=\"paragraph\">We have a bunch of projects in our bucket and here are some of the featured projects that we have delivered recently</p>\r\n</div>\r\n",
+                        "content": "<div class=\"container global_header\">\r\n<h2 class=\"header\">Blog</h2>\r\n\r\n<p class=\"paragraph\">Here are some things we've been thinking about or working on lately.</p>\r\n</div>\r\n",
                         "format": "full_html",
                         "tokenize": 0
                     }

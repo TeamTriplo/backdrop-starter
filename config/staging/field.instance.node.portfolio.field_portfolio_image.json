@@ -5,13 +5,14 @@
     "bundle": "portfolio",
     "label": "Portfolio Image",
     "widget": {
-        "weight": "-3",
+        "weight": "0",
         "type": "image_image",
         "module": "image",
         "active": 1,
         "settings": {
             "progress_indicator": "throbber",
-            "preview_image_style": "thumbnail"
+            "preview_image_style": "thumbnail",
+            "browser_view": "image_library"
         }
     },
     "description": "",
@@ -35,11 +36,12 @@
         "default": {
             "label": "hidden",
             "type": "image",
-            "weight": "1",
+            "weight": "0",
             "settings": {
-                "image_style": "medium",
+                "image_style": "large",
                 "image_link": "",
-                "image_float": ""
+                "image_float": "",
+                "image_load": "auto"
             },
             "module": "image"
         }

@@ -8,7 +8,7 @@
     "module": "dashboard",
     "weight": 0,
     "storage": 2,
-    "layout_template": "hero",
+    "layout_template": "sutro_full",
     "disabled": false,
     "settings": {
         "title": "",
@@ -19,22 +19,23 @@
         "header": [
             "eb936b48-d2ec-4d9f-9dd9-ef24a1ad3493"
         ],
-        "nav": [],
-        "hero": [],
-        "top": [
-            "a314b689-83cf-460e-9635-946582740e22"
-        ],
-        "content": [
+        "top": [],
+        "content": [],
+        "half1": [
             "1b1c9e24-eb39-447c-8912-1879553c34c7",
-            "8ebebe78-4aa4-4d08-a79f-2463daf79863",
-            "f149b0ac-ff4c-46f5-8402-ee1aac572dfb",
-            "aab75ee1-7a16-4137-b253-83a0f6323936",
             "a4b4935d-e085-4d77-a522-ea805e172c1a",
             "2496a766-3efd-410d-88ea-c84f7b67806e",
             "fe51ec3f-6310-42cd-87f1-1c2361d666c1"
         ],
+        "half2": [
+            "38b5b8bb-20f5-48cf-bc08-08bf8155231f",
+            "8ebebe78-4aa4-4d08-a79f-2463daf79863",
+            "f149b0ac-ff4c-46f5-8402-ee1aac572dfb",
+            "aab75ee1-7a16-4137-b253-83a0f6323936"
+        ],
         "bottom": [],
-        "footer": []
+        "footer": [],
+        "title": []
     },
     "contexts": [],
     "relationships": [],
@@ -62,30 +63,6 @@
                 }
             }
         },
-        "a314b689-83cf-460e-9635-946582740e22": {
-            "plugin": "dashboard:welcome",
-            "data": {
-                "module": "dashboard",
-                "delta": "welcome",
-                "settings": {
-                    "title_display": "default",
-                    "title": "",
-                    "style": "default",
-                    "block_settings": [],
-                    "contexts": [],
-                    "types": []
-                },
-                "uuid": "a314b689-83cf-460e-9635-946582740e22",
-                "style": {
-                    "plugin": "default",
-                    "data": {
-                        "settings": {
-                            "classes": ""
-                        }
-                    }
-                }
-            }
-        },
         "1b1c9e24-eb39-447c-8912-1879553c34c7": {
             "plugin": "dashboard_plus:manage_content",
             "data": {
@@ -100,6 +77,106 @@
                     "types": []
                 },
                 "uuid": "1b1c9e24-eb39-447c-8912-1879553c34c7",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "a4b4935d-e085-4d77-a522-ea805e172c1a": {
+            "plugin": "dashboard:menu",
+            "data": {
+                "module": "dashboard",
+                "delta": "menu",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "menus": [
+                        "menu-three",
+                        "main-menu"
+                    ]
+                },
+                "uuid": "a4b4935d-e085-4d77-a522-ea805e172c1a",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "2496a766-3efd-410d-88ea-c84f7b67806e": {
+            "plugin": "dashboard:node_types",
+            "data": {
+                "module": "dashboard",
+                "delta": "node_types",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "types": []
+                },
+                "uuid": "2496a766-3efd-410d-88ea-c84f7b67806e",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "fe51ec3f-6310-42cd-87f1-1c2361d666c1": {
+            "plugin": "dashboard:taxonomy",
+            "data": {
+                "module": "dashboard",
+                "delta": "taxonomy",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "vocabularies": []
+                },
+                "uuid": "fe51ec3f-6310-42cd-87f1-1c2361d666c1",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "38b5b8bb-20f5-48cf-bc08-08bf8155231f": {
+            "plugin": "dashboard:news",
+            "data": {
+                "module": "dashboard",
+                "delta": "news",
+                "settings": {
+                    "title_display": "default",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": [],
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "38b5b8bb-20f5-48cf-bc08-08bf8155231f",
                 "style": {
                     "plugin": "default",
                     "data": {
@@ -186,81 +263,6 @@
                     ]
                 },
                 "uuid": "aab75ee1-7a16-4137-b253-83a0f6323936",
-                "style": {
-                    "plugin": "default",
-                    "data": {
-                        "settings": {
-                            "classes": ""
-                        }
-                    }
-                }
-            }
-        },
-        "a4b4935d-e085-4d77-a522-ea805e172c1a": {
-            "plugin": "dashboard:menu",
-            "data": {
-                "module": "dashboard",
-                "delta": "menu",
-                "settings": {
-                    "title_display": "default",
-                    "title": "",
-                    "style": "default",
-                    "block_settings": [],
-                    "contexts": [],
-                    "menus": [
-                        "menu-three",
-                        "main-menu"
-                    ]
-                },
-                "uuid": "a4b4935d-e085-4d77-a522-ea805e172c1a",
-                "style": {
-                    "plugin": "default",
-                    "data": {
-                        "settings": {
-                            "classes": ""
-                        }
-                    }
-                }
-            }
-        },
-        "2496a766-3efd-410d-88ea-c84f7b67806e": {
-            "plugin": "dashboard:node_types",
-            "data": {
-                "module": "dashboard",
-                "delta": "node_types",
-                "settings": {
-                    "title_display": "default",
-                    "title": "",
-                    "style": "default",
-                    "block_settings": [],
-                    "contexts": [],
-                    "types": []
-                },
-                "uuid": "2496a766-3efd-410d-88ea-c84f7b67806e",
-                "style": {
-                    "plugin": "default",
-                    "data": {
-                        "settings": {
-                            "classes": ""
-                        }
-                    }
-                }
-            }
-        },
-        "fe51ec3f-6310-42cd-87f1-1c2361d666c1": {
-            "plugin": "dashboard:taxonomy",
-            "data": {
-                "module": "dashboard",
-                "delta": "taxonomy",
-                "settings": {
-                    "title_display": "default",
-                    "title": "",
-                    "style": "default",
-                    "block_settings": [],
-                    "contexts": [],
-                    "vocabularies": []
-                },
-                "uuid": "fe51ec3f-6310-42cd-87f1-1c2361d666c1",
                 "style": {
                     "plugin": "default",
                     "data": {

@@ -5,7 +5,7 @@
     "title": "",
     "description": "",
     "body": {
-        "value": "<p>1360 University Ave. W. #102</p>\r\n<p>Saint Paul, MN 55104</p>\r\n",
+        "value": "<p>1360 University Ave. W. #102<br>Saint Paul, MN 55104</p>\r\n",
         "format": "full_html"
     },
     "default_langcode": "und"

@@ -21,7 +21,8 @@
     },
     "positions": {
         "header": [
-            "b3c26a44-7586-4520-b900-e9a9110fa677"
+            "b3c26a44-7586-4520-b900-e9a9110fa677",
+            "b2684c94-a158-4c11-ac00-c04dc5ad58ce"
         ],
         "nav": [],
         "hero": [],
@@ -61,6 +62,39 @@
                     "contexts": []
                 },
                 "uuid": "b3c26a44-7586-4520-b900-e9a9110fa677",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "b2684c94-a158-4c11-ac00-c04dc5ad58ce": {
+            "plugin": "system:main-menu",
+            "data": {
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "dropdown",
+                        "level": "1",
+                        "depth": "0",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 1
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "b2684c94-a158-4c11-ac00-c04dc5ad58ce",
                 "style": {
                     "plugin": "default",
                     "data": {

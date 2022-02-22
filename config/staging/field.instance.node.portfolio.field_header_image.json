@@ -5,13 +5,14 @@
     "bundle": "portfolio",
     "label": "Header Image",
     "widget": {
-        "weight": "-1",
+        "weight": "3",
         "type": "image_image",
         "module": "image",
         "active": 1,
         "settings": {
             "progress_indicator": "throbber",
-            "preview_image_style": "thumbnail"
+            "preview_image_style": "thumbnail",
+            "browser_view": "image_library"
         }
     },
     "description": "",

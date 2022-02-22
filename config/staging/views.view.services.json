@@ -308,7 +308,7 @@
                         "ui_name": "",
                         "label": "",
                         "empty": 1,
-                        "content": "<div class=\"container global_header\">\r\n<h2 class=\"header\">We are best at</h2>\r\n\r\n<p class=\"paragraph\">At a time when simplification is essential, marketing is becoming increasingly complex. It not only requires an original idea and the right strategy,but the capabilities to make it all come to life in a relevant, influential and easy-to-understand manner across markets.</p>\r\n</div>\r\n",
+                        "content": "<div class=\"container global_header\">\r\n<h2 class=\"header\">We are best at</h2>\r\n\r\n<p class=\"paragraph\">Our strength is our knowledge and commitment to working with Open Source CMS platforms that include: Backdrop CMS, Drupal, and Wordpress. We believe in and support Open Source software and are active members of the Backdrop CMS and Drupal communities. We can help steer to you the right CMS and customize it to meet your specific requirements.</p>\r\n</div>\r\n",
                         "format": "full_html",
                         "tokenize": 0
                     }

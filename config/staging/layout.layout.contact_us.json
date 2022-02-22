@@ -8,31 +8,29 @@
     "module": null,
     "weight": 0,
     "storage": 1,
-    "layout_template": "saint_paul",
+    "layout_template": "hero",
     "disabled": false,
     "settings": {
         "title": "",
-        "title_display": "default",
-        "title_block": null
+        "title_display": "none",
+        "title_block": "4f25e200-7478-444c-b407-7c85e2886a0a"
     },
     "positions": {
-        "8dbda505-6d40-4bdd-8556-86f370c02f18--0": [
-            "768a66ec-2fba-42e4-9506-0661f320e52f"
+        "header": [
+            "768a66ec-2fba-42e4-9506-0661f320e52f",
+            "eddb07c7-9e50-4b61-8f00-d8e403940ff5"
         ],
-        "9bb9969d-47fb-454b-8c5c-92abad7a22ee--0": [],
-        "b818150d-c66c-432f-af0f-1555f1674290--0": [
-            "9b797009-d143-4b8a-8115-218ddba7484b"
-        ],
-        "b818150d-c66c-432f-af0f-1555f1674290--1": [
+        "nav": [],
+        "hero": [],
+        "top": [],
+        "content": [
+            "9b797009-d143-4b8a-8115-218ddba7484b",
             "00b5709a-c576-4c02-a329-41a1a1ba149f"
         ],
-        "cdb458c6-0b91-41f1-8d09-9e588f858c98--0": [
-            "f684501e-7711-4ed4-a404-4d988d1dedfe"
-        ],
-        "cdb458c6-0b91-41f1-8d09-9e588f858c98--1": [
-            "4f25e200-7478-444c-b407-7c85e2886a0a"
-        ],
-        "cdb458c6-0b91-41f1-8d09-9e588f858c98--2": [
+        "bottom": [],
+        "footer": [
+            "f684501e-7711-4ed4-a404-4d988d1dedfe",
+            "4f25e200-7478-444c-b407-7c85e2886a0a",
             "8b2e51cf-c2e2-4a9b-8246-701026466442"
         ],
         "title": []
@@ -58,6 +56,39 @@
                     "contexts": []
                 },
                 "uuid": "768a66ec-2fba-42e4-9506-0661f320e52f",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
+        "eddb07c7-9e50-4b61-8f00-d8e403940ff5": {
+            "plugin": "system:main-menu",
+            "data": {
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "dropdown",
+                        "level": "1",
+                        "depth": "0",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 1
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "eddb07c7-9e50-4b61-8f00-d8e403940ff5",
                 "style": {
                     "plugin": "default",
                     "data": {

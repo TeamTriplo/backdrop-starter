@@ -315,7 +315,7 @@
                         "ui_name": "",
                         "label": "",
                         "empty": 0,
-                        "content": "<div class=\"container global_header\">\r\n<h2 class=\"header\">Our Team</h2>\r\n\r\n<p class=\"paragraph\">We have a bunch of projects in our bucket and here are some of the featured projects that we have delivered recently</p>\r\n</div>",
+                        "content": "<div class=\"container global_header\">\r\n<h2 class=\"header\">Our Team</h2>\r\n\r\n<p class=\"paragraph\">Meet some of the core members of our team along with key collaborators.</p>\r\n</div>\r\n",
                         "format": "full_html",
                         "tokenize": 0
                     }

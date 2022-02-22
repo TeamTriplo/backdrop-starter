@@ -21,7 +21,8 @@
     },
     "positions": {
         "header": [
-            "84c43df4-1165-4faf-8700-c362a7153c0b"
+            "84c43df4-1165-4faf-8700-c362a7153c0b",
+            "3c0dc649-2f04-4be0-8b12-18ddca788c94"
         ],
         "nav": [],
         "hero": [],
@@ -71,6 +72,39 @@
                 }
             }
         },
+        "3c0dc649-2f04-4be0-8b12-18ddca788c94": {
+            "plugin": "system:main-menu",
+            "data": {
+                "module": "system",
+                "delta": "main-menu",
+                "settings": {
+                    "title_display": "none",
+                    "title": "",
+                    "style": "default",
+                    "block_settings": {
+                        "menu_name": "main-menu",
+                        "style": "dropdown",
+                        "level": "1",
+                        "depth": "0",
+                        "expand_all": 0,
+                        "clickdown": 0,
+                        "toggle": 1
+                    },
+                    "contexts": [],
+                    "admin_label": "",
+                    "admin_description": ""
+                },
+                "uuid": "3c0dc649-2f04-4be0-8b12-18ddca788c94",
+                "style": {
+                    "plugin": "default",
+                    "data": {
+                        "settings": {
+                            "classes": ""
+                        }
+                    }
+                }
+            }
+        },
         "13ca4b57-bc04-4948-b908-8b3b0cf818b3": {
             "plugin": "system:page_components:tabs",
             "data": {
@@ -110,7 +144,9 @@
                     "contexts": [],
                     "title_tag": "h1",
                     "title_classes": "page-title",
-                    "tab_type": "both"
+                    "tab_type": "both",
+                    "admin_label": "",
+                    "admin_description": ""
                 },
                 "uuid": "a5e028c2-68f6-4234-8303-3c902646dc5a",
                 "style": {
@@ -127,7 +163,7 @@
                         "data": {
                             "settings": {
                                 "visibility_setting": "1",
-                                "paths": "blog/*",
+                                "paths": "portfolio/*",
                                 "load_condition_nojs": "Load condition"
                             }
                         }

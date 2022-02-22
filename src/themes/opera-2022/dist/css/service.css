@@ -16,7 +16,7 @@
         align-items: center; } }
     .block-views-services-block .view-services .view-content .field-content .image {
       height: 90px;
-      width: 100px; }
+      text-align: center; }
       @media (max-width: 767px) {
         .block-views-services-block .view-services .view-content .field-content .image {
           text-align: center; } }

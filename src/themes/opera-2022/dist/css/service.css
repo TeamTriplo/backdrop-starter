@@ -7,7 +7,7 @@
     .block-views-services-block .view-services .views-grid-box {
       padding: 0; } }
   .block-views-services-block .view-services .view-content img {
-    width: auto; }
+    width: 100px; }
   .block-views-services-block .view-services .view-content .field-content {
     display: flex;
     flex-direction: column; }

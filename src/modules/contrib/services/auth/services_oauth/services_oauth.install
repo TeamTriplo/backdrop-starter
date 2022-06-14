@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function services_oauth_install() {
+  backdrop_install_schema('services_oauth');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function services_oauth_uninstall() {
+  backdrop_uninstall_schema('services_oauth');
+}
+
+/**
+ * Implements hook_schema().
+ */
+function services_oauth_schema() {
+  $schema = array();
+
+  return $schema;
+}

@@ -1,0 +1,121 @@
+<?php
+
+include_once BACKDROP_ROOT . '/' . backdrop_get_path('module', 'services') . '/tests/services.test';
+
+// $Id: ServicesResourceSystemTests.test,v 1.1.2.1 2011/01/19 00:34:49 ocyrus Exp $
+
+/**
+ * @file
+ * Call the endpoint tests when no authentication is being used.
+ *
+ */
+
+/**
+ * Run test cases for the endpoint with no authentication turned on.
+ *
+ */
+class ServicesResourceSystemTests extends ServicesWebTestCase {
+  // Class variables
+  protected $privileged_user = NULL ;
+  // Endpoint details.
+  protected $endpoint = NULL;
+
+  /**
+   * Implementation of setUp().
+   */
+  public function setUp() {
+    parent::setUp(
+      'services',
+      'rest_server'
+    );
+    // Set up endpoint.
+    $this->endpoint =  $this->saveNewEndpoint();
+    // Set up privileged user and login.
+    $this->privileged_user = $this->backdropCreateUser(array('get a system variable', 'set a system variable'));
+    $this->backdropLogin($this->privileged_user);
+  }
+
+  /**
+   * Implementation of getInfo().
+   */
+  public static function getInfo() {
+    return array(
+      'name'        => 'Resource System',
+      'description' => 'Test the resource System methods.',
+      'group'       => 'Services',
+    );
+  }
+
+  /**
+   * Test connect method.
+   */
+  function testSystemConnect() {
+    $path = $this->endpoint->path;
+    // Call as authenticated user.
+    $response = $this->servicesPost($path . '/system/connect');
+    $response_user = $response['body']->user;
+    $this->assertEqual($response_user->uid, $this->privileged_user->uid, 'User account received for authenticated user.', 'SystemResource: Connect');
+
+    $this->backdropLogout();
+    // Call as anonymous user.
+    $response = $this->servicesPost($path . '/system/connect');
+    $response_user = $response['body']->user;
+    $this->assertEqual($response_user->uid, 0, 'User account received for anonymous user.', 'SystemResource: Connect');
+  }
+
+  /**
+   * Test get_variable method.
+   */
+  function testSystemGetVariable() {
+    $path = $this->endpoint->path;
+
+    $name = $this->randomName();
+    $value = $this->randomString();
+    $config_name = 'services.settings';
+
+    config_set($config_name, $name, $value);
+
+    // Get already set variable.
+    $response = $this->servicesPost($path . '/system/get_variable', array('config_name' => $config_name, 'name' => $name));
+    $this->assertEqual($value, $response['body'], 'Variable get value.', 'SystemResource: get_variable');
+  }
+
+  /**
+   * Test set_variable method.
+   */
+  function testSystemSetVariable() {
+    $path = $this->endpoint->path;
+
+    $name = $this->randomName();
+    $value = $this->randomString();
+    $config_name = 'services.settings';
+
+    $response = $this->servicesPost($path . '/system/set_variable', array('config_name' => $config_name, 'name' => $name, 'value' => $value));
+
+    // Get variable.
+    $new_value = config_get($config_name, $name);
+
+    $this->assertEqual($value, $new_value, 'Variable set value.', 'SystemResource: set_variable');
+  }
+
+  /**
+   * Test del_variable method.
+   */
+  function testSystemDelVariable() {
+    $path = $this->endpoint->path;
+
+    // Set a random variable.
+    $name = $this->randomName();
+    $value = $this->randomString();
+    $config_name = 'services.settings';
+    config_set($config_name, $name, $value);
+
+    // Delete the variable via del_variable.
+    $response = $this->servicesPost($path . '/system/del_variable', array('config_name' => $config_name, 'name' => $name));
+
+    // Get variable.
+    $no_value = config_get($config_name, $name);
+
+    $this->assertNull($no_value, 'Variable deleted.', 'SystemResource: del_variable');
+  }
+}

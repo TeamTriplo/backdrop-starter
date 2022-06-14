@@ -1,0 +1,88 @@
+<?php
+
+include_once BACKDROP_ROOT . '/' . backdrop_get_path('module', 'services') . '/tests/services.test';
+
+
+
+/**
+ * @file
+ * Call the endpoint tests when no authentication is being used.
+ *
+ */
+
+/**
+ * Run test cases for the endpoint with no authentication turned on.
+ *
+ */
+class ServicesEndpointTests extends ServicesWebTestCase {
+  /**
+   * Test adding an endpoint succeeds.
+   */
+  public function testEndpointForm() {
+    $edit = $this->populateEndpointFAPI();
+// Create and log in our privileged user.
+    $this->privilegedUser = $this->backdropCreateUser(array(
+      'administer services',
+      'administer site configuration',
+    ));
+    $this->backdropLogin($this->privilegedUser);
+    $this->backdropPost('admin/structure/services/add', $edit, 'Save endpoint');
+    $this->backdropGet($edit['path']);
+  }
+
+  /**
+   * Test adding an endpoint succeeds.
+   */
+  public function testSuccessfulAddEndpoint() {
+    $edit = $this->populateEndpointFAPI();
+    $this->privilegedUser = $this->backdropCreateUser(array(
+      'administer services',
+      'administer content types',
+      'administer site configuration',
+    ));
+    $this->backdropLogin($this->privilegedUser);
+    $this->backdropPost('admin/structure/services/add', $edit, 'Save endpoint');
+    $this->assertResponse('200', 'expected 200');
+    $this->backdropGet('admin/structure/services');
+    $this->assertResponse('200', 'expected 200');
+
+    $this->assertText($edit['name'], 'Endpoint path appears');
+  }
+
+  /**
+   * Test missing path to endpoint causes an error.
+   */
+  public function testMissingPath() {
+    $edit = $this->populateEndpointFAPI();
+    unset($edit['path']);
+    $this->privilegedUser = $this->backdropCreateUser(array(
+      'administer services',
+      'administer content types',
+      'administer site configuration',
+    ));
+    $this->backdropLogin($this->privilegedUser);
+    $this->backdropPost('admin/structure/services/add', $edit, 'Save endpoint');
+    $this->assertResponse('200', 'expected 200');
+
+    $this->assertText('Path to endpoint field is required.', 'Endpoint path missing error message.');
+    $this->assertFieldByName('server', 'rest_server', 'Server is rest server');
+  }
+  /**
+   * Test missing server for endpoint causes an error.
+   */
+  public function testMissingServer() {
+    $edit = $this->populateEndpointFAPI();
+    unset($edit['server']);
+    $this->privilegedUser = $this->backdropCreateUser(array(
+      'administer services',
+      'administer content types',
+      'administer site configuration',
+    ));
+    $this->backdropLogin($this->privilegedUser);
+    $this->backdropPost('admin/structure/services/add', $edit, 'Save endpoint');
+    $this->assertResponse('200', 'expected 200');
+
+    $this->assertText('Server field is required.', 'Server missing error message.');
+    $this->assertFieldByName('name', $edit['name'], 'Name field remains.');
+  }
+}

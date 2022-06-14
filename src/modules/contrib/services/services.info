@@ -1,0 +1,12 @@
+name = Services
+description = Provide an API for creating web services.
+package = Services
+backdrop = 1.x
+type = module
+php = 5.x
+configure = admin/structure/services
+
+; Added by Backdrop CMS packaging script on 2021-03-06
+project = services
+version = 1.x-3.27.0-beta
+timestamp = 1615096187

@@ -1,0 +1,15 @@
+name = Services Test Resource
+description = Provide test methods to check different situations.
+package = Services
+core = 7.x
+php = 5.x
+
+; This module for tests only.
+hidden = TRUE
+
+dependencies[] = services
+
+; Added by Backdrop CMS packaging script on 2021-03-06
+project = services
+version = 1.x-3.27.0-beta
+timestamp = 1615096187

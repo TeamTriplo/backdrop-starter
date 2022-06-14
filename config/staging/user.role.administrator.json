@@ -155,6 +155,12 @@
         "use PHP for tracking visibility",
         "administer stickynav",
         "administer flexible templates",
-        "create terms in tags"
+        "create terms in tags",
+        "administer matomo",
+        "opt-in or out of matomo tracking",
+        "use php for matomo tracking visibility",
+        "add js snippets for matomo",
+        "administer meta tags",
+        "edit meta tags"
     ]
 }

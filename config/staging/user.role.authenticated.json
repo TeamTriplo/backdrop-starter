@@ -11,6 +11,7 @@
         "upload editor images",
         "use text format filtered_html",
         "access site-wide contact form",
-        "view files"
+        "view files",
+        "opt-in or out of matomo tracking"
     ]
 }

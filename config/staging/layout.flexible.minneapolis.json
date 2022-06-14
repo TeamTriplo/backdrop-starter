@@ -10,7 +10,10 @@
             "classes": "",
             "container": "container",
             "region_names": {
-                "region_name_0": "Header"
+                "region_0": {
+                    "label": "Header",
+                    "name": "header"
+                }
             }
         },
         "e87df9a2-c5f1-4aff-b54c-76745f9f85c7": {
@@ -19,7 +22,10 @@
             "classes": "",
             "container": "no_container",
             "region_names": {
-                "region_name_0": "Hero"
+                "region_0": {
+                    "label": "Hero",
+                    "name": "hero"
+                }
             }
         },
         "fe4ace1e-5e00-4d28-9417-23887839b2f8": {
@@ -28,7 +34,10 @@
             "classes": "",
             "container": "container",
             "region_names": {
-                "region_name_0": "Content"
+                "region_0": {
+                    "label": "Content",
+                    "name": "content"
+                }
             }
         },
         "3f62e7ea-d6b7-475a-9200-ab93c8fb6d7b": {
@@ -37,9 +46,18 @@
             "classes": "",
             "container": "container_fluid",
             "region_names": {
-                "region_name_0": "Footer Left",
-                "region_name_1": "Footer Center ",
-                "region_name_2": "Footer Right"
+                "region_0": {
+                    "label": "Footer Left",
+                    "name": "footer-left"
+                },
+                "region_1": {
+                    "label": "Footer Center ",
+                    "name": "footer-center-"
+                },
+                "region_2": {
+                    "label": "Footer Right",
+                    "name": "footer-right"
+                }
             }
         }
     }

@@ -20,12 +20,12 @@
             "set1menu": "#983734"
         },
         "stylesheets": [
-            "public://color/opera2022-ab39448e/all.css",
-            "public://color/opera2022-ab39448e/opera-variables.css"
+            "public://color/opera2022-067ef3c3/all.css",
+            "public://color/opera2022-067ef3c3/opera-variables.css"
         ],
         "files": [
-            "public://color/opera2022-ab39448e/all.css",
-            "public://color/opera2022-ab39448e/opera-variables.css"
+            "public://color/opera2022-067ef3c3/all.css",
+            "public://color/opera2022-067ef3c3/opera-variables.css"
         ]
     }
 }

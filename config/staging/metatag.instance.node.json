@@ -1,0 +1,54 @@
+{
+    "_config_name": "metatag.instance.node",
+    "module": "metatag",
+    "storage": "overridden",
+    "name": "node",
+    "instance": "node",
+    "label": "Content",
+    "disabled": false,
+    "api_version": 1,
+    "config": {
+        "title": {
+            "value": "[node:title] | [current-page:pager][site:name]"
+        },
+        "description": {
+            "value": "[node:summary]"
+        },
+        "image_src": {
+            "value": "[node:field_featured_image]"
+        },
+        "canonical": {
+            "value": "[current-page:url:absolute]"
+        },
+        "og:title": {
+            "value": "[node:title]"
+        },
+        "og:description": {
+            "value": "[node:summary]"
+        },
+        "og:updated_time": {
+            "value": "[node:changed:custom:c]"
+        },
+        "og:image": {
+            "value": "[node:field_featured_image]"
+        },
+        "og:image:url": {
+            "value": "[node:field_featured_image]"
+        },
+        "article:published_time": {
+            "value": "[node:created:custom:c]"
+        },
+        "article:modified_time": {
+            "value": "[node:changed:custom:c]"
+        },
+        "twitter:title": {
+            "value": "[node:title]"
+        },
+        "twitter:description": {
+            "value": "[node:summary]"
+        },
+        "twitter:image": {
+            "value": "[node:field_featured_image]"
+        }
+    }
+}

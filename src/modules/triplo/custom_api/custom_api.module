@@ -1,0 +1,81 @@
+<?php
+
+function  custom_api_menu(){  
+
+   $items = array();
+   $items['type/%/data'] = array (     
+        'title' => 'News item list',
+        'page callback' => 'custom_node_list',
+        'page arguments'  => array(1),
+        'access arguments' => TRUE,
+        'type' => MENU_CALLBACK
+   );  
+   return $items;
+
+
+}
+
+function custom_node_list($content_type){
+
+    $query = new EntityFieldQuery();
+    $query
+      ->entityCondition('entity_type', 'node', '=')
+      ->propertyCondition('status', 1, '=')
+      ->propertyCondition('type', $content_type, '=');
+    $result = $query->execute();
+    $nodes = node_load_multiple(array_keys($result['node']));
+    foreach($nodes as $node){  
+      generate_styled_image($node);
+      $output[] =$node;
+    }
+   backdrop_json_output($output);
+   backdrop_exit();
+
+}
+
+/*
+* Generate styled image and URL for image fields using image_style
+*
+*/
+
+function generate_styled_image($node){
+   if($node->type == 'team'){
+      $style_name = 'big_thumbnail';      
+      if(!empty($node->field_profile_picture[und][0][uri])){
+         $path = $node->field_profile_picture[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_profile_picture[und][0][uri] = $style_url;
+      }
+   }
+   else if ($node->type == 'blog'){
+         $style_name = 'big_thumbnail';      
+         if(!empty($node->field_featured_image[und][0][uri])){
+         $path = $node->field_featured_image[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_featured_image[und][0][uri] = $style_url;
+      }
+      
+         $style_name = 'large';      
+         if(!empty($node->field_featured_image[und][0][uri])){
+         $path = $node->field_featured_image[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_featured_image[und][0][uri] = $style_url;
+
+      }
+   
+   }
+   else if ($node->type == 'clients'){
+         $style_name = 'big_thumbnail';      
+         if(!empty($node->field_client_logo[und][0][uri])){
+         $path = $node->field_client_logo[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_client_logo[und][0][uri] = $style_url;
+
+      }
+   }
+
+   
+
+}
+
+?>

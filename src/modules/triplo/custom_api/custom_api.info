@@ -1,0 +1,5 @@
+type = module
+name = CUSTOM API
+description = Create custom api for Triplo.co.
+package = custom_api
+backdrop = 1.x

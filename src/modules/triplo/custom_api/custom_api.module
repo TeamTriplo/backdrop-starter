@@ -3,7 +3,7 @@
 function  custom_api_menu(){  
 
    $items = array();
-   
+
    $items['type/%/data'] = array (     
         'title' => 'News item list',
         'page callback' => 'custom_node_list',
@@ -159,6 +159,22 @@ function generate_styled_image($node){
          $path = $node->field_slider_image[und][0][uri]; 
          $style_url = image_style_url($style_name, $path);
          $node->field_slider_image[und][0][uri] = $style_url;
+
+      }
+   }else if ($node->type == 'services'){
+         $style_name = 'big_thumbnail';      
+         if(!empty($node->field_service_image[und][0][uri])){
+         $path = $node->field_service_image[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_service_image[und][0][uri] = $style_url;
+
+      }
+   }else if ($node->type == 'portfolio'){
+         $style_name = 'medium';      
+         if(!empty($node->field_portfolio_image[und][0][uri])){
+         $path = $node->field_portfolio_image[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_portfolio_image[und][0][uri] = $style_url;
 
       }
    }

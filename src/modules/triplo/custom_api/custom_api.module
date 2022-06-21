@@ -62,18 +62,13 @@ function custom_node_retrieve($content_type,$nid){
       ->propertyCondition('type', $content_type, '=');
       $result = $query->execute(); 
 
+
+     $node = node_load(array_keys($result['node']));
+
      generate_styled_image($node, 'list');
 
-     $nodes = node_load_multiple(array_keys($result['node']));
 
-     foreach($nodes as $node){  
-
-      generate_styled_image($node, 'list');
-      $output[] =$node;
-    }
-
-
-   backdrop_json_output($output);
+   backdrop_json_output($node);
    backdrop_exit();
 
 }
@@ -138,9 +133,16 @@ function generate_styled_image($node, $operation = Null){
    }else if ($node->type == 'portfolio'){
          $style_name = 'medium';      
          if(!empty($node->field_portfolio_image[und][0][uri])){
-         $path = $node->field_portfolio_image[und][0][uri]; 
-         $style_url = image_style_url($style_name, $path);
+         $path1 = $node->field_portfolio_image[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path1);
          $node->field_portfolio_image[und][0][uri] = $style_url;
+
+      }
+
+         $style_name = 'large';      
+         if(empty($node->field_header_image[und][0][uri])){
+         $style_url = image_style_url($style_name, $path1);
+         $node->field_header_image[und][0][uri] = $style_url;
 
       }
    }

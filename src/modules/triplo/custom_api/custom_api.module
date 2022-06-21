@@ -3,41 +3,112 @@
 function  custom_api_menu(){  
 
    $items = array();
-   $items['type/%/data/%'] = array (     
+   
+   $items['type/%/data'] = array (     
         'title' => 'News item list',
         'page callback' => 'custom_node_list',
+        'page arguments'  => array(1),
+        'access arguments' => TRUE,
+        'type' => MENU_CALLBACK
+   );
+
+   $items['type/%/data/%'] = array (     
+        'title' => 'News item list',
+        'page callback' => 'custom_node_retrieve',
         'page arguments'  => array(1,3),
         'access arguments' => TRUE,
         'type' => MENU_CALLBACK
-   );  
+   ); 
+
+ 
    return $items;
 
 
 }
 
-function custom_node_list($content_type,$nid=null){
+function custom_node_list($content_type){
 
     $query = new EntityFieldQuery();
-    if (!empty($nid)) {
-          $query
-      ->entityCondition('entity_type', 'node', '=')
-      ->propertyCondition('status', 1, '=')
-       ->propertyCondition('nid', $nid, '=')    
-      ->propertyCondition('type', $content_type, '=');
-      $result = $query->execute();
-    }else{
+
          $query
       ->entityCondition('entity_type', 'node', '=')
       ->propertyCondition('status', 1, '=')
       ->propertyCondition('type', $content_type, '=');
       $result = $query->execute();
-    }
 
     $nodes = node_load_multiple(array_keys($result['node']));
+
+    foreach($nodes as $node){  
+
+      generate_styled_image($node);
+      $output[] =$node;
+    }
+
+   backdrop_json_output($output);
+   backdrop_exit();
+
+}
+
+function custom_node_retrieve($content_type,$nid){
+
+    $query = new EntityFieldQuery();
+
+       if ($nid == 'add'){
+
+            /*
+            * post api
+            */
+            exit;
+
+            $new_node = new Node();                                                                                                                         
+            $new_node->type = $content_type;
+            $new_node->title = 'First Saved Node';
+            $new_node->language = 'und';
+            $new_node->field_score_team_name = array(
+              'und' => array(
+                array(
+                 'value' => 'test',
+               ),
+              ),
+            );
+            $new_node->field_score_pts = array(
+              'und' => array(
+                array(
+                 'value' => 'test',
+               ),
+              ),
+            );
+
+            node_object_prepare($new_node);
+
+         try {
+           node_save($new_node);
+           $success = TRUE;
+           backdrop_set_message('Updated the node.');
+         }
+         catch (Exception $e) {
+           backdrop_set_message('Could not update the node.', 'error');
+         } 
+
+      }else{
+
+          $query
+      ->entityCondition('entity_type', 'node', '=')
+      ->propertyCondition('status', 1, '=')
+      ->propertyCondition('nid', $nid, '=')    
+      ->propertyCondition('type', $content_type, '=');
+      $result = $query->execute();
+
+      }
+    
+
+    $nodes = node_load_multiple(array_keys($result['node']));
+
     foreach($nodes as $node){  
       generate_styled_image($node);
       $output[] =$node;
     }
+
    backdrop_json_output($output);
    backdrop_exit();
 
@@ -80,6 +151,14 @@ function generate_styled_image($node){
          $path = $node->field_client_logo[und][0][uri]; 
          $style_url = image_style_url($style_name, $path);
          $node->field_client_logo[und][0][uri] = $style_url;
+
+      }
+   }else if ($node->type == 'slider'){
+         $style_name = 'large';      
+         if(!empty($node->field_slider_image[und][0][uri])){
+         $path = $node->field_slider_image[und][0][uri]; 
+         $style_url = image_style_url($style_name, $path);
+         $node->field_slider_image[und][0][uri] = $style_url;
 
       }
    }

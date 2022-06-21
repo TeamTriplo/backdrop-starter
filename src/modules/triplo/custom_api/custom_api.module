@@ -39,8 +39,7 @@ function custom_node_list($content_type){
     $nodes = node_load_multiple(array_keys($result['node']));
 
     foreach($nodes as $node){  
-        // generate_styled_image_for_list()
-        // generate_styled_image_for_retrieve()
+
       generate_styled_image($node, 'list');
       $output[] =$node;
     }
@@ -120,6 +119,7 @@ function generate_styled_image($node, $operation = Null){
          $path = $node->field_slider_image[und][0][uri]; 
          $style_url = image_style_url($style_name, $path);
          $node->field_slider_image[und][0][uri] = $style_url;
+         $node->field_slider_image[und][0][uri] =str_replace('/styles/large/public','',$node->field_slider_image[und][0][uri]);
 
       }
    }else if ($node->type == 'services'){

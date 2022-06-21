@@ -39,8 +39,9 @@ function custom_node_list($content_type){
     $nodes = node_load_multiple(array_keys($result['node']));
 
     foreach($nodes as $node){  
-
-      generate_styled_image($node);
+        // generate_styled_image_for_list()
+        // generate_styled_image_for_retrieve()
+      generate_styled_image($node, 'list');
       $output[] =$node;
     }
 
@@ -53,61 +54,24 @@ function custom_node_retrieve($content_type,$nid){
 
     $query = new EntityFieldQuery();
 
-       if ($nid == 'add'){
-
-            /*
-            * post api
-            */
-            exit;
-
-            $new_node = new Node();                                                                                                                         
-            $new_node->type = $content_type;
-            $new_node->title = 'First Saved Node';
-            $new_node->language = 'und';
-            $new_node->field_score_team_name = array(
-              'und' => array(
-                array(
-                 'value' => 'test',
-               ),
-              ),
-            );
-            $new_node->field_score_pts = array(
-              'und' => array(
-                array(
-                 'value' => 'test',
-               ),
-              ),
-            );
-
-            node_object_prepare($new_node);
-
-         try {
-           node_save($new_node);
-           $success = TRUE;
-           backdrop_set_message('Updated the node.');
-         }
-         catch (Exception $e) {
-           backdrop_set_message('Could not update the node.', 'error');
-         } 
-
-      }else{
 
           $query
       ->entityCondition('entity_type', 'node', '=')
       ->propertyCondition('status', 1, '=')
       ->propertyCondition('nid', $nid, '=')    
       ->propertyCondition('type', $content_type, '=');
-      $result = $query->execute();
+      $result = $query->execute(); 
 
-      }
-    
+     generate_styled_image($node, 'list');
 
-    $nodes = node_load_multiple(array_keys($result['node']));
+     $nodes = node_load_multiple(array_keys($result['node']));
 
-    foreach($nodes as $node){  
-      generate_styled_image($node);
+     foreach($nodes as $node){  
+
+      generate_styled_image($node, 'list');
       $output[] =$node;
     }
+
 
    backdrop_json_output($output);
    backdrop_exit();
@@ -116,10 +80,12 @@ function custom_node_retrieve($content_type,$nid){
 
 /*
 * Generate styled image and URL for image fields using image_style
+* @param $node - Which node to be used to generate image style
+* @param $operation - node list or retrieve? 
 *
 */
 
-function generate_styled_image($node){
+function generate_styled_image($node, $operation = Null){
    if($node->type == 'team'){
       $style_name = 'big_thumbnail';      
       if(!empty($node->field_profile_picture[und][0][uri])){
@@ -137,10 +103,10 @@ function generate_styled_image($node){
       }
       
          $style_name = 'large';      
-         if(!empty($node->field_featured_image[und][0][uri])){
-         $path = $node->field_featured_image[und][0][uri]; 
-         $style_url = image_style_url($style_name, $path);
-         $node->field_featured_image[und][0][uri] = $style_url;
+         if(!empty($node->field_header_image[und][0][uri])){
+             $path = $node->field_header_image[und][0][uri]; 
+             $style_url = image_style_url($style_name, $path);
+             $node->field_header_image[und][0][uri] = $style_url;
 
       }
    

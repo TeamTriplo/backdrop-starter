@@ -26,6 +26,5 @@
     }
   };
 
-  console.log('Global JS');
 }(document, Drupal, jQuery);
 //# sourceMappingURL=global.js.map

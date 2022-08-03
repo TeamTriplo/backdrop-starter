@@ -429,7 +429,6 @@ textarea {
           margin-right: 30px; } }
     .l-header .block-system-main-menu .menu li:hover {
       background-color: unset !important;
-      -webkit-filter: none;
       filter: none;
       color: #ffffff; }
   .l-header .header-site-name-wrapper img {
@@ -479,7 +478,6 @@ textarea {
           width: 100%;
           transition: all 1s; }
           .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-field-portfolio-image img:hover {
-            -webkit-transform: scale(1.1);
             transform: scale(1.1); }
       .block-views-portfolio-block .view-portfolio .view-content .views-view-grid .views-field-title {
         color: #000000;

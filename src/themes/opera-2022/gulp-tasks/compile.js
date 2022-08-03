@@ -46,7 +46,6 @@ module.exports = {
   // Compile JavaScript.
   compileJS: function() {
     return src(['./src/patterns/**/**/*.js'], { base: './' })
-      .pipe(sourcemaps.init())
       .pipe(babel())
       .pipe(
         rename(function(path) {
@@ -60,7 +59,6 @@ module.exports = {
           return path;
         })
       )
-      .pipe(sourcemaps.write('./'))
       .pipe(dest('./dist/js'));
   }
 };

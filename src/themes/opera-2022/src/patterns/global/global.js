@@ -3,8 +3,8 @@
 
   window.onscroll = function changeClass() {
     var navBar = document.getElementsByClassName('l-header');
-    var layoutHeight = document.querySelector('.layout').offsetHeight;
-    let windowHeight = window.innerHeight;
+    // var layoutHeight = document.querySelector('.layout').offsetHeight;
+    // var windowHeight = window.innerHeight;
     var scrollPosY = window.pageYOffset | document.body.scrollTop;
 
     if (document.querySelector('#admin-bar') !== null) {
@@ -28,5 +28,4 @@
       navBar[0].classList.remove('sticky_header');
     }
   };
-
 })(document, Drupal, jQuery);

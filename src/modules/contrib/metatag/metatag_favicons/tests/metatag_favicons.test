@@ -17,6 +17,9 @@ class MetatagFaviconsTest extends MetatagTestHelper {
     // Create an admin user and log them in.
     $this->adminUser = $this->createAdminUser();
     $this->backdropLogin($this->adminUser);
+
+    // Enable mask icon metatag used in these tests.
+    config_set('metatag.settings', 'enabled_tags.mask-icon', 'generator');
   }
 
   /**
@@ -197,6 +200,29 @@ class MetatagFaviconsTest extends MetatagTestHelper {
     $this->assertEqual(count($xpath), 1, 'One mask-icon meta tag found.');
     $this->assertEqual((string)$xpath[0]['href'], $absolute_path);
     $this->assertEqual((string)$xpath[0]['color'], $color2);
+
+    // Before proceeding, clear the site's caches.
+    backdrop_flush_all_caches();
+
+    // Try empty color.
+    $color = '';
+
+    // Update the global config.
+    $config = metatag_config_load('global');
+    $config['config']['mask-icon']['value'] = $svg_path;
+    $config['config']['mask-icon']['color'] = $color;
+    metatag_config_save($config);
+
+    // Load the front page.
+    $this->backdropGet('<front>');
+    $this->assertResponse(200);
+
+    // Confirm the meta tag is present.
+    $xpath = $this->xpath("//link[@rel='mask-icon']");
+    $this->assertEqual(count($xpath), 1, 'One mask-icon meta tag found.');
+    $this->assertEqual((string)$xpath[0]['href'], $absolute_path);
+    $this->assertFalse(isset($xpath[0]['color']));
+
   }
 
 }

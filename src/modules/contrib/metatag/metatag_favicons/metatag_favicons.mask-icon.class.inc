@@ -39,7 +39,7 @@ class BackdropMaskIconMetaTag extends BackdropTextMetaTag {
   public function getValue(array $options = array()) {
     $value = array(
       'value' => '',
-      'color' => '',
+      'color' => NULL,
     );
 
     // The 'color' attribute will only be output if the 'value' is present.
@@ -89,6 +89,11 @@ class BackdropMaskIconMetaTag extends BackdropTextMetaTag {
       ),
       '#weight' => $this->getWeight(),
     );
+
+    // Remove the color attribute if empty.
+    if (empty($color)) {
+      unset($element['#attributes']['color']);
+    }
 
     return $element;
   }

@@ -150,7 +150,7 @@ function metatag_config_overview() {
         'href' => 'admin/config/metadata/metatags/config/' . $config['instance'] . '/delete',
       );
     }
-    if (module_exists('i18n_string') && !$settings->get('i18n_disabled', FALSE)) {
+    if (module_exists('i18n_string') && !config_get('metatag.settings', 'i18n_disabled')) {
       $operations['translate'] = array(
         'title' => t('Translate'),
         'href' => 'admin/config/metadata/metatags/config/' . $config['instance'] . '/translate',
@@ -423,7 +423,7 @@ function metatag_bulk_revert_form() {
     '#default_value' => array(),
   );
 
-  $metatags = metatag_get_info();
+  $metatags = metatag_get_info(NULL, NULL, TRUE);
   $options = array();
   foreach ($metatags['tags'] as $tag_name => $tag) {
     $options[$tag_name] = t('@group_label: @tag_label', array(
@@ -686,7 +686,7 @@ function metatag_admin_settings_form() {
     $form['i18n'] = array(
       '#type' => 'fieldset',
       '#title' => t('Internationalization options'),
-      '#description' => t('Additional options are available when using the <a href="@url">Internationalization module</a>.', array('@url' => 'https://www.drupal.org/project/i18n')),
+      '#description' => t('Additional options are available when using the <a href="@url">Internationalization module</a>.', array('@url' => 'https://backdropcms.org/project/i18n')),
       '#collapsible' => TRUE,
       '#collapsed' => TRUE,
     );
@@ -712,6 +712,29 @@ function metatag_admin_settings_form() {
       '#disabled' => !module_exists('i18n_string'),
     );
   }
+
+  $form['enable'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Enable Meta tags'),
+    '#description' => t("Enable the specific meta tags that will be used/relevant for this site."),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $metatags = metatag_get_info(NULL, NULL, TRUE);
+  $options = array();
+  foreach ($metatags['tags'] as $tag) {
+    $options[$tag['name']] = t('@group_label: @tag_label', array(
+      '@group_label' => $metatags['groups'][$tag['group']]['label'],
+      '@tag_label' => $tag['label'],
+    ));
+  }
+  $default = $settings->get('enabled_tags');
+  $form['enable']['enabled_tags'] = array(
+    '#type' => 'checkboxes',
+    '#title' => t('Meta tags to enable'),
+    '#options' => $options,
+    '#default_value' => isset($default) ? $default : array(),
+  );
 
   $form['advanced'] = array(
     '#type' => 'fieldset',
@@ -749,15 +772,16 @@ function metatag_admin_settings_form() {
     '#description' => t('When disabled, meta tags will only be output on public-facing pages.'),
     '#default_value' => $settings->get('tag_admin_pages'),
   );
+  $form['advanced']['token_sanitize'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Sanitize token data to ensure meta tag text is safe'),
+    '#description' => t('When disabled, token replacements may return raw, unfiltered values.'),
+    '#default_value' => $settings->get('token_sanitize'),
+  );
   $form['advanced']['extended_permissions'] = array(
     '#type' => 'checkbox',
     '#title' => t('Provide a permission for each individual meta tag'),
     '#default_value' => $settings->get('extended_permissions'),
-  );
-  $form['advanced']['token_sanitize'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Sanitize meta tag text during token replacement'),
-    '#default_value' => $settings->get('token_sanitize'),
   );
   $form['advanced']['pager_string'] = array(
     '#title' => t('Replace the token [current-page:pager] with the following custom pager string:'),

@@ -161,6 +161,7 @@
         "use php for matomo tracking visibility",
         "add js snippets for matomo",
         "administer meta tags",
-        "edit meta tags"
+        "edit meta tags",
+        "administer comment settings"
     ]
 }

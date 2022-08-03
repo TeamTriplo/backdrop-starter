@@ -39,6 +39,7 @@
         "delete any location content",
         "administer comments",
         "edit own comments",
-        "create terms in tags"
+        "create terms in tags",
+        "administer comment settings"
     ]
 }

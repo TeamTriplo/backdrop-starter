@@ -20,10 +20,10 @@
             "set1menu": "#983734"
         },
         "stylesheets": [
-            "public://color/opera-93449403/opera-variables.css"
+            "public://color/opera-dbd066b1/opera-variables.css"
         ],
         "files": [
-            "public://color/opera-93449403/opera-variables.css"
+            "public://color/opera-dbd066b1/opera-variables.css"
         ]
     }
 }

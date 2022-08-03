@@ -4,7 +4,13 @@ description = Test the creation of number fields.
 group = Field types
 file = number.test
 
-; Added by Backdrop CMS packaging script on 2022-02-16
+[NumberFieldSettingsTestCase]
+name = Number field settings
+description = Test settings for number fields.
+group = Field types
+file = number_settings.test
+
+; Added by Backdrop CMS packaging script on 2022-07-21
 project = backdrop
-version = 1.21.2
-timestamp = 1645040702
+version = 1.22.2
+timestamp = 1658447718

@@ -25,9 +25,9 @@ function  custom_api_menu(){
          'access arguments' => array('administer blocks'),
   );
 
-  $items['ckeditor/block/%/%'] = array(
+  $items['ckeditor/%/%'] = array(
     'page callback' => 'ckeditor_blocks_block_ajax',
-    'page arguments' => array(2,3),
+    'page arguments' => array(1,2),
     'access arguments' => array('access content'),
   );
 

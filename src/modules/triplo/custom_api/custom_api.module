@@ -28,7 +28,7 @@ function  custom_api_menu(){
   $items['ckeditor/block/%/%'] = array(
     'page callback' => 'ckeditor_blocks_block_ajax',
     'page arguments' => array(2,3),
-    'access arguments' => array('administer blocks'),
+    'access arguments' => array('access content'),
   );
 
  
@@ -272,7 +272,7 @@ function ckeditor_blocks_block_ajax($module, $delta) {
   backdrop_page_is_cacheable(FALSE);
   $block = ckeditor_blocks_get_block($module, $delta);
   
-  backdrop_json_output($block);
+  backdrop_json_output(array('html' => ($block ? $block : '(Empty Block)')));
   backdrop_exit();
 
   backdrop_json_output(array('html' => ($block ? $block : '(Empty Block)')));

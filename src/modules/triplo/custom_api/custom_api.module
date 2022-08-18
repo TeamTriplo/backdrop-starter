@@ -31,9 +31,27 @@ function  custom_api_menu(){
     'access arguments' => array('access content'),
   );
 
+  $items['webform/submit'] = array(
+    'page callback' => 'webform_submit',
+    'page arguments' => array(1,2),
+    'access arguments' => array('access content'),
+  );
+
  
    return $items;
 
+
+}
+
+function webform_submit(){
+
+  $json = $_POST;
+  $data = json_decode($json);
+  echo "";print_r($data); exit;
+
+
+ backdrop_json_output($output);
+ backdrop_exit();
 
 }
 

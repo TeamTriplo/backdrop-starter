@@ -47,12 +47,48 @@ function webform_submit(){
 
   
   $data = json_decode(file_get_contents('php://input'), true);
-  echo "";print_r($data); exit;
+  //echo "";print_r($data); exit;
+  
+  $id = db_insert('webform_submissions')
+  ->fields(array(
+    'nid' => 50,
+    'submitted' => REQUEST_TIME,
+    'completed' => REQUEST_TIME,
+    'modified' => REQUEST_TIME,
+    'remote_addr' => getUserIpAddr(),
+  ))
+  ->execute();
 
+  $i=1;
+  foreach($data as $key => $val) {
+    
+    db_insert('webform_submitted_data')
+  ->fields(array(
+    'nid' => 50,
+    'sid' => $id,
+    'cid' => $i,
+     $key => $val,
+  ))
+  ->execute();
+  $i++;
 
- backdrop_json_output($output);
- backdrop_exit();
+  }
 
+  return  drupal_set_message(t('The form has been submitted.'));
+
+}
+
+function getUserIpAddr(){
+  if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+      //ip from share internet
+      $ip = $_SERVER['HTTP_CLIENT_IP'];
+  }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+      //ip pass from proxy
+      $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+  }else{
+      $ip = $_SERVER['REMOTE_ADDR'];
+  }
+  return $ip;
 }
 
 function custom_node_list($content_type){

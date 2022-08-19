@@ -68,7 +68,7 @@ function webform_submit(){
     'nid' => 50,
     'sid' => $id,
     'cid' => $i,
-     $key => $val,
+    'data' => $val,
   ))
   ->execute();
   $i++;

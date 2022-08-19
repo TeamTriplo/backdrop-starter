@@ -52,7 +52,7 @@ function webform_submit(){
   $id = db_insert('webform_submissions')
   ->fields(array(
     'nid' => 50,
-    'serial' => 50,
+    'serial' => rand(100, 1000),
     'submitted' => REQUEST_TIME,
     'completed' => REQUEST_TIME,
     'modified' => REQUEST_TIME,

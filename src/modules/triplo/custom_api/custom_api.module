@@ -58,7 +58,7 @@ function webform_submit(){
   $serial = $serial + 1;
 
 
-  /*$id = db_insert('webform_submissions')
+  $id = db_insert('webform_submissions')
   ->fields(array(
     'nid' => 50,
     'serial' => $serial,
@@ -86,7 +86,7 @@ function webform_submit(){
   ))
   ->execute();
  
-  }*/
+  }
 
   $results = db_select('webform_emails', 'email')
   ->fields('email')

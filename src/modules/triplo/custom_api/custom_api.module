@@ -52,13 +52,13 @@ function webform_submit(){
   $serial = db_select('webform_submissions', 'serial')
   ->fields('serial')
   ->orderBy('serial', 'DESC')
-  ->limit(1)
+  //->limit(1)
   ->execute()
   ->fetchField();
 
   $serial = $serial + 1;
 
-
+  print_r($serial); exit;
 
   $id = db_insert('webform_submissions')
   ->fields(array(

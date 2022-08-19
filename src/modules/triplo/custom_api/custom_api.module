@@ -71,7 +71,7 @@ function webform_submit(){
   ))
   ->execute();
 
-  $i=1;
+  
   foreach($data as $key => $val) {
     if ($key='name')$cid=1;
     if ($key='email')$cid=2;
@@ -86,7 +86,7 @@ function webform_submit(){
     'data' => $val,
   ))
   ->execute();
-  $i++;
+ 
 
   }
 

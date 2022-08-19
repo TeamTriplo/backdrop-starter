@@ -45,8 +45,8 @@ function  custom_api_menu(){
 
 function webform_submit(){
 
-  $json = $_POST;
-  $data = json_decode($json);
+  
+  $data = json_decode(file_get_contents('php://input'), true);
   echo "";print_r($data); exit;
 
 

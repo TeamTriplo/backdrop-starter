@@ -106,7 +106,8 @@ foreach($results as $result) {
 
   $headers = "From: Triplo Contact Form" . "\r\n" ;  
 
-  mail($to,$subject,$txt,$headers);
+  custom_api_mail($from = 'default_from', $to, $subject, $txt);
+  //mail($to,$subject,$txt,$headers);
 
 }
   
@@ -392,6 +393,33 @@ function _ckeditor_blocks($text, $filter, $format) {
     return str_replace($raw_tags, $repl, $text);
   }
   return $text;
+}
+
+function custom_api_mail($from = 'default_from', $to, $subject, $message) {
+  $my_module = 'custom_api';
+  $my_mail_token = microtime();
+  if ($from == 'default_from') {
+      // Change this to your own default 'from' email address.
+      $from = variable_get('system_mail', 'noreply@triplo.co');
+  }
+  $message = array(
+      'id' => $my_module . '_' . $my_mail_token,
+      'to' => $to,
+      'subject' => $subject,
+      'body' => array($message),
+      'headers' => array(
+          'From' => $from,
+          'Sender' => $from,
+          'Return-Path' => $from,
+      ),
+  );
+  $system = drupal_mail_system($my_module, $my_mail_token);
+  $message = $system->format($message);
+  if ($system->mail($message)) {
+      return TRUE;
+  } else {
+      return FALSE;
+  }
 }
 
 ?>

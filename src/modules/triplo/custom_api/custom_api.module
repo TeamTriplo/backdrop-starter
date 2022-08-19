@@ -58,7 +58,7 @@ function webform_submit(){
 
   $serial = $serial + 1;
 
-  print_r($serial); exit;
+  //print_r($serial); exit;
 
   $id = db_insert('webform_submissions')
   ->fields(array(

@@ -71,14 +71,14 @@ function webform_submit(){
   ))
   ->execute();
 
-  echo '<pre>'; print_r($data); 
+  //echo '<pre>'; print_r($data); 
   foreach($data as $key => $val) {
 
-    print_r($key); exit;
-    if ($key='name')$cid=1;
-    if ($key='email')$cid=2;
-    if ($key='subject')$cid=3;
-    if ($key='message')$cid=4;
+    //print_r($key); exit;
+    if ($key=='name')$cid=1;
+    if ($key=='email')$cid=2;
+    if ($key=='subject')$cid=3;
+    if ($key=='message')$cid=4;
 
     db_insert('webform_submitted_data')
   ->fields(array(

@@ -48,11 +48,22 @@ function webform_submit(){
   
   $data = json_decode(file_get_contents('php://input'), true);
   //echo "";print_r($data); exit;
-  
+
+  $serial = db_select('webform_submissions', 'serial')
+  ->fields('serial')
+  ->orderBy('serial', 'DESC')
+  ->limit(1)
+  ->execute()
+  ->fetchField();
+
+  $serial = $serial + 1;
+
+
+
   $id = db_insert('webform_submissions')
   ->fields(array(
     'nid' => 50,
-    'serial' => rand(100, 1000),
+    'serial' => $serial,
     'submitted' => REQUEST_TIME,
     'completed' => REQUEST_TIME,
     'modified' => REQUEST_TIME,
@@ -62,12 +73,16 @@ function webform_submit(){
 
   $i=1;
   foreach($data as $key => $val) {
-    
+    if ($key='name')$cid=1;
+    if ($key='email')$cid=2;
+    if ($key='subject')$cid=3;
+    if ($key='message')$cid=4;
+
     db_insert('webform_submitted_data')
   ->fields(array(
     'nid' => 50,
     'sid' => $id,
-    'cid' => $i,
+    'cid' => $cid,
     'data' => $val,
   ))
   ->execute();

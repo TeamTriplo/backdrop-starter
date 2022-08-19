@@ -52,15 +52,13 @@ function webform_submit(){
   $serial = db_select('webform_submissions', 'serial')
   ->fields('serial')
   ->orderBy('serial', 'DESC')
-  //->limit(1)
   ->execute()
   ->fetchField();
 
   $serial = $serial + 1;
 
-  //print_r($serial); exit;
 
-  $id = db_insert('webform_submissions')
+  /*$id = db_insert('webform_submissions')
   ->fields(array(
     'nid' => 50,
     'serial' => $serial,
@@ -71,14 +69,12 @@ function webform_submit(){
   ))
   ->execute();
 
-  //echo '<pre>'; print_r($data); 
   foreach($data as $key => $val) {
 
     if ($key=='name')$cid=1;
     if ($key=='email')$cid=2;
     if ($key=='subject')$cid=3;
     if ($key=='message')$cid=4;
-    if ($key=='webform_components_form')$cid=0;
 
 
     db_insert('webform_submitted_data')
@@ -90,8 +86,30 @@ function webform_submit(){
   ))
   ->execute();
  
+  }*/
 
-  }
+  $results = db_select('webform_emails', 'email')
+  ->fields('email')
+  ->condition('status', 1,'=')
+  ->execute()
+  ->fetchAll();
+
+foreach($results as $result) {
+ 
+  //echo '<pre>'; print_r($result->email); exit;
+  $to = $result->email;
+  $subject = "Triplo Contact Form";
+  $txt = "Name ".$data['name']. "\r\n" ;
+  $txt .= "Email ".$data['email'] . "\r\n";
+  $txt .= "Subject ".$data['subject'] . "\r\n";
+  $txt .= "Message ".$data['message'] . "\r\n";
+
+  $headers = "From: Triplo Contact Form" . "\r\n" ;  
+
+  mail($to,$subject,$txt,$headers);
+
+}
+  
 
   return  drupal_set_message(t('The form has been submitted.'));
 

@@ -89,7 +89,7 @@ function generate_styled_image($node, $operation = Null){
       }
    }
    else if ($node->type == 'blog'){
-         $style_name = 'big_thumbnail';      
+         $style_name = 'large';      
          if(!empty($node->field_featured_image[und][0][uri])){
          $path = $node->field_featured_image[und][0][uri]; 
          $style_url = image_style_url($style_name, $path);
@@ -131,7 +131,7 @@ function generate_styled_image($node, $operation = Null){
 
       }
    }else if ($node->type == 'portfolio'){
-         $style_name = 'medium';      
+         $style_name = 'large';      
          if(!empty($node->field_portfolio_image[und][0][uri])){
          $path1 = $node->field_portfolio_image[und][0][uri]; 
          $style_url = image_style_url($style_name, $path1);

@@ -41,6 +41,7 @@ function custom_node_list($content_type){
     foreach($nodes as $node){  
 
       generate_styled_image($node, 'list');
+      generate_absolute_path($node);
       $output[] =$node;
     }
 
@@ -65,7 +66,7 @@ function custom_node_retrieve($content_type,$nid){
      $node = node_load(array_keys($result['node']));
 
      generate_styled_image($node, 'list');
-
+     generate_absolute_path($node);
 
    backdrop_json_output($node);
    backdrop_exit();
@@ -149,6 +150,33 @@ function generate_styled_image($node, $operation = Null){
 
    
 
+}
+
+/*
+* Generate absolute image URL for body image fields
+* @param $node - Which node to be used to generate image url
+* 
+*/
+
+function generate_absolute_path($node) {
+
+   if (isset($node->body['und'][0]['value'])) {
+      $base_url = url('<front>', array('absolute' => TRUE));
+      $body = $node->body['und'][0]['value'];
+      $updated_body = preg_replace_callback('/(<img[^>]+src=")([^"]+)(")/i', function($matches) use ($base_url) {
+         $image_path = $matches[2];
+         // Create the absolute URL by concatenating the base URL with the image path.
+         $absolute_url = $base_url . '/' . $image_path;
+         // Return the updated image tag with the absolute URL.
+         return $matches[1] . $absolute_url . $matches[3];
+      }, $body);
+   
+      // Update the Body field value with the absolute URLs.
+      $node->body['und'][0]['value'] = $updated_body;
+      if(isset($node->body['und'][0]['safe_value'])){
+      $node->body['und'][0]['safe_value'] = $updated_body;
+      }
+   }
 }
 
 ?>

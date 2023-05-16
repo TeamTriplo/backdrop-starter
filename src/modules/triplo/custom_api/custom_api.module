@@ -20,10 +20,113 @@ function  custom_api_menu(){
         'type' => MENU_CALLBACK
    ); 
 
+   $items['ckeditor/blocks'] = array(
+         'page callback' => 'ckeditor_blocks_blocks_ajax',
+         'access arguments' => array('administer blocks'),
+  );
+
+  $items['ckeditor/%/%'] = array(
+    'page callback' => 'ckeditor_blocks_block_ajax',
+    'page arguments' => array(1,2),
+    'access arguments' => array('access content'),
+  );
+
+  $items['webform/submit'] = array(
+    'page callback' => 'webform_submit',
+    'page arguments' => array(1,2),
+    'access arguments' => array('access content'),
+  );
+
  
    return $items;
 
 
+}
+
+function webform_submit(){
+
+  
+  $data = json_decode(file_get_contents('php://input'), true);
+  //echo "";print_r($data); exit;
+
+  $serial = db_select('webform_submissions', 'serial')
+  ->fields('serial')
+  ->orderBy('serial', 'DESC')
+  ->execute()
+  ->fetchField();
+
+  $serial = $serial + 1;
+
+
+  $id = db_insert('webform_submissions')
+  ->fields(array(
+    'nid' => 50,
+    'serial' => $serial,
+    'submitted' => REQUEST_TIME,
+    'completed' => REQUEST_TIME,
+    'modified' => REQUEST_TIME,
+    'remote_addr' => getUserIpAddr(),
+  ))
+  ->execute();
+
+  foreach($data as $key => $val) {
+
+    if ($key=='name')$cid=1;
+    if ($key=='email')$cid=2;
+    if ($key=='subject')$cid=3;
+    if ($key=='message')$cid=4;
+
+
+    db_insert('webform_submitted_data')
+  ->fields(array(
+    'nid' => 50,
+    'sid' => $id,
+    'cid' => $cid,
+    'data' => $val,
+  ))
+  ->execute();
+ 
+  }
+
+  $results = db_select('webform_emails', 'email')
+  ->fields('email')
+  ->condition('status', 1,'=')
+  ->execute()
+  ->fetchAll();
+
+   foreach($results as $result) {
+   
+   //echo '<pre>'; print_r($result->email); exit;
+   $to = $result->email;
+   $subject = "Triplo Contact Form";
+   $txt = "Name ".$data['name']. "\r\n" ;
+   $txt .= "Email ".$data['email'] . "\r\n";
+   $txt .= "Subject ".$data['subject'] . "\r\n";
+   $txt .= "Message ".$data['message'] . "\r\n";
+
+   $headers = "From: Triplo Contact Form" . "\r\n" ;  
+
+   custom_api_mail($from = 'default_from', $to, $subject, $txt);
+   //mail($to,$subject,$txt,$headers);
+
+   }
+  
+
+  return  drupal_set_message(t('The form has been submitted.'));
+
+}
+
+function getUserIpAddr(){
+  if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+      //ip from share internet
+      $ip = $_SERVER['HTTP_CLIENT_IP'];
+  }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+      //ip pass from proxy
+      $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+  }else{
+      $ip = $_SERVER['REMOTE_ADDR'];
+  }
+  return $ip;
 }
 
 function custom_node_list($content_type){
@@ -44,6 +147,7 @@ function custom_node_list($content_type){
       generate_absolute_path($node);
       $output[] =$node;
     }
+
 
    backdrop_json_output($output);
    backdrop_exit();
@@ -67,6 +171,7 @@ function custom_node_retrieve($content_type,$nid){
 
      generate_styled_image($node, 'list');
      generate_absolute_path($node);
+
 
    backdrop_json_output($node);
    backdrop_exit();
@@ -174,9 +279,176 @@ function generate_absolute_path($node) {
       // Update the Body field value with the absolute URLs.
       $node->body['und'][0]['value'] = $updated_body;
       if(isset($node->body['und'][0]['safe_value'])){
-      $node->body['und'][0]['safe_value'] = $updated_body;
+         $node->body['und'][0]['safe_value'] = $updated_body;
       }
    }
+}
+
+function ckeditor_blocks_get_block($module, $delta, $check_roles = FALSE) {
+
+  static $blocks = array();
+  if(isset($blocks[$module.$delta])) {
+    return "";
+  }
+  $blocks[$module.$delta] = true;
+
+  global $language;
+  $block = block_custom_block_load($delta, $language->langcode);
+
+  $views_name = '';
+  if($module == 'views'){
+    // Get the view name from views block name 
+    $views_delta_arr = explode('-',$delta);
+    if(!empty($views_delta_arr)){
+      $views_name = $views_delta_arr[0];
+      $display_id = $views_delta_arr[1];
+      if($display_id == 'block'){
+        $display_id = 'default';
+      }
+    }
+    $block_content = views_embed_view($views_name, $display_id);
+  }else{
+    $block_content = module_invoke($module, 'block_view', $delta);
+  }
+
+  // @TODO feedback
+  $block = (object)$block;
+  $block->module = $module;
+  $block->plugin = $module.':'.$delta;
+  $block->delta = $delta;
+  $block->style = "";
+
+  $uuid = new Uuid();
+  $block->uuid = $uuid->generate();
+
+
+  // Allow modules to modify the block before it is viewed, via either
+  // hook_block_view_alter() or hook_block_view_MODULE_DELTA_alter().
+  $block->subject = (empty($block_content['subject'])) ? '' : $block_content['subject'];
+  backdrop_alter(array('block_view', "block_view_{$module}_" . str_replace('-', '_', $delta)), $block_content, $block);
+  
+  if (isset($block_content['content'])) {
+     // Assemble a structured content array.
+    $content = (object) array(
+      'title' => $block->subject,
+      'content' => $block_content['content'],
+    );
+  $output = theme('block', array('content' => $content, 'block' => $block));
+  }
+  elseif (isset($block_content)){
+    $content = (object) array(
+      'title' => $block->subject,
+      'content' => $block_content,
+    );
+    $output = theme('block', array('content' => $content, 'block' => $block));
+  }else{
+    $output = '';
+  }   
+  
+    return $output;
+}
+
+/**
+ * Page callback for getting a list of blocks.
+ */
+function ckeditor_blocks_blocks_ajax() {
+  // Disable client-side caching.
+  header('Cache-Control: private, no-cache, no-store, must-revalidate, max-age=0');
+  header('Pragma: no-cache');
+  // Disable server-side caching.
+  backdrop_page_is_cacheable(FALSE);
+
+  global $theme_key;
+  $options = array();
+  $options['All'] = 'Select a block';
+  $module_blocks = layout_get_block_info();
+  // Allow the block list to be altered.
+  $included_modules = array('views','block','node','webform');
+  $excluded_deltas = array('content');
+  backdrop_alter('ckeditor_blocks_list', $module_blocks);
+  foreach ($module_blocks as $module => $blocks) {
+    if(in_array($module, $included_modules)){    
+      if (!empty($blocks)) {
+        foreach ($blocks as $delta => $block) {
+          if(!in_array($delta, $excluded_deltas)){
+            $options['[block:' . $module. '=' . $delta . ']'] = $block['info'];
+          }        
+        }
+      }
+    }
+  }
+
+  backdrop_json_output($options);
+  backdrop_exit();
+}
+
+/**
+ * Page callback for rendering a block
+ */
+function ckeditor_blocks_block_ajax($module, $delta) {  
+  // Disable client-side caching.
+  header('Cache-Control: private, no-cache, no-store, must-revalidate, max-age=0');
+  header('Pragma: no-cache');
+  // Disable server-side caching.
+  backdrop_page_is_cacheable(FALSE);
+  $block = ckeditor_blocks_get_block($module, $delta);
+  
+  backdrop_json_output(array('html' => ($block ? $block : '(Empty Block)')));
+  backdrop_exit();
+
+  backdrop_json_output(array('html' => ($block ? $block : '(Empty Block)')));
+}
+
+
+
+/**
+ * Filter replacement callback.
+ *
+ * @param type $text
+ * @param type $filter
+ * @param type $format
+ * @return type
+ */
+function _ckeditor_blocks($text, $filter, $format) {
+  if (preg_match_all("/\[block:([^=\\]]+)=?([^\\]]*)?\]/i", $text, $match)) {
+    foreach ($match[2] as $key => $value) {
+      $raw_tags[] = $match[0][$key];
+      $module = $match[1][$key];
+      $delta = $match[2][$key];
+
+      $check_roles = !empty($filter->settings['check_roles']);
+      $repl[] =  ckeditor_blocks_get_block($module, $delta, $check_roles);
+    }
+    return str_replace($raw_tags, $repl, $text);
+  }
+  return $text;
+}
+
+function custom_api_mail($from = 'default_from', $to, $subject, $message) {
+  $my_module = 'custom_api';
+  $my_mail_token = microtime();
+  if ($from == 'default_from') {
+      // Change this to your own default 'from' email address.
+      $from = variable_get('system_mail', 'noreply@triplo.co');
+  }
+  $message = array(
+      'id' => $my_module . '_' . $my_mail_token,
+      'to' => $to,
+      'subject' => $subject,
+      'body' => array($message),
+      'headers' => array(
+          'From' => $from,
+          'Sender' => $from,
+          'Return-Path' => $from,
+      ),
+  );
+  $system = drupal_mail_system($my_module, $my_mail_token);
+  $message = $system->format($message);
+  if ($system->mail($message)) {
+      return TRUE;
+  } else {
+      return FALSE;
+  }
 }
 
 ?>

@@ -347,7 +347,7 @@ function _webform_render_file($component, $value = NULL, $filter = TRUE, $submis
     '#title_display' => $component['extra']['title_display'] ? $component['extra']['title_display'] : 'before',
     '#required' => $component['required'],
     '#default_value' => isset($value[0]) ? $value[0] : NULL,
-    '#attributes' => $component['extra']['attributes'],
+    '#attributes' => $component['extra']['attributes'] ?: array(),
     '#attached' => array(
       'library' => array('system', 'backdrop.form'),
       'js' => array(
@@ -566,7 +566,8 @@ function _webform_csv_headers_file($component, $export_options) {
  * Implements _webform_csv_data_component().
  */
 function _webform_csv_data_file($component, $export_options, $value) {
-  $file = webform_get_file($value[0]);
+  $fid = isset($value[0]) ? $value[0] : NULL;
+  $file = webform_get_file($fid);
   return empty($file->filename) ? array('', '') : array(webform_file_url($file->uri), (int) ($file->filesize / 1024));
 }
 

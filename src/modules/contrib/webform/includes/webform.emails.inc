@@ -106,7 +106,7 @@ function theme_webform_emails_form(array $variables) {
   $form = $variables['form'];
   $node = $form['#node'];
 
-  $header = array(t('Send'), t('E-mail to'), t('Subject'), t('From'), array('data' => t('Operations'), 'colspan' => 3));
+  $header = array(t('Send'), t('E-mail to'), t('Subject'), t('Reply-to'), array('data' => t('Operations'), 'colspan' => 3));
   $rows = array();
 
   if (!empty($form['emails'])) {
@@ -372,7 +372,8 @@ function webform_email_edit_form($form, $form_state, $node, $email = array(), $c
     '#type' => 'checkbox',
     '#title' => t('Include files as attachments'),
     '#default_value' => $email['attachments'],
-    '#access' => webform_variable_get('webform_email_html_capable'),
+    '#disabled' => !webform_variable_get('webform_email_html_capable'),
+    '#description' => t('For this option to be available, the "HTML mail system" option needs to be enabled in the <a target="_blank" href="/admin/config/content/webform#edit-email">Default e-mail values</a> section of the Webform settings page.'),
   );
 
   $form['template']['components'] = array(

@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Webform module textarea component.
+ * Webform Link component
  */
 
 /**
  * Implements _webform_defaults_component().
  */
-function _webform_defaults_textarea() {
+function _webform_defaults_link() {
   return array(
     'name' => '',
     'form_key' => NULL,
@@ -17,11 +17,9 @@ function _webform_defaults_textarea() {
     'value' => '',
     'required' => 0,
     'extra' => array(
-      'cols' => '',
-      'rows' => '',
-      'title_display' => 0,
-      'resizable' => 1,
       'disabled' => 0,
+      'width' => '',
+      'title_display' => 0,
       'description' => '',
       'description_above' => FALSE,
       'placeholder' => '',
@@ -33,62 +31,33 @@ function _webform_defaults_textarea() {
 }
 
 /**
- * Implements _webform_theme_component().
- */
-function _webform_theme_textarea() {
-  return array(
-    'webform_display_textarea' => array(
-      'render element' => 'element',
-      'file' => 'components/textarea.inc',
-    ),
-  );
-}
-
-/**
  * Implements _webform_edit_component().
  */
-function _webform_edit_textarea($component) {
+function _webform_edit_link($component) {
   $form = array();
   $form['value'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Default value'),
+    '#type' => 'textfield',
+    '#title' => t('Default URL'),
     '#default_value' => $component['value'],
-    '#description' => t('The default value of the field.') . ' ' . theme('webform_token_help'),
-    '#cols' => 60,
-    '#rows' => 5,
+    '#description' => t('The default URL of the field.') . theme('webform_token_help'),
+    '#size' => 60,
+    '#maxlength' => 1024,
     '#weight' => 0,
   );
-  $form['display']['cols'] = array(
+  $form['display']['width'] = array(
     '#type' => 'textfield',
     '#title' => t('Width'),
-    '#default_value' => $component['extra']['cols'],
-    '#description' => t('Width of the textarea in columns. This property might not have a visual impact depending on the CSS of your site.') . ' ' . t('Leaving blank will use the default size.'),
+    '#default_value' => $component['extra']['width'],
+    '#description' => t('Width of the textfield.') . ' ' . t('Leaving blank will use the default size.'),
     '#size' => 5,
     '#maxlength' => 10,
-    '#parents' => array('extra', 'cols'),
-  );
-  $form['display']['rows'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Height'),
-    '#default_value' => $component['extra']['rows'],
-    '#description' => t('Height of the textarea in rows.') . ' ' . t('Leaving blank will use the default size.'),
-    '#size' => 5,
-    '#maxlength' => 10,
-    '#parents' => array('extra', 'rows'),
-  );
-  $form['display']['resizable'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Resizable'),
-    '#description' => t('Make this field resizable by the user.'),
-    '#weight' => 2,
-    '#default_value' => $component['extra']['resizable'],
-    '#parents' => array('extra', 'resizable'),
+    '#parents' => array('extra', 'width'),
   );
   $form['display']['placeholder'] = array(
     '#type' => 'textfield',
     '#title' => t('Placeholder'),
     '#default_value' => $component['extra']['placeholder'],
-    '#description' => t('The placeholder will be shown in the field until the user starts entering a value.'),
+    '#description' => t('The placeholder will be shown in the field until the user starts entering a value.') . ' ' . t('Often used for example values, such as "https://example.com".'),
     '#parents' => array('extra', 'placeholder'),
   );
   $form['display']['disabled'] = array(
@@ -102,32 +71,50 @@ function _webform_edit_textarea($component) {
   );
   return $form;
 }
+/**
+ * Implements _webform_theme_component().
+ */
+function _webform_theme_link() {
+  return array(
+    'webform_link' => array(
+      'render element' => 'element',
+      'file' => 'components/link.inc',
+    ),
+    'webform_display_link' => array(
+      'render element' => 'element',
+      'file' => 'components/link.inc',
+    ),
+  );
+}
 
 /**
  * Implements _webform_render_component().
  */
-function _webform_render_textarea($component, $value = NULL, $filter = TRUE, $submission = NULL) {
+function _webform_render_link($component, $value = NULL, $filter = TRUE) {
   $node = isset($component['nid']) ? node_load($component['nid']) : NULL;
 
   $element = array(
-    '#type' => 'textarea',
+    '#type' => 'webform_link',
     '#title' => $filter ? webform_filter_xss($component['name']) : $component['name'],
     '#title_display' => $component['extra']['title_display'] ? $component['extra']['title_display'] : 'before',
     '#default_value' => $filter ? webform_replace_tokens($component['value'], $node) : $component['value'],
     '#required' => $component['required'],
     '#weight' => $component['weight'],
     '#description' => $filter ? webform_filter_descriptions($component['extra']['description'], $node) : $component['extra']['description'],
-    '#rows' => !empty($component['extra']['rows']) ? $component['extra']['rows'] : 5,
-    '#cols' => !empty($component['extra']['cols']) ? $component['extra']['cols'] : 60,
-    '#attributes' => $component['extra']['attributes'] ?: array(),
-    // MUST be FALSE to disable.
-    '#resizable' => (bool) $component['extra']['resizable'],
-    '#theme_wrappers' => array('webform_element'),
     '#translatable' => array('title', 'description', 'placeholder'),
+    '#theme_wrappers' => array('webform_element'),
+    '#element_validate' => array('webform_link_validate'),
   );
 
   if ($component['required']) {
     $element['#attributes']['required'] = 'required';
+  }
+
+  // Add a link class for identifying the difference from normal textfields.
+  $element['#attributes']['class'][] = 'link';
+
+  if (isset($value[0])) {
+    $element['#default_value'] = $value[0];
   }
 
   if ($component['extra']['placeholder']) {
@@ -143,8 +130,9 @@ function _webform_render_textarea($component, $value = NULL, $filter = TRUE, $su
     }
   }
 
-  if (isset($value[0])) {
-    $element['#default_value'] = $value[0];
+  // Change the 'width' option to the correct 'size' option.
+  if ($component['extra']['width'] > 0) {
+    $element['#size'] = $component['extra']['width'];
   }
 
   return $element;
@@ -153,35 +141,61 @@ function _webform_render_textarea($component, $value = NULL, $filter = TRUE, $su
 /**
  * Implements _webform_display_component().
  */
-function _webform_display_textarea($component, $value, $format = 'html', $submission = array()) {
-  return array(
+function _webform_display_link($component, $value, $format = 'html') {
+  $element = array(
     '#title' => $component['name'],
-    '#title_display' => $component['extra']['title_display'] ? $component['extra']['title_display'] : 'before',
     '#weight' => $component['weight'],
-    '#theme' => 'webform_display_textarea',
+    '#theme' => 'webform_display_link',
     '#theme_wrappers' => $format == 'html' ? array('webform_element') : array('webform_element_text'),
     '#format' => $format,
-    '#value' => isset($value[0]) ? $value[0] : '',
+    '#value' => l($value[0], $value[0]),
     '#translatable' => array('title', 'placeholder'),
   );
+  return $element;
 }
 
 /**
- * Format the output of data for this component.
+ * Theme function to render a link component.
  */
-function theme_webform_display_textarea($variables) {
+function theme_webform_link($variables) {
   $element = $variables['element'];
-  $output = $element['#format'] == 'html' ? nl2br(check_plain($element['#value'])) : $element['#value'];
-  if (backdrop_strlen($output) > 80) {
-    $output = ($element['#format'] == 'html') ? '<div class="webform-long-answer">' . $output . '</div>' : $output;
+
+  // This IF statement is mostly in place to allow our tests to set type="text"
+  // because SimpleTest does not support type="link".
+  if (!isset($element['#attributes']['type'])) {
+    $element['#attributes']['type'] = 'url';
   }
-  return $output !== '' ? $output : ' ';
+
+  // Convert properties to attributes on the element if set.
+  foreach (array('id', 'name', 'value', 'size') as $property) {
+    if (isset($element['#' . $property]) && $element['#' . $property] !== '') {
+      $element['#attributes'][$property] = $element['#' . $property];
+    }
+  }
+  _form_set_class($element, array('form-text', 'form-url'));
+
+  return '<input' . backdrop_attributes($element['#attributes']) . ' />';
+}
+
+/**
+ * Custom theme function for collected link.
+ */
+function theme_webform_display_link($variables) {
+  $element = $variables['element'];
+  return empty($element['#value']) ? ' ' : $element['#value'];
+}
+
+/**
+ * Implements _webform_table_component().
+ */
+function _webform_table_link($component, $value) {
+  return l($value[0], $value[0]);
 }
 
 /**
  * Implements _webform_analysis_component().
  */
-function _webform_analysis_textarea($component, $sids = array(), $single = FALSE, $join = NULL) {
+function _webform_analysis_link($component, $sids = array(), $single = FALSE, $join = NULL) {
   $query = db_select('webform_submitted_data', 'wsd', array('fetch' => PDO::FETCH_ASSOC))
     ->fields('wsd', array('no', 'data'))
     ->condition('wsd.nid', $component['nid'])
@@ -211,9 +225,9 @@ function _webform_analysis_textarea($component, $sids = array(), $single = FALSE
   $rows[0] = array(t('Left Blank'), ($submissions - $nonblanks));
   $rows[1] = array(t('User entered value'), $nonblanks);
 
-  $other[] = array(
+  $other[0] = array(
     t('Average submission length in words (ex blanks)'),
-    $nonblanks != 0 ? number_format($wordcount / $nonblanks, 2) : '0',
+    ($nonblanks != 0 ? number_format($wordcount / $nonblanks, 2) : '0')
   );
 
   return array(
@@ -223,24 +237,9 @@ function _webform_analysis_textarea($component, $sids = array(), $single = FALSE
 }
 
 /**
- * Implements _webform_table_component().
- */
-function _webform_table_textarea($component, $value) {
-  return empty($value[0]) ? '' : check_plain($value[0]);
-}
-
-/**
- * Implements _webform_action_set_component().
- */
-function _webform_action_set_textarea($component, &$element, &$form_state, $value) {
-  $element['#value'] = $value;
-  form_set_value($element, $value, $form_state);
-}
-
-/**
  * Implements _webform_csv_headers_component().
  */
-function _webform_csv_headers_textarea($component, $export_options) {
+function _webform_csv_headers_link($component, $export_options) {
   $header = array();
   $header[0] = '';
   $header[1] = '';
@@ -251,6 +250,18 @@ function _webform_csv_headers_textarea($component, $export_options) {
 /**
  * Implements _webform_csv_data_component().
  */
-function _webform_csv_data_textarea($component, $export_options, $value) {
+function _webform_csv_data_link($component, $export_options, $value) {
   return empty($value[0]) ? '' : $value[0];
+}
+
+/**
+ * Form validation handler.
+ *
+ * If a link was submitted, check that the URL is valid.
+ */
+function webform_link_validate($element, &$form_state) {
+  if ($element['#value'] && !valid_url($element['#value'], TRUE)) {
+    $message = t('%url is not a valid URL.', array('%url' => $element['#value']));
+    form_error($element, $message);
+  }
 }

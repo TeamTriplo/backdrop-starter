@@ -64,7 +64,19 @@ description = Tests layout paths, like the Default Layout.
 group = Layout
 file = layout.test
 
-; Added by Backdrop CMS packaging script on 2022-07-21
+[LayoutDeletionTest]
+name = Layout Deletion Test
+description = Tests checks and messages when layouts are deleted.
+group = Layout
+file = layout.test
+
+[LayoutEntityLayoutsTest]
+name = Layout Entity Layouts Test
+description = Tests the user interface for adding layout configuration to entity types.
+group = Layout
+file = layout_entity.test
+
+; Added by Backdrop CMS packaging script on 2026-01-05
 project = backdrop
-version = 1.22.2
-timestamp = 1658447718
+version = 1.33.0-preview
+timestamp = 1767674436

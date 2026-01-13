@@ -28,6 +28,12 @@ description = Test field create, read, update, and delete.
 group = Field API
 file = field.test
 
+[FieldSchemaAlterTestCase]
+name = Field schema alteration tests
+description = Alter the schema for a given type of field.
+group = Field API
+file = field.test
+
 [FieldInstanceCrudTestCase]
 name = Field instance CRUD tests
 description = Create field entities by attaching fields to entities.
@@ -82,7 +88,7 @@ description = Tests the Views field of the Field API integration.
 group = Field API
 file = field_views.test
 
-; Added by Backdrop CMS packaging script on 2022-07-21
+; Added by Backdrop CMS packaging script on 2026-01-05
 project = backdrop
-version = 1.22.2
-timestamp = 1658447718
+version = 1.33.0-preview
+timestamp = 1767674436

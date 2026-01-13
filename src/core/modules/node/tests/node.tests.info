@@ -40,6 +40,12 @@ description = Tests that the correct layout is used for node previews.
 group = Node
 file = node.test
 
+[NodeLayoutRevisionTestCase]
+name = Node layout revision test
+description = Tests that the correct layout is used for node revisions.
+group = Node
+file = node.test
+
 [NodeCreationTestCase]
 name = Node creation
 description = Create a node and test saving it.
@@ -196,6 +202,12 @@ description = Test changing display mode.
 group = Node
 file = node.test
 
+[NodeAccessJoinTest]
+name = Node access joins
+description = Tests that node access checks get applied across left-joined tables.
+group = Node
+file = node.test
+
 [NodePageCacheTest]
 name = Node page cache test
 description = Test cache invalidation of node operations.
@@ -220,7 +232,7 @@ description = Tests the new node states for Draft, Publish Now and Schedule Publ
 group = Node
 file = node.test
 
-; Added by Backdrop CMS packaging script on 2022-07-21
+; Added by Backdrop CMS packaging script on 2026-01-05
 project = backdrop
-version = 1.22.2
-timestamp = 1658447718
+version = 1.33.0-preview
+timestamp = 1767674436

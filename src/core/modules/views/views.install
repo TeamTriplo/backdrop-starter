@@ -149,7 +149,7 @@ function views_update_1004() {
 }
 
 /**
- * Set all grid style Views to use the deprecrated table if not set already.
+ * Set all grid style Views to use the deprecated table if not set already.
  */
 function views_update_1005() {
   $configs = config_get_names_with_prefix('views.view.');
@@ -190,6 +190,27 @@ function views_update_1006() {
  */
 function views_update_1007() {
   config_clear('views.settings', 'no_javascript');
+}
+
+/**
+ * Update all grid Views to use the backwards-compatible unresponsive option.
+ */
+function views_update_1008() {
+  $view_names = config_get_names_with_prefix('views.view.');
+  foreach ($view_names as $view_name) {
+    $config = config($view_name);
+    $displays = $config->get('display');
+    foreach ($displays as $display => $display_details) {
+      if (!isset($display_details['display_options']['style_plugin']) || $display_details['display_options']['style_plugin'] != 'grid') {
+        continue;
+      }
+      if (isset($display_details['display_options']['style_options']['unresponsive'])) {
+        continue;
+      }
+      $config->set('display.' . $display . '.display_options.style_options.unresponsive', 1);
+    }
+    $config->save();
+  }
 }
 
 /**

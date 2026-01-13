@@ -37,14 +37,17 @@ function devel_admin_settings() {
   $form['queries']['settings']['show_query_args_first'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show query arguments'),
-    '#default_value' => $config->get('show_query_args_first', FALSE),
+    '#default_value' => $config->get('show_query_args_first'),
     '#description' => t('Show arguments rather than the query placeholders in the logged query.'),
   );
   $form['queries']['settings']['query_sort'] = array(
     '#type' => 'radios',
     '#title' => t('Sort query log'),
     '#default_value' => $config->get('query_sort', DEVEL_QUERY_SORT_BY_SOURCE),
-    '#options' => array(t('by source'), t('by duration')),
+    '#options' => array(
+      DEVEL_QUERY_SORT_BY_SOURCE => t('by source'),
+      DEVEL_QUERY_SORT_BY_DURATION => t('by duration')
+    ),
     '#description' => t('The query table can be sorted in the order that the queries were executed or by descending duration.'),
   );
   $form['queries']['settings']['query_slow_limit'] = array('#type' => 'textfield',
@@ -169,7 +172,7 @@ function devel_admin_settings() {
  */
 function devel_admin_settings_submit($form, &$form_state) {
   $values = $form_state['values'];
-  
+
   // Save the hidden core development settings
   $config = config('system.core');
   $config->set('theme_debug', (bool) $values['theme_debug']);
@@ -182,8 +185,9 @@ function devel_admin_settings_submit($form, &$form_state) {
 
   // Save value of system variable 'theme_debug'
   config_set('system.core', 'theme_debug', (bool) $values['theme_debug']);
-  
+
   $config->set('query_display', (bool) $values['query_display']);
+  $config->set('show_query_args_first', (bool) $values['show_query_args_first']);
   $config->set('query_sort', $values['query_sort']);
   $config->set('query_slow_limit', (int) $values['query_slow_limit']);
 

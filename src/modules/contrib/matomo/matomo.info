@@ -5,7 +5,7 @@ type = module
 package = Statistics
 configure = admin/config/system/matomo
 
-; Added by Backdrop CMS packaging script on 2025-08-02
+; Added by Backdrop CMS packaging script on 2026-02-09
 project = matomo
-version = 1.x-2.12.4
-timestamp = 1754118983
+version = 1.x-2.12.5
+timestamp = 1770709289

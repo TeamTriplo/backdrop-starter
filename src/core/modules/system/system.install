@@ -394,7 +394,7 @@ function system_requirements($phase) {
 
     // Set summary and description based on values determined above.
     $summary = $t('Last run !time ago (<a href="@url">Run cron manually</a>)', array(
-      '!time' => format_interval(REQUEST_TIME - $cron_last),
+      '!time' => format_time_diff_since($cron_last),
       '@url' => url('admin/reports/status/run-cron'),
     ));
     $description = '';
@@ -695,6 +695,10 @@ function system_requirements($phase) {
 
           case 'entityreference':
             $change_notice = 47321;
+            break;
+
+          case 'field_group':
+            $change_notice = 49214;
             break;
         }
         if ($change_notice) {
@@ -3718,7 +3722,10 @@ function system_update_1098() {
   $module = db_query("SELECT name FROM {system} WHERE name = 'fast_token_browser' AND type = 'module'")->fetchField();
   if ($module) {
     $path = backdrop_get_path('module', 'fast_token_browser');
-    backdrop_set_message(t('The contributed module <em>Fast Token Browser</em> has been located at %path. The module has been disabled, since its functionality is now provided by Backdrop core. It is recommended that you remove this module from your site.', array('%path' => BACKDROP_ROOT . '/' . $path)), 'warning');
+    backdrop_set_message(t('The contributed module %module has been located at %path. The module has been disabled, since its functionality is now provided by Backdrop core. It is recommended that you remove this module from your site.', array(
+      '%module' => 'Fast Token Browser',
+      '%path' => BACKDROP_ROOT . '/' . $path,
+    )), 'warning');
     // Remove the entry for the Fast Token Browser module from the system table.
     // As this module does not provide any config or settings, there doesn't
     // seem to be anything else left to clean up or migrate.
@@ -3880,6 +3887,55 @@ function system_update_1104() {
   if ($config->get('_config_static') === NULL) {
     $config->set('_config_static', TRUE);
     $config->save();
+  }
+}
+
+/**
+ * Uninstall the html5_upload contrib module, now part of core.
+ */
+function system_update_1105() {
+  $module = db_query("SELECT name FROM {system} WHERE name = 'html5_upload' AND type = 'module'")->fetchField();
+  if ($module) {
+    $path = backdrop_get_path('module', 'html5_upload');
+    backdrop_set_message(t('The contributed module %module has been located at %path. The module has been disabled, since its functionality is now provided by Backdrop core. It is recommended that you remove this module from your site.', array(
+      '%module' => 'HTML5 Upload',
+      '%path' => BACKDROP_ROOT . '/' . $path,
+    )), 'warning');
+
+    // Remove the entry for the HTML5 Upload module from the system table.
+    // As this module does not provide any config or settings, there doesn't
+    // seem to be anything else left to clean up or migrate.
+    // While the contrib module remains in the filesystem, this entry will be
+    // recreated, but it will have status 0 (disabled), and schema -1
+    // (uninstalled), so it is safe to remove.
+    db_query("DELETE FROM {system} WHERE name = 'html5_upload' AND type = 'module'");
+  } else {
+    return t('<em>HTML5 Upload</em> not found. Nothing to be done.');
+  }
+}
+
+/**
+ * Set icon browser default number of icons per page.
+ */
+function system_update_1106() {
+  $config = config('system.core');
+  if ($config->get('icon_browser_icons_per_page') === NULL) {
+    $config->set('icon_browser_icons_per_page', 110);
+    $config->save();
+  }
+}
+
+/**
+ * Notify if a non-core version of Field Group module is present.
+ */
+function system_update_1107() {
+  $path = backdrop_get_path('module', 'field_group');
+  if ($path && strpos($path, 'core/modules/field_group') === FALSE) {
+    backdrop_set_message(t('Backdrop core provides a bundled @name module. A different copy of @name module is at %path. Remove this module from your installation to use the core @name module. For more information see the <a href="!url" target="_blank">@name change notice</a>.', array(
+      '@name' => t('Field Group'),
+      '%path' => $path,
+      '!url' => 'https://docs.backdropcms.org/node/49214',
+    )), 'warning');
   }
 }
 

@@ -28,7 +28,7 @@ preview = taylor.png
 ; Include the Bootstrap4 Grid System
 libraries[] = bootstrap4-gs
 
-; Added by Backdrop CMS packaging script on 2026-04-22
+; Added by Backdrop CMS packaging script on 2026-09-15
 project = backdrop
-version = 1.33.2
-timestamp = 1776907681
+version = 1.35.0
+timestamp = 1789506311

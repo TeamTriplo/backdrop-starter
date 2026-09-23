@@ -530,6 +530,40 @@ function hook_icon_info_alter(&$icons) {
 }
 
 /**
+/**
+ * Modify the list of icon details.
+ *
+ * @param array $icons
+ *   This parameter is passed by reference. It contains the entire list of
+ *   available icons with details about each icon, keyed by the icon name.
+ *
+ * @see icon_get_all_details()
+ *
+ * @since 1.34.0 Hook added.
+ */
+function hook_icon_get_all_details_alter(&$icons) {
+  foreach ($icons as $icon) {
+    if (strpos($icon['name'], 'my_module') === 0) {
+      $icon['style'] = 'my_module_style';
+    }
+  }
+}
+
+/**
+ * Modify the list of available icon styles.
+ *
+ * @param array $allowed_styles
+ *   This parameter is passed by reference.
+ *
+ * @see icon_allowed_styles()
+ *
+ * @since 1.34.0 Hook added.
+ */
+function hook_icon_allowed_styles_alter(&$allowed_styles) {
+  $allowed_styles['my_module_style'] = t('My module style');
+}
+
+/**
  * Alter the commands that are sent to the user through the Ajax framework.
  *
  * @param $commands
@@ -2660,7 +2694,7 @@ function hook_requirements($phase) {
     $cron_last = state_get('cron_last');
 
     if (is_numeric($cron_last)) {
-      $requirements['cron']['value'] = $t('Last run !time ago', array('!time' => format_interval(REQUEST_TIME - $cron_last)));
+      $requirements['cron']['value'] = $t('Last run !time ago', array('!time' => format_time_diff_since($cron_last)));
     }
     else {
       $requirements['cron'] = array(
